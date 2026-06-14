@@ -236,6 +236,39 @@ html,body{height:100%;overflow:hidden;font-family:'Heebo',sans-serif;direction:r
 
 
 
+
+/* ── TRANSLATOR ───────────────────────────── */
+#translate-panel{overflow-y:auto;background:var(--cream)}
+#translate-content{padding:16px;max-width:720px;margin:0 auto}
+.tr-h2{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.tr-sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.tr-dir{display:flex;gap:8px;margin-bottom:16px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:6px}
+.tr-dir-btn{flex:1;padding:11px 8px;border:none;border-radius:9px;background:transparent;font-family:'Heebo',sans-serif;font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;transition:.15s}
+.tr-dir-btn.active{background:var(--red);color:#fff}
+.tr-box{background:#fff;border:1px solid var(--border);border-radius:14px;padding:15px;margin-bottom:14px}
+.tr-box-label{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:9px;display:flex;align-items:center;gap:6px}
+.tr-input{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:12px;font-family:'Heebo',sans-serif;font-size:16px;outline:none;resize:none;min-height:70px;box-sizing:border-box}
+.tr-input:focus{border-color:var(--red)}
+.tr-input[dir=ltr]{direction:ltr;text-align:left}
+.tr-btns{display:flex;gap:8px;margin-top:10px}
+.tr-btn{flex:1;padding:12px;border:none;border-radius:10px;font-family:'Heebo',sans-serif;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+.tr-btn-go{background:var(--red);color:#fff}
+.tr-btn-go:disabled{opacity:.5}
+.tr-btn-mic{background:#1d4ed8;color:#fff;flex:0 0 56px}
+.tr-btn-mic.rec{background:#c0392b;animation:trpulse 1s infinite}
+@keyframes trpulse{0%,100%{opacity:1}50%{opacity:.6}}
+.tr-result{background:linear-gradient(135deg,#fff,#fff8ec);border:2px solid var(--gold);border-radius:14px;padding:16px;margin-bottom:14px;min-height:50px}
+.tr-result-main{font-size:22px;font-weight:800;color:var(--dark);line-height:1.4;margin-bottom:6px;word-break:break-word}
+.tr-result-roma{font-size:13px;color:var(--muted);font-style:italic;margin-bottom:10px}
+.tr-result-actions{display:flex;gap:8px}
+.tr-speak{background:var(--gold);color:var(--dark);border:none;border-radius:9px;padding:9px 14px;font-family:'Heebo',sans-serif;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px}
+.tr-speak.playing{background:var(--red);color:#fff}
+.tr-copy{background:#eef;color:#1d4ed8;border:none;border-radius:9px;padding:9px 14px;font-family:'Heebo',sans-serif;font-size:13px;font-weight:700;cursor:pointer}
+.tr-loading{color:var(--muted);font-size:14px;text-align:center;padding:8px}
+.tr-empty{color:var(--muted);font-size:14px;text-align:center}
+.tr-err{color:#c0392b;font-size:13px;text-align:center;padding:6px}
+.tr-note{background:#fff8ec;border:1px solid var(--gold);border-radius:10px;padding:10px 12px;font-size:12px;color:#8a6d2f;margin-top:12px;line-height:1.5}
+
 /* ── PACKING LIST ───────────────────────── */
 #packing-panel{overflow-y:auto;background:var(--cream)}
 #packing-content{padding:18px;max-width:760px;margin:0 auto}
@@ -430,6 +463,7 @@ html,body{height:100%;overflow:hidden;font-family:'Heebo',sans-serif;direction:r
     <button class="tab"     data-tab="journal">📓 יומן</button>
     <button class="tab"     data-tab="phrases">🗣️ מילון</button>
     <button class="tab"     data-tab="packing">🎒 אריזה</button>
+    <button class="tab"     data-tab="translate">🔄 תרגומון</button>
   </div>
 </header>
 
@@ -531,6 +565,10 @@ html,body{height:100%;overflow:hidden;font-family:'Heebo',sans-serif;direction:r
 
   <div id="packing-panel" class="panel">
     <div id="packing-content"></div>
+  </div>
+
+  <div id="translate-panel" class="panel">
+    <div id="translate-content"></div>
   </div>
 
 </div>
@@ -1065,6 +1103,7 @@ function switchTab(name) {
   if (name === 'journal') { renderJournal(); }
   if (name === 'phrases') { renderPhrases(); }
   if (name === 'packing') { renderPacking(); }
+  if (name === 'translate') { renderTranslate(); }
   if (name === 'itin' && window.applyMobileItinerary) { setTimeout(window.applyMobileItinerary, 10); }
 }
 
@@ -1250,6 +1289,196 @@ window.toggleTrain = function(i){
 
 
 
+
+
+
+// ── TRANSLATOR MODULE ────────────────────────────────
+var trDir = 'he2ja'; // he2ja | ja2he
+var trRecognition = null;
+var trLastResult = { text:'', roma:'' };
+
+function renderTranslate(){
+  var heToJa = trDir === 'he2ja';
+  var srcLabel = heToJa ? '\ud83c\uddee\ud83c\uddf1 \u05e2\u05d1\u05e8\u05d9\u05ea' : '\ud83c\uddef\ud83c\uddf5 \u05d9\u05e4\u05e0\u05d9\u05ea (\u05d3\u05d1\u05e8\u05d5 \u05dc\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df)';
+  var dstLabel = heToJa ? '\ud83c\uddef\ud83c\uddf5 \u05d9\u05e4\u05e0\u05d9\u05ea' : '\ud83c\uddee\ud83c\uddf1 \u05e2\u05d1\u05e8\u05d9\u05ea';
+
+  var inputArea = heToJa
+    ? '<textarea class="tr-input" id="tr-input" placeholder="\u05db\u05ea\u05d1\u05d5 \u05d0\u05d5 \u05d3\u05d1\u05e8\u05d5 \u05e2\u05d1\u05e8\u05d9\u05ea..."></textarea>'
+    : '<textarea class="tr-input" id="tr-input" dir="ltr" placeholder="\u05dc\u05d7\u05e6\u05d5 \u05e2\u05dc \u05d4\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d5\u05d3\u05d1\u05e8\u05d5 \u05d9\u05e4\u05e0\u05d9\u05ea..."></textarea>';
+
+  document.getElementById('translate-content').innerHTML =
+    '<div class="tr-h2">\ud83d\udd04 \u05ea\u05e8\u05d2\u05d5\u05de\u05d5\u05df \u05e9\u05d9\u05d7\u05d4</div>'+
+    '<div class="tr-sub">\u05ea\u05e8\u05d2\u05d5\u05dd \u05d3\u05d5-\u05db\u05d9\u05d5\u05d5\u05e0\u05d9 \u00b7 \u05d3\u05d5\u05e8\u05e9 \u05d7\u05d9\u05d1\u05d5\u05e8 \u05dc\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8</div>'+
+    '<div class="tr-dir">'+
+      '<button class="tr-dir-btn'+(heToJa?' active':'')+'" onclick="trSetDir(\'he2ja\')">\ud83c\uddee\ud83c\uddf1 \u2190 \ud83c\uddef\ud83c\uddf5</button>'+
+      '<button class="tr-dir-btn'+(!heToJa?' active':'')+'" onclick="trSetDir(\'ja2he\')">\ud83c\uddef\ud83c\uddf5 \u2190 \ud83c\uddee\ud83c\uddf1</button>'+
+    '</div>'+
+    '<div class="tr-box">'+
+      '<div class="tr-box-label">'+srcLabel+'</div>'+
+      inputArea+
+      '<div class="tr-btns">'+
+        '<button class="tr-btn tr-btn-mic" id="tr-mic" onclick="trMic()" title="\u05d3\u05d1\u05e8\u05d5">\ud83c\udfa4</button>'+
+        '<button class="tr-btn tr-btn-go" id="tr-go" onclick="trGo()">\ud83d\udd04 \u05ea\u05e8\u05d2\u05dd</button>'+
+      '</div>'+
+    '</div>'+
+    '<div class="tr-box-label">'+dstLabel+'</div>'+
+    '<div class="tr-result" id="tr-result"><div class="tr-empty">\u05d4\u05ea\u05e8\u05d2\u05d5\u05dd \u05d9\u05d5\u05e4\u05d9\u05e2 \u05db\u05d0\u05df</div></div>'+
+    '<div class="tr-note">\ud83d\udca1 \u05d8\u05d9\u05e4: \u05d1\u05db\u05d9\u05d5\u05d5\u05df \u05de\u05d9\u05e4\u05e0\u05d9\u05ea, \u05ea\u05e0\u05d5 \u05dc\u05d0\u05d3\u05dd \u05d4\u05d9\u05e4\u05e0\u05d9 \u05dc\u05d3\u05d1\u05e8 \u05dc\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df. \u05d4\u05ea\u05e8\u05d2\u05d5\u05dd \u05dc\u05e2\u05d1\u05e8\u05d9\u05ea \u05d9\u05d5\u05e4\u05d9\u05e2 \u05e2\u05dc \u05d4\u05de\u05e1\u05da. \u05d4\u05e7\u05dc\u05d8 \u05d4\u05e7\u05d5\u05dc\u05d9 \u05e2\u05d5\u05d1\u05d3 \u05d8\u05d5\u05d1 \u05d1-Chrome / \u05d1\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4 \u05d4\u05de\u05d5\u05ea\u05e7\u05e0\u05ea.</div>';
+
+  if (window.applyMobileTranslate) window.applyMobileTranslate();
+}
+
+window.trSetDir = function(d){
+  trDir = d;
+  trLastResult = { text:'', roma:'' };
+  if (trRecognition){ try{trRecognition.stop();}catch(e){} }
+  renderTranslate();
+};
+
+window.trGo = function(){
+  var input = document.getElementById('tr-input');
+  var text = (input.value || '').trim();
+  if (!text){ return; }
+  var result = document.getElementById('tr-result');
+  result.innerHTML = '<div class="tr-loading">\u05de\u05ea\u05e8\u05d2\u05dd... \u23f3</div>';
+  var goBtn = document.getElementById('tr-go');
+  if (goBtn) goBtn.disabled = true;
+
+  var src = trDir === 'he2ja' ? 'he' : 'ja';
+  var dst = trDir === 'he2ja' ? 'ja' : 'he';
+
+  function done(translated){
+    if (goBtn) goBtn.disabled = false;
+    trShowResult(translated);
+  }
+  function fail(){
+    if (goBtn) goBtn.disabled = false;
+    result.innerHTML = '<div class="tr-err">\u05e9\u05d2\u05d9\u05d0\u05d4 \u05d1\u05ea\u05e8\u05d2\u05d5\u05dd. \u05d1\u05d3\u05e7\u05d5 \u05d7\u05d9\u05d1\u05d5\u05e8 \u05dc\u05d0\u05d9\u05e0\u05d8\u05e8\u05e0\u05d8 \u05d5\u05e0\u05e1\u05d5 \u05e9\u05d5\u05d1. (\u05d0\u05dd \u05d0\u05ea\u05dd \u05d1\u05ea\u05e6\u05d5\u05d2\u05d4 \u05de\u05ea\u05d5\u05da Claude \u2014 \u05e4\u05ea\u05d7\u05d5 \u05d0\u05ea \u05d4\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4 \u05de\u05d4\u05db\u05ea\u05d5\u05d1\u05ea \u05d4\u05d0\u05de\u05d9\u05ea\u05d9\u05ea)</div>';
+  }
+
+  // ניסיון 1: Google Translate (לא רשמי, gtx) — אמין ומהיר
+  var gURL = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=' + src + '&tl=' + dst + '&dt=t&q=' + encodeURIComponent(text);
+  fetch(gURL)
+    .then(function(r){ if(!r.ok) throw new Error('g'); return r.json(); })
+    .then(function(data){
+      // התוצאה: [[["\u05ea\u05e8\u05d2\u05d5\u05dd","\u05de\u05e7\u05d5\u05e8",...]],...]
+      var out = '';
+      if (data && data[0]){
+        for (var i=0;i<data[0].length;i++){ if(data[0][i][0]) out += data[0][i][0]; }
+      }
+      if (!out) throw new Error('empty');
+      done(out);
+    })
+    .catch(function(){
+      // ניסיון 2: MyMemory כגיבוי
+      var mURL = 'https://api.mymemory.translated.net/get?q=' + encodeURIComponent(text) + '&langpair=' + src + '|' + dst;
+      fetch(mURL)
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          var t = (data && data.responseData && data.responseData.translatedText) ? data.responseData.translatedText : '';
+          if (!t) throw new Error('no');
+          done(t);
+        })
+        .catch(fail);
+    });
+};
+
+function trShowResult(translated){
+  var heToJa = trDir === 'he2ja';
+  trLastResult = { text: translated, roma:'' };
+  var html = '<div class="tr-result-main"'+(heToJa?'':' dir="rtl"')+'>'+escapeHtmlTr(translated)+'</div>';
+  var actions = '<div class="tr-result-actions">';
+  // הקראה: ביפנית אם he2ja, בעברית אם ja2he
+  var speakLang = heToJa ? 'ja' : 'he';
+  actions += '<button class="tr-speak" id="tr-speak" onclick="trSpeak()">\ud83d\udd0a \u05d4\u05e7\u05e8\u05d0</button>';
+  actions += '<button class="tr-copy" onclick="trCopy()">\ud83d\udccb \u05d4\u05e2\u05ea\u05e7</button>';
+  actions += '</div>';
+  document.getElementById('tr-result').innerHTML = html + actions;
+}
+
+function escapeHtmlTr(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+window.trSpeak = function(){
+  if (!trLastResult.text) return;
+  if (!('speechSynthesis' in window)){
+    alert('\u05d4\u05d3\u05e4\u05d3\u05e4\u05df \u05dc\u05d0 \u05ea\u05d5\u05de\u05da \u05d1\u05d4\u05e7\u05e8\u05d0\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea. \u05e0\u05e1\u05d4 \u05d1-Chrome.');
+    return;
+  }
+  speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(trLastResult.text);
+  var heToJa = trDir === 'he2ja';
+  if (heToJa){
+    loadJpVoice();
+    if (jpVoice){ u.voice = jpVoice; u.lang = jpVoice.lang; } else { u.lang = 'ja-JP'; }
+    u.rate = 0.85;
+  } else {
+    u.lang = 'he-IL';
+    u.rate = 0.95;
+  }
+  var btn = document.getElementById('tr-speak');
+  if (btn){
+    btn.classList.add('playing');
+    u.onend = function(){ btn.classList.remove('playing'); };
+    u.onerror = function(){ btn.classList.remove('playing'); };
+  }
+  setTimeout(function(){ speechSynthesis.speak(u); }, 60);
+};
+
+window.trCopy = function(){
+  if (!trLastResult.text) return;
+  if (navigator.clipboard){
+    navigator.clipboard.writeText(trLastResult.text);
+  }
+};
+
+window.trMic = function(){
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR){
+    alert('\u05d6\u05d9\u05d4\u05d5\u05d9 \u05d3\u05d9\u05d1\u05d5\u05e8 \u05dc\u05d0 \u05e0\u05ea\u05de\u05da \u05d1\u05d3\u05e4\u05d3\u05e4\u05df \u05d6\u05d4. \u05e0\u05e1\u05d4 \u05d1-Chrome \u05d0\u05d5 \u05d1\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4 \u05d4\u05de\u05d5\u05ea\u05e7\u05e0\u05ea, \u05d0\u05d5 \u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05d4\u05e7\u05dc\u05d3\u05d4.');
+    return;
+  }
+  var mic = document.getElementById('tr-mic');
+  // אם כבר מקליט — עצור
+  if (trRecognition){
+    try{ trRecognition.stop(); }catch(e){}
+    trRecognition = null;
+    if (mic) mic.classList.remove('rec');
+    return;
+  }
+  var rec = new SR();
+  rec.lang = trDir === 'he2ja' ? 'he-IL' : 'ja-JP';
+  rec.interimResults = false;
+  rec.maxAlternatives = 1;
+  rec.continuous = false;
+  trRecognition = rec;
+  if (mic) mic.classList.add('rec');
+
+  rec.onresult = function(ev){
+    var said = ev.results[0][0].transcript;
+    var input = document.getElementById('tr-input');
+    if (input) input.value = said;
+    // תרגם אוטומטית אחרי זיהוי
+    window.trGo();
+  };
+  rec.onerror = function(ev){
+    if (mic) mic.classList.remove('rec');
+    trRecognition = null;
+    if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){
+      alert('\u05d0\u05d9\u05df \u05d2\u05d9\u05e9\u05d4 \u05dc\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df. \u05d0\u05e9\u05e8 \u05d4\u05e8\u05e9\u05d0\u05d4 \u05d1\u05d3\u05e4\u05d3\u05e4\u05df.');
+    }
+  };
+  rec.onend = function(){
+    if (mic) mic.classList.remove('rec');
+    trRecognition = null;
+  };
+  try{ rec.start(); }catch(e){ if (mic) mic.classList.remove('rec'); trRecognition = null; }
+};
+
+window.applyMobileTranslate = function(){
+  if (window.innerWidth > 700) return;
+  var tc = document.getElementById('translate-content');
+  if (tc) tc.style.cssText = 'padding:12px;max-width:none;margin:0;width:100%';
+};
 
 
 // ── PACKING LIST MODULE ──────────────────────────────

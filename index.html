@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a1a2e"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="טיול יפן"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACKElEQVR4nO3bwQkCMRBAUVesImALe7AkC7Mkm7ARW9D9ukvgvXtgDp85hGQZYz3BVuejB2BuAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASC7l8PNx/dUcHOh2f20+awORCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASJYx1qNn+NS21yPlrUI348xfsYFIBEQiIBIBkQiIREAkAiIREMlOF4l+kO1vn9tIG4hEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiLxqP6/Zpz5KzYQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgkmWM9egZmJgNRCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBETyBsjrFWiNKWNWAAAAAElFTkSuQmCC"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='64' height='64' fill='%231a1a2e'/%3E%3Ctext x='32' y='48' font-size='40' text-anchor='middle'%3E%E2%9B%A9%3C/text%3E%3C/svg%3E"/>
+<title>🗾 טיול יפן 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --red:#c0392b; --dark:#1a1a2e; --gold:#e8b84b;
+  --cream:#fdf6e3; --cream2:#f5ead0; --border:#e0d5b8;
+  --muted:#7a7a9a; --text:#2c2c3e; --h:58px; --sb:290px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;font-family:'Heebo',sans-serif;direction:rtl;color:var(--text);background:var(--dark)}
+
+/* HEADER */
+#hdr{position:fixed;top:0;left:0;right:0;height:var(--h);background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:0 16px;z-index:200;border-bottom:1px solid rgba(232,184,75,.2)}
+.brand{display:flex;align-items:center;gap:10px}
+.torii{font-size:26px;display:inline-block;animation:sway 3s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.brand h1{font-size:17px;font-weight:900;color:var(--gold);line-height:1}
+.brand p{font-size:11px;color:rgba(253,246,227,.5)}
+.tabs{display:flex;gap:4px}
+.tab{padding:5px 13px;border-radius:18px;background:transparent;border:1px solid rgba(232,184,75,.3);color:rgba(253,246,227,.6);font-family:'Heebo',sans-serif;font-size:12px;cursor:pointer;transition:.2s}
+.tab:hover{color:var(--gold);border-color:var(--gold)}
+.tab.on{background:var(--red);color:#fff;border-color:var(--red)}
+
+/* APP */
+#app{display:flex;height:calc(100vh - var(--h));margin-top:var(--h)}
+
+/* SIDEBAR */
+#sb{width:var(--sb);background:var(--cream);display:flex;flex-direction:column;overflow:hidden;border-left:1px solid var(--border);flex-shrink:0}
+.sb-s{padding:10px;border-bottom:1px solid var(--border)}
+.sb-s input{width:100%;padding:7px 11px;border:1.5px solid var(--border);border-radius:8px;background:#fff;font-family:'Heebo',sans-serif;font-size:12px;outline:none;transition:.2s}
+.sb-s input:focus{border-color:var(--red)}
+.flt{padding:8px 10px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:5px}
+.fl{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.4px}
+.fr{display:flex;flex-wrap:wrap;gap:4px}
+.chip{padding:3px 9px;border-radius:14px;border:1.5px solid var(--border);background:#fff;font-family:'Heebo',sans-serif;font-size:11px;color:var(--muted);cursor:pointer;transition:.15s}
+.chip:hover{border-color:var(--red);color:var(--red)}
+.chip.on{background:var(--red);border-color:var(--red);color:#fff}
+.favrow{display:flex;align-items:center;gap:6px;padding:7px 10px;border-bottom:1px solid var(--border);font-size:12px;cursor:pointer}
+.favrow input{accent-color:var(--red);cursor:pointer}
+#plist{flex:1;overflow-y:auto;padding:6px 8px}
+#plist::-webkit-scrollbar{width:3px}
+#plist::-webkit-scrollbar-thumb{background:var(--border)}
+.pc{padding:9px 11px;border:1px solid var(--border);border-radius:8px;margin-bottom:5px;background:#fff;cursor:pointer;transition:.18s}
+.pc:hover{border-color:var(--red);transform:translateX(-2px);box-shadow:0 2px 10px rgba(192,57,43,.1)}
+.pc-top{display:flex;align-items:center;gap:7px;margin-bottom:3px}
+.pc-ico{font-size:15px;flex-shrink:0}
+.pc-name{font-size:12px;font-weight:600;flex:1;line-height:1.3}
+.pc-fav{background:none;border:none;font-size:13px;cursor:pointer;opacity:.3;transition:.15s;padding:0}
+.pc-fav.on{opacity:1}
+.pc-meta{display:flex;gap:5px;align-items:center}
+.bdg{display:inline-block;padding:1px 6px;border-radius:9px;font-size:10px;font-weight:600}
+.bdg.attraction{background:#dbeafe;color:#1d4ed8}
+.bdg.hotel{background:#dcfce7;color:#166534}
+.bdg.restaurant{background:#fef3c7;color:#92400e}
+.pc-city{font-size:10px;color:var(--muted)}
+
+/* PANELS */
+.panel{display:none;flex:1;overflow:hidden;flex-direction:column}
+.panel.on{display:flex}
+
+/* MAP */
+#map-panel{position:relative}
+#map-container{width:100%;height:100%;position:relative;overflow:hidden;background:#b8d8ea;cursor:grab}
+#map-container:active{cursor:grabbing}
+#tile-layer{position:absolute;top:0;left:0;width:100%;height:100%}
+#marker-layer{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
+#svg-overlay{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
+
+/* Zoom controls */
+.zc{position:absolute;bottom:20px;left:16px;display:flex;flex-direction:column;gap:2px;z-index:50}
+.zb{width:32px;height:32px;background:#fff;border:1px solid var(--border);border-radius:7px;font-size:18px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text);box-shadow:0 1px 5px rgba(0,0,0,.15);transition:.15s;line-height:1}
+.zb:hover{background:var(--cream);border-color:var(--red)}
+.attr{position:absolute;bottom:6px;right:8px;font-size:10px;color:#555;background:rgba(255,255,255,.7);padding:2px 5px;border-radius:3px;z-index:50}
+
+/* MARKER */
+.marker{position:absolute;transform:translate(-50%,-100%);cursor:pointer;pointer-events:all;transition:transform .15s;z-index:30;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+.marker:hover{transform:translate(-50%,-100%) scale(1.2);z-index:40}
+.marker svg{display:block}
+
+/* POPUP */
+#popup{position:absolute;z-index:100;background:#fff;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,.2);min-width:230px;max-width:260px;padding:13px 15px;display:none;direction:rtl;font-family:'Heebo',sans-serif;pointer-events:all}
+#popup::after{content:'';position:absolute;bottom:-9px;left:50%;transform:translateX(-50%);border:9px solid transparent;border-top-color:#fff;border-bottom:none}
+.pu-row1{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.pu-fav{background:none;border:none;font-size:18px;cursor:pointer;opacity:.3;transition:.15s;padding:0;line-height:1}
+.pu-fav.on{opacity:1}
+.pu-close{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;padding:0;line-height:1}
+.pu-name{font-size:13px;font-weight:700;margin-bottom:5px}
+.pu-note{font-size:11px;color:#666;line-height:1.5;margin-bottom:6px}
+.pu-meta{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px;font-size:10px}
+.pu-meta span{background:#f3f4f6;padding:2px 7px;border-radius:6px}
+.pu-link{font-size:11px;color:var(--red);font-weight:600;text-decoration:none}
+.pu-link:hover{text-decoration:underline}
+
+/* ITINERARY */
+#itin-panel{flex-direction:row}
+#day-nav{width:175px;flex-shrink:0;background:var(--cream2);border-left:1px solid var(--border);overflow-y:auto;padding:6px 5px}
+#day-nav::-webkit-scrollbar{width:3px}
+#day-nav::-webkit-scrollbar-thumb{background:var(--border)}
+.dni{padding:7px 9px;border-radius:7px;cursor:pointer;margin-bottom:3px;border:1px solid transparent;transition:.15s}
+.dni:hover{background:#fff;border-color:var(--border)}
+.dni.on{background:var(--dark);color:#fff}
+.dni .dd{font-size:11px;font-weight:700;display:block}
+.dni .dc{font-size:10px;opacity:.65;display:block;margin-top:1px}
+.dni .dt{font-size:9px;opacity:.8;display:block;margin-top:2px;line-height:1.3}
+#day-det{flex:1;overflow-y:auto;padding:18px 20px;background:var(--cream)}
+.dd-empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--muted)}
+.dd-empty span{font-size:44px;opacity:.25}
+.d-title{font-size:19px;font-weight:900;color:var(--dark)}
+.d-theme{font-size:13px;color:var(--red);font-weight:600;margin-top:3px}
+.d-notes{font-size:12px;color:var(--muted);margin-top:7px;line-height:1.55}
+.d-div{border:none;border-top:2px solid var(--border);margin:12px 0}
+.stats-row{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.sbox{background:#fff;border:1px solid var(--border);border-radius:8px;padding:7px 13px;font-size:11px}
+.sbox strong{display:block;font-size:17px;color:var(--dark);line-height:1.1}
+.dp-list{display:flex;flex-direction:column;gap:6px}
+.dpi{display:flex;align-items:flex-start;gap:9px;padding:9px 11px;background:#fff;border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:.15s}
+.dpi:hover{border-color:var(--red)}
+.dpi-n{width:22px;height:22px;border-radius:50%;background:var(--dark);color:#fff;font-size:10px;font-weight:700;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.dpi-name{font-size:12px;font-weight:600}
+.dpi-note{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.4}
+
+/* WEATHER */
+#wx-panel{overflow-y:auto;padding:18px 20px;background:var(--cream)}
+.wx-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.wx-hdr h2{font-size:17px;font-weight:700}
+.wx-cities{display:flex;gap:7px}
+.wxcb{padding:5px 14px;border-radius:18px;border:1.5px solid var(--border);background:#fff;font-family:'Heebo',sans-serif;font-size:12px;cursor:pointer;transition:.15s}
+.wxcb:hover{border-color:var(--red)}
+.wxcb.on{background:var(--red);color:#fff;border-color:var(--red)}
+.wx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:10px;margin-bottom:16px}
+.wxc{background:#fff;border:1px solid var(--border);border-radius:11px;padding:14px 12px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.06);animation:fu .35s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.wxdate{font-size:11px;font-weight:700;color:var(--muted);margin-bottom:7px}
+.wxicon{font-size:34px;margin-bottom:6px}
+.wxdesc{font-size:11px;color:var(--muted);margin-bottom:6px}
+.wxtemp{font-size:15px;font-weight:700;color:var(--dark)}
+.wxtemp span{font-weight:300;color:var(--muted)}
+.wxhum{font-size:10px;color:var(--muted);margin-top:4px}
+.wx-note{background:#fef3c7;border:1px solid #fde68a;border-radius:8px;padding:9px 13px;font-size:12px;color:#92400e;line-height:1.55}
+
+/* ── BUDGET ─────────────────────────────── */
+#budget-panel{overflow-y:auto;background:var(--cream)}
+#budget-content{padding:20px;max-width:960px;margin:0 auto}
+.bgt-hdr{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.bgt-hdr h2{font-size:18px;font-weight:800;color:var(--dark)}
+.bgt-currency{display:flex;gap:6px}
+.bgt-cur-btn{padding:5px 14px;border-radius:18px;border:1.5px solid var(--border);background:#fff;font-family:"Heebo",sans-serif;font-size:12px;cursor:pointer;transition:.15s}
+.bgt-cur-btn:hover{border-color:var(--red)}
+.bgt-cur-btn.on{background:var(--red);color:#fff;border-color:var(--red)}
+.bgt-summary{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:24px}
+.bgt-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.bgt-card.total{background:var(--dark);color:#fff;border-color:var(--dark)}
+.bgt-card.total .bc-label{color:rgba(255,255,255,.6)}
+.bc-label{font-size:11px;color:var(--muted);font-weight:600;margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px}
+.bc-amount{font-size:22px;font-weight:900;color:var(--dark);line-height:1}
+.bgt-card.total .bc-amount{color:var(--gold)}
+.bc-sub{font-size:11px;color:var(--muted);margin-top:4px}
+.bgt-card.total .bc-sub{color:rgba(255,255,255,.5)}
+.bgt-section{margin-bottom:24px}
+.bgt-section-title{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:10px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+.cat-item{background:#fff;border:1px solid var(--border);border-radius:9px;padding:11px 13px;display:flex;align-items:center;gap:10px}
+.cat-ico{font-size:20px;flex-shrink:0}
+.cat-info{flex:1}
+.cat-name{font-size:12px;font-weight:600}
+.cat-desc{font-size:10px;color:var(--muted);margin-top:1px}
+.cat-price{font-size:13px;font-weight:700;color:var(--dark)}
+.cat-price-sub{font-size:10px;color:var(--muted)}
+.bgt-bar-wrap{background:#f0ead0;border-radius:8px;height:10px;margin-bottom:16px;overflow:hidden;display:flex}
+.bgt-bar-seg{height:100%;transition:.5s}
+.day-table{width:100%;border-collapse:collapse;font-size:12px}
+.day-table th{background:var(--dark);color:#fff;padding:8px 10px;text-align:right;font-weight:600;font-size:11px}
+.day-table th:last-child,.day-table td:last-child{text-align:left}
+.day-table tr:nth-child(even){background:#f9f5ea}
+.day-table tr:hover{background:#fef3c7}
+.day-table td{padding:7px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
+.day-table td.total-col{font-weight:700}
+.day-table tfoot td{background:var(--dark);color:var(--gold);font-weight:700;padding:9px 10px}
+.day-city-tag{display:inline-block;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:600}
+.day-city-tag.Tokyo{background:#dbeafe;color:#1d4ed8}
+.day-city-tag.Kyoto{background:#fef3c7;color:#92400e}
+.day-city-tag.Osaka{background:#dcfce7;color:#166534}
+.day-city-tag.Hakone,.day-city-tag.Nara{background:#f3e8ff;color:#6b21a8}
+.bgt-tips{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.bgt-tips h3{font-size:13px;font-weight:700;margin-bottom:8px}
+.tip-item{display:flex;gap:8px;margin-bottom:7px;font-size:12px;line-height:1.5}
+.tip-item:last-child{margin-bottom:0}
+.tip-ico{flex-shrink:0;font-size:15px}
+.tip-item strong{color:var(--red)}
+/* countdown */
+.countdown{display:flex;align-items:center;gap:8px;background:rgba(232,184,75,.12);border:1px solid rgba(232,184,75,.25);border-radius:20px;padding:5px 14px}
+.cd-num{font-size:20px;font-weight:900;color:var(--gold);line-height:1}
+.cd-label{font-size:10px;color:rgba(253,246,227,.6);line-height:1.3}
+.cd-label strong{display:block;color:rgba(253,246,227,.9);font-size:11px}
+.countdown.arrived{background:rgba(39,174,96,.15);border-color:rgba(39,174,96,.35)}
+.countdown.arrived .cd-num{color:#2ecc71}
+
+
+
+
+
+
+
+.train-card-wrap{margin-bottom:9px}
+.train-card{cursor:pointer;margin-bottom:0!important;position:relative;transition:.15s}
+.train-card:hover{border-color:var(--red)}
+.train-chev{position:absolute;left:10px;bottom:8px;font-size:12px;color:var(--muted);transition:transform .25s}
+.train-detail-panel{max-height:0;overflow:hidden;background:#fff;border:1px solid var(--border);border-top:none;border-radius:0 0 11px 11px;transition:max-height .3s ease,padding .3s ease;padding:0 15px}
+.train-detail-panel.open{max-height:600px;padding:14px 15px}
+.trd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.trd-box{background:var(--cream);border-radius:8px;padding:8px 10px;text-align:center}
+.trd-label{font-size:10px;color:var(--muted);font-weight:600;margin-bottom:3px}
+.trd-val{font-size:12px;font-weight:700;color:var(--dark);line-height:1.3}
+.trd-path-title{font-size:12px;font-weight:700;color:var(--dark);margin-bottom:8px}
+.trd-path{padding-right:4px;margin-bottom:12px}
+.trd-step{display:flex;align-items:center;gap:9px}
+.trd-dot{width:11px;height:11px;border-radius:50%;background:#fff;border:2.5px solid var(--red);flex-shrink:0}
+.trd-dot.last{background:var(--red)}
+.trd-step-txt{font-size:12px;color:var(--text);padding:3px 0}
+.trd-connector{width:2px;height:14px;background:var(--border);margin-right:4px}
+.trd-notes{background:#fef3c7;border:1px solid #fde68a;border-radius:8px;padding:9px 12px;font-size:11px;color:#92400e;line-height:1.55}
+
+
+
+
+
+/* ── PACKING LIST ───────────────────────── */
+#packing-panel{overflow-y:auto;background:var(--cream)}
+#packing-content{padding:18px;max-width:760px;margin:0 auto}
+.pk-h2{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.pk-sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.pk-progress-wrap{background:#fff;border:1px solid var(--border);border-radius:12px;padding:13px 15px;margin-bottom:16px}
+.pk-progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.pk-progress-label{font-size:13px;font-weight:700;color:var(--dark)}
+.pk-progress-count{font-size:12px;color:var(--red);font-weight:700}
+.pk-progress-bar{height:8px;background:#f0ead0;border-radius:5px;overflow:hidden}
+.pk-progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--red));transition:width .4s ease}
+.pk-cat{margin-bottom:18px}
+.pk-cat-title{font-size:14px;font-weight:800;color:var(--dark);margin-bottom:9px;display:flex;align-items:center;gap:7px}
+.pk-item{background:#fff;border:1px solid var(--border);border-radius:10px;padding:11px 13px;margin-bottom:7px;display:flex;align-items:center;gap:11px;transition:.15s}
+.pk-item.checked{background:#f0f9f0;border-color:#bbe5bb}
+.pk-check{width:24px;height:24px;border-radius:7px;border:2px solid var(--border);flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;transition:.15s;background:#fff}
+.pk-check.on{background:#27ae60;border-color:#27ae60}
+.pk-item-name{flex:1;font-size:13px;color:var(--text)}
+.pk-item.checked .pk-item-name{text-decoration:line-through;color:var(--muted)}
+.pk-del{background:none;border:none;color:#c0392b;font-size:14px;cursor:pointer;opacity:.4;padding:2px 4px;flex-shrink:0}
+.pk-del:hover{opacity:1}
+.pk-add-row{display:flex;gap:7px;margin-top:8px}
+.pk-add-input{flex:1;border:1.5px solid var(--border);border-radius:8px;padding:9px 11px;font-family:'Heebo',sans-serif;font-size:13px;outline:none}
+.pk-add-input:focus{border-color:var(--red)}
+.pk-add-btn{background:var(--red);color:#fff;border:none;border-radius:8px;padding:0 16px;font-family:'Heebo',sans-serif;font-size:18px;font-weight:700;cursor:pointer}
+.pk-reset{width:100%;margin-top:6px;padding:9px;border-radius:8px;border:1.5px solid var(--border);background:#fff;font-family:'Heebo',sans-serif;font-size:12px;color:var(--muted);cursor:pointer}
+.pk-reset:hover{border-color:#c0392b;color:#c0392b}
+
+/* ── PHRASEBOOK ─────────────────────────── */
+#phrases-panel{overflow-y:auto;background:var(--cream)}
+#phrases-content{padding:18px;max-width:760px;margin:0 auto}
+.ph-h2{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.ph-sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.ph-cats{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.ph-cat{padding:6px 14px;border-radius:18px;border:1.5px solid var(--border);background:#fff;font-family:'Heebo',sans-serif;font-size:12px;cursor:pointer;transition:.15s;white-space:nowrap}
+.ph-cat:hover{border-color:var(--red)}
+.ph-cat.on{background:var(--red);color:#fff;border-color:var(--red)}
+.ph-item{background:#fff;border:1px solid var(--border);border-radius:12px;padding:13px 15px;margin-bottom:9px;display:flex;align-items:center;gap:12px}
+.ph-info{flex:1;min-width:0}
+.ph-heb{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:3px}
+.ph-jp{font-size:15px;color:var(--red);font-weight:600;direction:ltr;text-align:right}
+.ph-hp{font-size:12px;color:#1d4ed8;margin-top:3px;font-weight:600}
+.ph-roma{font-size:11px;color:var(--muted);direction:ltr;text-align:right;margin-top:2px;font-style:italic}
+.ph-play{flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--dark);color:#fff;border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;-webkit-tap-highlight-color:transparent}
+.ph-play:hover{background:var(--red)}
+.ph-play.playing{background:var(--red);animation:phpulse 1s ease infinite}
+@keyframes phpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.ph-novoice{background:#fef3c7;border:1px solid #fde68a;border-radius:8px;padding:10px 13px;font-size:12px;color:#92400e;line-height:1.55;margin-bottom:14px}
+
+/* ── JOURNAL ────────────────────────────── */
+#journal-panel{overflow-y:auto;background:var(--cream)}
+#journal-content{padding:18px;max-width:760px;margin:0 auto}
+.jr-h2{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.jr-sub{font-size:12px;color:var(--muted);margin-bottom:16px}
+.jr-newbtns{display:flex;gap:8px;margin-bottom:16px}
+.jr-newbtn{flex:1;padding:12px;border-radius:12px;border:1.5px solid var(--border);background:#fff;font-family:'Heebo',sans-serif;font-size:13px;font-weight:600;color:var(--dark);cursor:pointer;transition:.15s;display:flex;align-items:center;justify-content:center;gap:7px}
+.jr-newbtn:hover{border-color:var(--red);color:var(--red)}
+.jr-newbtn .ico{font-size:18px}
+/* editor */
+.jr-editor{background:#fff;border:1.5px solid var(--gold);border-radius:14px;padding:14px;margin-bottom:16px;display:none}
+.jr-editor.on{display:block}
+.jr-editor input.jr-title{width:100%;border:none;border-bottom:1.5px solid var(--border);padding:6px 2px;font-family:'Heebo',sans-serif;font-size:15px;font-weight:700;outline:none;margin-bottom:10px;background:none}
+.jr-editor textarea.jr-text{width:100%;min-height:90px;border:1px solid var(--border);border-radius:8px;padding:10px;font-family:'Heebo',sans-serif;font-size:13px;outline:none;resize:vertical;line-height:1.6}
+.jr-editor textarea.jr-text:focus{border-color:var(--red)}
+/* canvas drawing */
+.jr-canvas-wrap{position:relative;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fffef9;touch-action:none}
+.jr-canvas-wrap.hidden{display:none}
+.jr-canvas-tools{display:flex;gap:6px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.jr-tool{width:30px;height:30px;border-radius:7px;border:1.5px solid var(--border);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;padding:0}
+.jr-tool.on{border-color:var(--red);background:#fff5f3}
+.jr-color{width:24px;height:24px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1.5px var(--border);cursor:pointer}
+.jr-color.on{box-shadow:0 0 0 2.5px var(--red)}
+.jr-pen-hint{font-size:10px;color:var(--muted);margin-bottom:6px}
+.jr-editor-actions{display:flex;gap:8px;margin-top:12px}
+.jr-save{flex:1;padding:10px;border-radius:9px;border:none;background:var(--red);color:#fff;font-family:'Heebo',sans-serif;font-size:13px;font-weight:700;cursor:pointer}
+.jr-cancel{padding:10px 16px;border-radius:9px;border:1.5px solid var(--border);background:#fff;font-family:'Heebo',sans-serif;font-size:13px;cursor:pointer;color:var(--muted)}
+/* entries */
+.jr-entry{background:#fff;border:1px solid var(--border);border-radius:13px;padding:14px 16px;margin-bottom:11px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.jr-entry-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px}
+.jr-entry-title{font-size:14px;font-weight:700;color:var(--dark)}
+.jr-entry-date{font-size:11px;color:var(--muted)}
+.jr-entry-del{background:none;border:none;color:#c0392b;font-size:14px;cursor:pointer;opacity:.5;padding:0}
+.jr-entry-del:hover{opacity:1}
+.jr-entry-text{font-size:13px;color:var(--text);line-height:1.65;white-space:pre-wrap;word-break:break-word}
+.jr-entry-img{max-width:100%;border-radius:8px;border:1px solid var(--border);margin-top:8px}
+.jr-empty{text-align:center;padding:40px 20px;color:var(--muted)}
+.jr-empty .big{font-size:48px;opacity:.25;display:block;margin-bottom:10px}
+.jr-tag{display:inline-block;font-size:10px;font-weight:600;padding:1px 8px;border-radius:8px;margin-left:6px}
+.jr-tag.text{background:#dbeafe;color:#1d4ed8}
+.jr-tag.draw{background:#fce7f3;color:#be185d}
+
+/* ── HOME DASHBOARD ─────────────────────── */
+#home-panel{overflow-y:auto;background:linear-gradient(180deg,#fdf6e3,#f5ead0)}
+#home-content{padding:18px;max-width:900px;margin:0 auto}
+.dash-hero{background:linear-gradient(135deg,#1a1a2e,#2c2c4e);border-radius:18px;padding:22px 20px;color:#fff;margin-bottom:16px;position:relative;overflow:hidden}
+.dash-hero::after{content:'⛩';position:absolute;left:-10px;bottom:-20px;font-size:90px;opacity:.07}
+.dash-hero-title{font-size:15px;color:rgba(232,184,75,.85);font-weight:600;margin-bottom:4px}
+.dash-hero-count{font-size:46px;font-weight:900;color:var(--gold);line-height:1}
+.dash-hero-sub{font-size:13px;color:rgba(255,255,255,.7);margin-top:6px}
+.dash-hero-dates{font-size:12px;color:rgba(255,255,255,.5);margin-top:10px}
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.dash-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:15px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.dash-card.full{grid-column:1/-1}
+.dash-card-h{font-size:13px;font-weight:800;color:var(--dark);margin-bottom:11px;display:flex;align-items:center;gap:6px}
+.dash-card-h .more{margin-right:auto;font-size:11px;color:var(--red);font-weight:600;cursor:pointer}
+/* flights mini */
+.dash-flight{display:flex;align-items:center;justify-content:space-between;padding:8px 0;font-size:12px}
+.dash-flight+.dash-flight{border-top:1px solid var(--border)}
+.dfl-dir{font-size:11px;color:var(--muted);width:54px}
+.dfl-route{font-weight:700;color:var(--dark);flex:1;text-align:center}
+.dfl-time{color:var(--muted);font-size:11px;text-align:left}
+/* route mini */
+.dash-route{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.drt-city{background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:4px 11px;font-size:12px;font-weight:600;color:var(--dark)}
+.drt-arrow{color:var(--muted);font-size:11px}
+.drt-dates{font-size:11px;color:var(--muted);margin-top:8px}
+/* budget mini */
+.dash-budget-big{font-size:26px;font-weight:900;color:var(--dark);line-height:1}
+.dash-budget-sub{font-size:12px;color:var(--muted);margin-top:3px}
+.dash-budget-pp{font-size:13px;color:var(--red);font-weight:700;margin-top:6px}
+/* weather mini */
+.dash-wx{display:flex;align-items:center;gap:12px}
+.dash-wx-ico{font-size:38px}
+.dash-wx-temp{font-size:22px;font-weight:800;color:var(--dark)}
+.dash-wx-desc{font-size:12px;color:var(--muted)}
+/* shortcuts */
+.dash-shortcuts{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.dash-sc{background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px 6px;text-align:center;cursor:pointer;transition:.15s}
+.dash-sc:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:0 4px 12px rgba(192,57,43,.12)}
+.dash-sc-ico{font-size:24px;display:block;margin-bottom:4px}
+.dash-sc-label{font-size:11px;font-weight:600;color:var(--text)}
+
+/* ── TRANSPORT ──────────────────────────── */
+#transport-panel{overflow-y:auto;background:var(--cream)}
+#transport-content{padding:20px;max-width:960px;margin:0 auto}
+.tr-h2{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:16px}
+.tr-section-title{font-size:14px;font-weight:700;color:var(--dark);margin:22px 0 10px;display:flex;align-items:center;gap:7px}
+.flight-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:0;margin-bottom:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.flight-top{background:linear-gradient(135deg,#1a1a2e,#2c2c4e);color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.flight-no{font-size:13px;font-weight:700;color:var(--gold)}
+.flight-airline{font-size:12px;opacity:.7}
+.flight-body{padding:16px}
+.flight-route{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.fr-end{text-align:center;flex:1}
+.fr-code{font-size:26px;font-weight:900;color:var(--dark);line-height:1}
+.fr-city{font-size:12px;color:var(--muted);margin-top:2px}
+.fr-time{font-size:16px;font-weight:700;color:var(--dark);margin-top:6px}
+.fr-date{font-size:11px;color:var(--muted);margin-top:1px}
+.fr-mid{flex:1.2;text-align:center;position:relative}
+.fr-dur{font-size:11px;color:var(--muted);margin-bottom:4px}
+.fr-line{height:2px;background:repeating-linear-gradient(90deg,var(--border) 0 6px,transparent 6px 10px);position:relative}
+.fr-plane{font-size:18px}
+.flight-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid var(--border)}
+.fm-item{background:var(--cream);border-radius:8px;padding:5px 11px;font-size:11px;color:var(--text)}
+.fm-item strong{color:var(--dark)}
+.train-card{background:#fff;border:1px solid var(--border);border-radius:11px;padding:13px 15px;margin-bottom:9px;display:flex;align-items:center;gap:12px}
+.train-ico{font-size:24px;flex-shrink:0}
+.train-info{flex:1}
+.train-route{font-size:13px;font-weight:700;color:var(--dark)}
+.train-detail{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.5}
+.train-time{text-align:left;flex-shrink:0}
+.train-dur{font-size:13px;font-weight:700;color:var(--red)}
+.train-cost{font-size:11px;color:var(--muted);margin-top:1px}
+.local-card{background:#fff;border:1px solid var(--border);border-radius:11px;padding:13px 15px;margin-bottom:9px}
+.local-top{display:flex;align-items:center;gap:9px;margin-bottom:5px}
+.local-ico{font-size:20px}
+.local-name{font-size:13px;font-weight:700;color:var(--dark)}
+.local-desc{font-size:12px;color:var(--muted);line-height:1.55}
+.tr-tip{background:#fef3c7;border:1px solid #fde68a;border-radius:8px;padding:10px 14px;font-size:12px;color:#92400e;line-height:1.55;margin-top:6px}
+
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="brand">
+    <span class="torii">⛩</span>
+    <div><h1>טיול יפן 2026</h1><p>19 אוגוסט – 3 ספטמבר</p></div>
+  </div>
+  <div class="countdown" id="countdown">
+    <span class="cd-num" id="cd-num">…</span>
+    <div class="cd-label"><strong id="cd-text">טוען...</strong><span id="cd-sub"></span></div>
+  </div>
+  <div class="tabs">
+    <button class="tab on"  data-tab="home">🏠 בית</button>
+    <button class="tab"     data-tab="map">🗺️ מפה</button>
+    <button class="tab"     data-tab="places">🔍 מקומות</button>
+    <button class="tab"     data-tab="itin">📅 מסלול</button>
+    <button class="tab"     data-tab="wx">🌤️ מזג אוויר</button>
+    <button class="tab"     data-tab="budget">💴 תקציב</button>
+    <button class="tab"     data-tab="transport">🚆 תחבורה</button>
+    <button class="tab"     data-tab="journal">📓 יומן</button>
+    <button class="tab"     data-tab="phrases">🗣️ מילון</button>
+    <button class="tab"     data-tab="packing">🎒 אריזה</button>
+  </div>
+</header>
+
+<div id="app">
+  <!-- SIDEBAR -->
+  <aside id="sb">
+    <div class="sb-s"><input id="srch" type="text" placeholder="🔍 חיפוש מקומות..."/></div>
+    <div class="flt">
+      <span class="fl">עיר</span>
+            <div class="fr" id="city-f">
+        <button class="chip on" data-v="all">הכל</button>
+        <button class="chip" data-v="Tokyo">טוקיו</button>
+        <button class="chip" data-v="Hakone">האקונה</button>
+        <button class="chip" data-v="Kyoto">קיוטו</button>
+        <button class="chip" data-v="Osaka">אוסקה</button>
+        <button class="chip" data-v="Nara">נארה</button>
+      </div>
+      <span class="fl" style="margin-top:2px">סוג</span>
+      <div class="fr" id="type-f">
+        <button class="chip on" data-v="all">הכל</button>
+        <button class="chip" data-v="attraction">🏯 אטרקציות</button>
+        <button class="chip" data-v="hotel">🏨 מלונות</button>
+        <button class="chip" data-v="restaurant">🍜 מסעדות</button>
+      </div>
+    </div>
+    <label class="favrow"><input type="checkbox" id="fav-cb"/> ❤️ מועדפים בלבד</label>
+    <div id="plist"></div>
+  </aside>
+
+  <!-- HOME / DASHBOARD PANEL -->
+  <div id="home-panel" class="panel on">
+    <div id="home-content"></div>
+  </div>
+
+  <!-- MAP PANEL -->
+  <div id="map-panel" class="panel">
+    <div id="map-container">
+      <div id="tile-layer"></div>
+      <svg id="svg-overlay" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div id="marker-layer"></div>
+      <div id="popup">
+        <div class="pu-row1">
+          <span id="pu-badge" class="bdg"></span>
+          <div style="display:flex;gap:8px;align-items:center">
+            <button class="pu-fav" id="pu-fav" onclick="puFav()">❤️</button>
+            <button class="pu-close" onclick="closePopup()">✕</button>
+          </div>
+        </div>
+        <div class="pu-name"  id="pu-name"></div>
+        <div class="pu-note"  id="pu-note"></div>
+        <div class="pu-meta"  id="pu-meta"></div>
+        <a   class="pu-link"  id="pu-link" href="#" target="_blank" rel="noopener">🌐 אתר רשמי</a>
+      </div>
+      <div class="zc">
+        <button class="zb" onclick="doZoom(1)">+</button>
+        <button class="zb" onclick="doZoom(-1)">−</button>
+        <button class="zb" style="font-size:13px" onclick="goHome()">⊙</button>
+      </div>
+      <div class="attr">© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a></div>
+    </div>
+  </div>
+
+  <!-- ITINERARY PANEL -->
+  <div id="itin-panel" class="panel">
+    <div id="day-nav"></div>
+    <div id="day-det"><div class="dd-empty"><span>📅</span><p>בחר יום מהרשימה</p></div></div>
+  </div>
+
+  <!-- WEATHER PANEL -->
+  <div id="wx-panel" class="panel">
+    <div class="wx-hdr">
+      <h2>🌤️ תחזית 5 ימים</h2>
+      <div class="wx-cities">
+        <button class="wxcb on" data-c="Tokyo">טוקיו</button>
+        <button class="wxcb" data-c="Kyoto">קיוטו</button>
+        <button class="wxcb" data-c="Osaka">אוסקה</button>
+      </div>
+    </div>
+    <div id="wx-out"></div>
+    <p class="wx-note">☀️ אוגוסט–ספטמבר: 31–36°C עם לחות גבוהה. קחו מניפה, קרם הגנה ומים!</p>
+    <p style="margin-top:8px;font-size:11px;color:var(--muted);text-align:center">* תחזית לדוגמה — להוסיף מפתח OpenWeatherMap לתחזית חיה</p>
+  </div>
+
+  <div id="budget-panel" class="panel">
+    <div id="budget-content"></div>
+  </div>
+
+  <div id="transport-panel" class="panel">
+    <div id="transport-content"></div>
+  </div>
+
+  <div id="journal-panel" class="panel">
+    <div id="journal-content"></div>
+  </div>
+
+  <div id="phrases-panel" class="panel">
+    <div id="phrases-content"></div>
+  </div>
+
+  <div id="packing-panel" class="panel">
+    <div id="packing-content"></div>
+  </div>
+
+</div>
+
+<script>
+// ════════════════════════════════════════════════════
+//  ZERO EXTERNAL DEPENDENCIES — Custom slippy map
+//  Uses OpenStreetMap tiles loaded as <img> elements
+// ════════════════════════════════════════════════════
+
+// ── DATA ─────────────────────────────────────────────
+const PLACES = [
+  {id:"shib",name:"צומת שיבויה",              city:"Tokyo",  type:"attraction",lat:35.6595,lng:139.7005,note:"הצומת ההולכי רגל העמוסה בעולם. קניות וסיבוב.",link:"https://www.shibuya.org/",price:"חינם"},
+  {id:"snso",name:"מקדש סנסו-ג'י, אסאקוסה",  city:"Tokyo",  type:"attraction",lat:35.7148,lng:139.7967,note:"המקדש הבודהיסטי הוותיק בטוקיו. אווירה מסורתית.",link:"https://www.senso-ji.jp/",price:"חינם"},
+  {id:"sjku",name:"שינג'וקו בלילה",           city:"Tokyo",  type:"attraction",lat:35.6896,lng:139.6922,note:"שכונת בידור וחיי לילה. פתיחת הטיול.",link:"https://www.shinjuku.or.jp/",price:"חינם"},
+  {id:"tlab",name:"teamLab Planets",          city:"Tokyo",  type:"attraction",lat:35.6494,lng:139.7850,note:"מוזיאון אמנות דיגיטלית עוטפת. חובה להזמין מראש!",link:"https://planets.teamlab.art/",price:"₪₪"},
+  {id:"odai",name:"אודאיבה",                  city:"Tokyo",  type:"attraction",lat:35.6264,lng:139.7766,note:"איי פנאי מלאכותי. גשר, קניונים, נוף.",link:"https://www.odaiba.com/",price:"חינם"},
+  {id:"ginz",name:"גינזה",                    city:"Tokyo",  type:"attraction",lat:35.6717,lng:139.7649,note:"רחוב הקניות היוקרתי של טוקיו.",link:"https://www.ginza.jp/",price:"חינם"},
+  {id:"dsea",name:"Tokyo DisneySea",          city:"Tokyo",  type:"attraction",lat:35.6267,lng:139.8850,note:"פארק דיסני ייחודי ביפן. יום מלא לפחות!",link:"https://www.tokyodisneyresort.jp/",price:"₪₪₪"},
+  {id:"hkrw",name:"רכבל האקונה",              city:"Hakone", type:"attraction",lat:35.2324,lng:139.0231,note:"רכבל עם נוף מדהים לאזור הגעשי ולפוג'י.",link:"https://www.hakonenavi.jp/",price:"₪₪"},
+  {id:"hkow",name:"אזור געשי אואקידאני",      city:"Hakone", type:"attraction",lat:35.2333,lng:139.0167,note:"ביצים שחורות מגעש פעיל ונוף מרהיב.",link:"https://www.hakonenavi.jp/",price:"₪"},
+  {id:"hkas",name:"שייט אגם אשי",             city:"Hakone", type:"attraction",lat:35.1989,lng:139.0197,note:"שייט עם נוף לפוג'י כשהשמיים בהירים.",link:"https://www.hakonenavi.jp/",price:"₪"},
+  {id:"hkon",name:"Yumoto Fujiya Hotel",city:"Hakone",type:"hotel",lat:35.2326,lng:139.1043,note:"\u05d4\u05d0\u05e7\u05d5\u05e0\u05d4 \u00b7 22-23.8 (1 \u05dc\u05d9\u05dc\u05d4) \u00b7 \u05d0\u05d5\u05e0\u05e1\u05df \u00b7 \u20aa790 \u00b7 \ud83d\udcdd \u05de\u05d8\u05d5\u05e4\u05dc \u05e2\"\u05d9 \u05d4\u05d1\u05ea",link:"https://www.yumotofujiya.jp/",price:"\u20aa790"},
+  {id:"fush",name:"פושימי אינארי",            city:"Kyoto",  type:"attraction",lat:34.9671,lng:135.7727,note:"אלפי שערי טורי כתומים. הגיעו עם שחר!",link:"https://inari.jp/",price:"חינם"},
+  {id:"arsh",name:"יער הבמבוק ארשייאמה",     city:"Kyoto",  type:"attraction",lat:35.0094,lng:135.6720,note:"שביל הבמבוק האיקוני + נהר.",link:"https://kyoto.travel/en/",price:"חינם"},
+  {id:"gion",name:"רובע גיון",               city:"Kyoto",  type:"attraction",lat:35.0038,lng:135.7785,note:"רובע הגישות המסורתי. קסום בין הערביים.",link:"https://kyoto.travel/en/",price:"חינם"},
+  {id:"kink",name:"קינקאקו-ג'י (פביליון זהב)",city:"Kyoto", type:"attraction",lat:35.0394,lng:135.7292,note:"מקדש זן מצופה זהב. אחד היפים ביפן.",link:"https://www.shokoku-ji.jp/kinkakuji/",price:"₪"},
+  {id:"nshk",name:"שוק נישיקי",             city:"Kyoto",  type:"attraction",lat:35.0050,lng:135.7643,note:"מטבחה של קיוטו — חמוצים, טופו, מאצ'ה.",link:"https://www.kyoto-nishiki.or.jp/",price:"₪"},
+  {id:"nara",name:"פארק נארה + טודאי-ג'י",  city:"Nara",   type:"attraction",lat:34.6851,lng:135.8048,note:"להאכיל אייות חופשיים! בודהה ענק. 45 דק' מקיוטו.",link:"https://www.visitnara.jp/",price:"₪"},
+  {id:"dtbr",name:"דוטונבורי",              city:"Osaka",  type:"attraction",lat:34.6687,lng:135.5013,note:"לב הבידור — ניאון, טקויאקי ואוכל רחוב.",link:"https://www.dotonbori.or.jp/",price:"חינם"},
+  {id:"ocst",name:"טירת אוסקה",            city:"Osaka",  type:"attraction",lat:34.6873,lng:135.5262,note:"טירה מרשימה מהמאה ה-16 עם פארק סביבה.",link:"https://www.osakacastle.net/",price:"₪"},
+  {id:"umed",name:"מגדל אומדה סקיי",        city:"Osaka",  type:"attraction",lat:34.7055,lng:135.4908,note:"מצפה גן הצף עם נוף 360°. מושלם בשקיעה.",link:"https://www.kuchu-teien.com/",price:"₪₪"},
+  {id:"htok",name:"APA Hotel Ryogoku Ekimae Tower",city:"Tokyo",type:"hotel",lat:35.6967,lng:139.7933,note:"\u05d8\u05d5\u05e7\u05d9\u05d5 (\u05ea\u05d7\u05d9\u05dc\u05d4) \u00b7 19-22.8 \u00b7 \u20aa1,069 \u00b7 \u05de\u05d0\u05d5\u05e9\u05e8 \u2705",link:"https://www.apahotel.com/",price:"\u20aa1,069"},
+  {id:"hkyt",name:"Richmond Hotel Premier Kyoto Shijo",city:"Kyoto",type:"hotel",lat:35.0036,lng:135.7660,note:"\u05e7\u05d9\u05d5\u05d8\u05d5 \u00b7 23-28.8 (5 \u05dc\u05d9\u05dc\u05d5\u05ea) \u00b7 \u20aa2,162 \u00b7 \u05de\u05d0\u05d5\u05e9\u05e8 \u2705",link:"https://richmondhotel.jp/",price:"\u20aa2,162"},
+  {id:"htk2",name:"Villa Fontaine Grand Tokyo Ariake",city:"Tokyo",type:"hotel",lat:35.6314,lng:139.7920,note:"\u05d8\u05d5\u05e7\u05d9\u05d5 (\u05e1\u05d5\u05e3) \u00b7 30.8-3.9 \u00b7 \u20aa1,733 \u00b7 \u05de\u05d0\u05d5\u05e9\u05e8 \u2705 \u00b7 \u05d0\u05d5\u05d3\u05d0\u05d9\u05d1\u05d4",link:"https://www.hvf.jp/",price:"\u20aa1,733"},
+  {id:"hosk",name:"Hotel 88 Shinsaibashi",city:"Osaka",type:"hotel",lat:34.6720,lng:135.5010,note:"\u05d0\u05d5\u05e1\u05e7\u05d4 \u00b7 28-30.8 (2 \u05dc\u05d9\u05dc\u05d5\u05ea) \u00b7 \u20aa1,125 \u00b7 \u05de\u05d0\u05d5\u05e9\u05e8 \u2705",link:"https://www.booking.com/",price:"\u20aa1,125"},
+  {id:"rich",name:"Ichiran רמן",            city:"Tokyo",  type:"restaurant",lat:35.6590,lng:139.6985,note:"רמן אישי מפורסם. חוויה יחודית.",link:"https://en.ichiran.com/",price:"₪"},
+  {id:"rtky",name:"אוקונומייאקי שינג'וקו",  city:"Tokyo",  type:"restaurant",lat:35.6910,lng:139.6950,note:"פנקייק יפני. צמחוני-ידידותי.",link:"https://fugetsu.co.jp/",price:"₪"},
+  {id:"rosk",name:"טקויאקי דוטונבורי",      city:"Osaka",  type:"restaurant",lat:34.6680,lng:135.5025,note:"כדורי תמנון אגדיים. מאכל הרחוב של אוסקה.",link:"https://takoyaki-wanaka.com/",price:"₪"},
+  {id:"rkyt",name:"קפה בוקר קיוטו",        city:"Kyoto",  type:"restaurant",lat:35.0050,lng:135.7640,note:"קפה בוקר ליד שוק נישיקי.",link:"https://mumokuteki.com/",price:"₪"},
+];
+
+const ITINERARY = [
+  {date:"2026-08-19",city:"Tokyo",  theme:"הגעה + שינג'וקו בערב",           ids:["htok","sjku","rich"],        notes:"נחיתה. צ'ק-אין. סיבוב ערב קל בשינג'וקו. אל תגזימו — ג'ט-לאג."},
+  {date:"2026-08-20",city:"Tokyo",  theme:"🎢 Tokyo DisneySea — יום מלא",    ids:["dsea"],                      notes:"יום מלא ב-DisneySea. להזמין כרטיסים מראש! חזרה למלון עייפים ומאושרים."},
+  {date:"2026-08-21",city:"Tokyo",  theme:"שיבויה + אסאקוסה",               ids:["shib","snso","rtky"],         notes:"בוקר בשיבויה — מעבר החציה + שופינג. אחה׳צ אסאקוסה ומקדש סנסו-ג'י."},
+  {date:"2026-08-22",city:"Hakone", theme:"🌋 האקונה — רכבל + אגם אשי",      ids:["hkrw","hkow","hkas","hkon"], notes:"יציאה מוקדמת מטוקיו. רכבל + אזור געשי + שייט באגם אשי. לינה עם אונסן!"},
+  {date:"2026-08-23",city:"Kyoto",  theme:"נוף לפוג'י + הגעה לקיוטו",       ids:["hkyt"],                      notes:"בוקר: נוף לפוג'י מהאקונה (אם בהיר). שינקנסן לקיוטו. צ'ק-אין + סיבוב ערב."},
+  {date:"2026-08-24",city:"Kyoto",  theme:"פושימי אינארי + מקדשים",         ids:["fush","kink","rkyt"],         notes:"פושימי אינארי בשחר (לפני ההמונים!). אחה׳צ קינקאקו-ג'י + שוק נישיקי."},
+  {date:"2026-08-25",city:"Kyoto",  theme:"🎋 ארשייאמה — יער הבמבוק",       ids:["arsh","rkyt"],                notes:"יום שלם בארשייאמה. יער הבמבוק, נהר, קופים, בית קפה בטבע."},
+  {date:"2026-08-26",city:"Kyoto",  theme:"🦌 נארה — טיול יום (לינה בקיוטו)",ids:["nara"],                     notes:"45 דק' מקיוטו. להאכיל אייות! מקדש טודאי-ג'י. חזרה לקיוטו."},
+  {date:"2026-08-27",city:"Kyoto",  theme:"גיון + יום בחירה חופשי",          ids:["gion","nshk"],               notes:"בוקר רגוע. גיון בין הערביים — הכי קסום. קפה, שופינג קטן, מנוחה."},
+  {date:"2026-08-28",city:"Osaka",  theme:"🍜 הגעה לאוסקה + דוטונבורי",     ids:["hosk","dtbr","rosk"],         notes:"רכבת לאוסקה (14 דק'). צ'ק-אין. דוטונבורי בערב — טקויאקי ושלטי ניאון!"},
+  {date:"2026-08-29",city:"Osaka",  theme:"תצפית + סיבוב + שופינג",          ids:["ocst","umed","rosk"],         notes:"טירת אוסקה בבוקר. שקיעה ממגדל אומדה. ערב אחרון באוסקה."},
+  {date:"2026-08-30",city:"Tokyo",  theme:"חזרה לטוקיו + מנוחה",            ids:["htk2","rich"],                notes:"שינקנסן לטוקיו. צ'ק-אין. יום רגוע — מנוחה לפני ימי השופינג."},
+  {date:"2026-08-31",city:"Tokyo",  theme:"שופינג — שיבויה / שינג'וקו / גינזה",ids:["shib","sjku","ginz"],     notes:"יום שופינג מלא. שיבויה לפשן, שינג'וקו לאלקטרוניקה, גינזה ליוקרה."},
+  {date:"2026-09-01",city:"Tokyo",  theme:"teamLab + אודאיבה",              ids:["tlab","odai"],                notes:"teamLab Planets — להזמין מראש! אחה׳צ אודאיבה + נוף לגשר הקשת."},
+  {date:"2026-09-02",city:"Tokyo",  theme:"יום חופשי אחרון",                ids:[],                            notes:"שופינג אחרון / מנוחה. ארוחת ערב אחרונה. אריזת מזוודות."},
+  {date:"2026-09-03",city:"Tokyo",  theme:"טיסה חזרה ✈️",                   ids:[],                            notes:"צ'ק-אאוט. נסיעה לשדה התעופה. またね — להתראות יפן!"},
+];
+
+const WX = {
+  Tokyo:[
+    {d:"שני 18/8",  i:"🌦️",desc:"חם עם גשם קל",   max:34,min:27,h:82,r:55},
+    {d:"שלישי 19/8",i:"⛈️",desc:"סופות רעמים",     max:33,min:27,h:85,r:70},
+    {d:"רביעי 20/8",i:"🌤️",desc:"מעונן חלקית",     max:35,min:28,h:78,r:25},
+    {d:"חמישי 21/8",i:"☀️",desc:"שמשי וחם מאוד",   max:36,min:28,h:75,r:10},
+    {d:"שישי 22/8", i:"🌦️",desc:"גשם אפשרי",       max:33,min:27,h:80,r:40},
+  ],
+  Kyoto:[
+    {d:"שני 24/8",  i:"☀️",desc:"שמשי וחם",         max:37,min:28,h:72,r:10},
+    {d:"שלישי 25/8",i:"🌤️",desc:"מעונן חלקית",     max:36,min:28,h:76,r:20},
+    {d:"רביעי 26/8",i:"⛅", desc:"עננות מפוזרת",     max:35,min:27,h:78,r:25},
+    {d:"חמישי 27/8",i:"🌦️",desc:"גשמים אפשריים",   max:33,min:27,h:82,r:50},
+    {d:"שישי 28/8", i:"🌥️",desc:"מעונן",            max:32,min:26,h:83,r:35},
+  ],
+  Osaka:[
+    {d:"שישי 28/8", i:"🌤️",desc:"שמשי בעיקר",      max:35,min:28,h:74,r:15},
+    {d:"שבת 29/8",  i:"☀️",desc:"חם ובהיר",          max:36,min:28,h:72,r:10},
+    {d:"ראשון 30/8",i:"⛅", desc:"עננות חלקית",      max:34,min:27,h:77,r:20},
+    {d:"שני 31/8",  i:"🌦️",desc:"גשם לסירוגין",     max:32,min:27,h:84,r:60},
+    {d:"שלישי 1/9", i:"🌤️",desc:"התבהרות",          max:33,min:27,h:78,r:25},
+  ],
+};
+
+// ════════════════════════════════════════════════════
+//  SLIPPY MAP ENGINE — pure JS, no Leaflet
+// ════════════════════════════════════════════════════
+
+// Tile/projection helpers
+const TILE_SIZE = 256;
+
+function lon2tile(lon, zoom) { return Math.floor((lon + 180) / 360 * Math.pow(2, zoom)); }
+function lat2tile(lat, zoom) {
+  return Math.floor((1 - Math.log(Math.tan(lat * Math.PI / 180) + 1 / Math.cos(lat * Math.PI / 180)) / Math.PI) / 2 * Math.pow(2, zoom));
+}
+function tile2lon(x, zoom) { return x / Math.pow(2, zoom) * 360 - 180; }
+function tile2lat(y, zoom) {
+  const n = Math.PI - 2 * Math.PI * y / Math.pow(2, zoom);
+  return 180 / Math.PI * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n)));
+}
+// lat/lng → pixel offset from top-left of the tile grid origin
+function latLngToPixel(lat, lng, zoom) {
+  const x = (lng + 180) / 360 * Math.pow(2, zoom) * TILE_SIZE;
+  const sinLat = Math.sin(lat * Math.PI / 180);
+  const y = (0.5 - Math.log((1 + sinLat) / (1 - sinLat)) / (4 * Math.PI)) * Math.pow(2, zoom) * TILE_SIZE;
+  return { x, y };
+}
+
+// Map state
+let MAP = {
+  zoom: 6,
+  // Center in pixel coords at current zoom
+  cx: 0, cy: 0,
+  // Container size
+  w: 0, h: 0,
+  dragging: false,
+  dragStartX: 0, dragStartY: 0,
+  dragStartCX: 0, dragStartCY: 0,
+  tileCache: {},
+  activePopupId: null,
+};
+
+const HOME = { lat: 36.2, lng: 138.0, zoom: 6 };
+const CITY_VIEWS = {
+  Tokyo:  { lat:35.68, lng:139.75, zoom:12 },
+  Hakone: { lat:35.22, lng:139.02, zoom:12 },
+  Kyoto:  { lat:35.01, lng:135.77, zoom:13 },
+  Osaka:  { lat:34.69, lng:135.50, zoom:13 },
+  Nara:   { lat:34.68, lng:135.83, zoom:13 },
+};
+
+function initMapState(lat, lng, zoom) {
+  const p = latLngToPixel(lat, lng, zoom);
+  MAP.zoom = zoom;
+  MAP.cx = p.x;
+  MAP.cy = p.y;
+}
+
+function render() {
+  const container = document.getElementById('map-container');
+  MAP.w = container.clientWidth;
+  MAP.h = container.clientHeight;
+  renderTiles();
+  renderMarkers();
+  renderPolyline();
+}
+
+// tile servers — rotate for parallel loading
+const TILE_SERVERS = [
+  'https://maps.wikimedia.org/osm-intl',
+];
+// גיבוי — Carto Voyager (תוויות מקומיות)
+const TILE_FALLBACK = 'https://a.basemaps.cartocdn.com/rastertiles/voyager';
+let tileServerIdx = 0;
+
+function tileUrl(z, x, y) {
+  const s = TILE_SERVERS[tileServerIdx % TILE_SERVERS.length];
+  tileServerIdx++;
+  return `${s}/${z}/${x}/${y}.png`;
+}
+
+function renderTiles() {
+  const layer = document.getElementById('tile-layer');
+  const z = Math.round(MAP.zoom);
+  const scale = Math.pow(2, z);
+  const worldSize = scale * TILE_SIZE;
+  // פינת ה-viewport בקואורדינטות פיקסל עולמיות
+  const originX = MAP.cx - MAP.w / 2;
+  const originY = MAP.cy - MAP.h / 2;
+  // טווח האריחים שצריך להציג
+  const minTileX = Math.floor(originX / TILE_SIZE);
+  const minTileY = Math.floor(originY / TILE_SIZE);
+  const maxTileX = Math.floor((originX + MAP.w) / TILE_SIZE);
+  const maxTileY = Math.floor((originY + MAP.h) / TILE_SIZE);
+
+  let html = '';
+  for (let tx = minTileX; tx <= maxTileX; tx++) {
+    for (let ty = minTileY; ty <= maxTileY; ty++) {
+      // עיטוף אופקי (wrap) + בדיקת גבולות אנכיים
+      let wx = ((tx % scale) + scale) % scale;
+      if (ty < 0 || ty >= scale) continue;
+      const screenX = tx * TILE_SIZE - originX;
+      const screenY = ty * TILE_SIZE - originY;
+      const s = TILE_SERVERS[(tx + ty) % TILE_SERVERS.length];
+      const url = s + '/' + z + '/' + wx + '/' + ty + '.png';
+      const fb = TILE_FALLBACK + '/' + z + '/' + wx + '/' + ty + '.png';
+      html += '<img src="' + url + '" width="' + TILE_SIZE + '" height="' + TILE_SIZE +
+        '" style="position:absolute;left:' + screenX + 'px;top:' + screenY +
+        'px;width:' + TILE_SIZE + 'px;height:' + TILE_SIZE + 'px;pointer-events:none" ' +
+        'loading="eager" draggable="false" ' +
+        'onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src=\'' + fb + '\'}else{this.style.display=\'none\'}"/>';
+    }
+  }
+  layer.innerHTML = html;
+}
+
+// ── MARKERS ──────────────────────────────────────────
+let dayPolylineCoords = null;
+let filteredIds = new Set(PLACES.map(p => p.id));
+
+function markerSVG(type, isFav) {
+  const colors = {attraction:'#1d4ed8', hotel:'#166534', restaurant:'#92400e'};
+  const emojis = {attraction:'🏯', hotel:'🏨', restaurant:'🍜'};
+  const col = colors[type] || '#555';
+  const fav = isFav ? '<text x="12" y="-11" font-size="9" style="pointer-events:none">❤️</text>' : '';
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="-14 -18 28 36" style="overflow:visible">
+    <path d="M0-18C-7.2-18-12-12.5-12-6C-12 4 0 18 0 18C0 18 12 4 12-6C12-12.5 7.2-18 0-18Z"
+      fill="${col}" opacity="0.92" stroke="white" stroke-width="1.5"/>
+    <circle cy="-6" r="5.5" fill="white" opacity="0.95"/>
+    <text x="0" y="-2.5" font-size="7.5" text-anchor="middle" dominant-baseline="middle" style="pointer-events:none">${emojis[type]||'•'}</text>
+    ${fav}
+  </svg>`;
+}
+
+function renderMarkers() {
+  const layer = document.getElementById('marker-layer');
+  const tileOriginX = MAP.cx - MAP.w / 2;
+  const tileOriginY = MAP.cy - MAP.h / 2;
+
+  layer.innerHTML = PLACES.map(p => {
+    const px = latLngToPixel(p.lat, p.lng, MAP.zoom);
+    const sx = px.x - tileOriginX;
+    const sy = px.y - tileOriginY;
+    const dimmed = !filteredIds.has(p.id);
+    const isActive = MAP.activePopupId === p.id;
+    return `<div class="marker" data-id="${p.id}"
+      style="left:${sx}px;top:${sy}px;opacity:${dimmed?0.2:1};transform:translate(-50%,-100%)${isActive?' scale(1.25)':''}"
+      onclick="clickMarker('${p.id}')">${markerSVG(p.type, favorites.has(p.id))}</div>`;
+  }).join('');
+}
+
+// ── POLYLINE ─────────────────────────────────────────
+function renderPolyline() {
+  const svg = document.getElementById('svg-overlay');
+  if (!dayPolylineCoords || dayPolylineCoords.length < 2) { svg.innerHTML=''; return; }
+  const tileOriginX = MAP.cx - MAP.w / 2;
+  const tileOriginY = MAP.cy - MAP.h / 2;
+
+  const pts = dayPolylineCoords.map(([lat,lng]) => {
+    const px = latLngToPixel(lat, lng, MAP.zoom);
+    return `${px.x - tileOriginX},${px.y - tileOriginY}`;
+  }).join(' ');
+
+  svg.innerHTML = `<polyline points="${pts}" fill="none" stroke="#c0392b" stroke-width="3" opacity="0.8" stroke-dasharray="8,5" stroke-linecap="round"/>`;
+}
+
+// ── PAN & ZOOM ────────────────────────────────────────
+function setupEvents() {
+  const mc = document.getElementById('map-container');
+
+  mc.addEventListener('mousedown', e => {
+    if (e.target.closest('.marker') || e.target.closest('#popup')) return;
+    MAP.dragging = true;
+    MAP.dragStartX = e.clientX; MAP.dragStartY = e.clientY;
+    MAP.dragStartCX = MAP.cx;   MAP.dragStartCY = MAP.cy;
+    closePopup();
+  });
+  window.addEventListener('mousemove', e => {
+    if (!MAP.dragging) return;
+    MAP.cx = MAP.dragStartCX - (e.clientX - MAP.dragStartX);
+    MAP.cy = MAP.dragStartCY - (e.clientY - MAP.dragStartY);
+    render();
+  });
+  window.addEventListener('mouseup', () => { MAP.dragging = false; });
+
+  mc.addEventListener('wheel', e => {
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? 1 : -1;
+    zoomAt(e.clientX - mc.getBoundingClientRect().left,
+            e.clientY - mc.getBoundingClientRect().top, delta);
+  }, {passive: false});
+
+  // Touch
+  let lastTouchDist = 0, lastTouchMid = null;
+  mc.addEventListener('touchstart', e => {
+    if (e.touches.length === 1) {
+      MAP.dragging = true;
+      MAP.dragStartX = e.touches[0].clientX; MAP.dragStartY = e.touches[0].clientY;
+      MAP.dragStartCX = MAP.cx; MAP.dragStartCY = MAP.cy;
+    }
+    if (e.touches.length === 2) {
+      MAP.dragging = false;
+      lastTouchDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+    }
+  }, {passive:true});
+  mc.addEventListener('touchmove', e => {
+    e.preventDefault();
+    if (e.touches.length === 1 && MAP.dragging) {
+      MAP.cx = MAP.dragStartCX - (e.touches[0].clientX - MAP.dragStartX);
+      MAP.cy = MAP.dragStartCY - (e.touches[0].clientY - MAP.dragStartY);
+      render();
+    }
+    if (e.touches.length === 2) {
+      const d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      const mid = { x: (e.touches[0].clientX + e.touches[1].clientX) / 2, y: (e.touches[0].clientY + e.touches[1].clientY) / 2 };
+      const rect = document.getElementById('map-container').getBoundingClientRect();
+      if (d > lastTouchDist + 5)      zoomAt(mid.x - rect.left, mid.y - rect.top,  1);
+      else if (d < lastTouchDist - 5) zoomAt(mid.x - rect.left, mid.y - rect.top, -1);
+      lastTouchDist = d;
+    }
+  }, {passive: false});
+  mc.addEventListener('touchend', () => { MAP.dragging = false; });
+
+  window.addEventListener('resize', () => render());
+}
+
+function zoomAt(screenX, screenY, delta) {
+  const newZoom = Math.max(4, Math.min(18, MAP.zoom + delta));
+  if (newZoom === MAP.zoom) return;
+  // keep the point under cursor fixed
+  const tileOriginX = MAP.cx - MAP.w / 2;
+  const tileOriginY = MAP.cy - MAP.h / 2;
+  const worldX = tileOriginX + screenX;
+  const worldY = tileOriginY + screenY;
+  const scale = Math.pow(2, newZoom - MAP.zoom);
+  MAP.cx = worldX * scale - screenX + MAP.w / 2;
+  MAP.cy = worldY * scale - screenY + MAP.h / 2;
+  MAP.zoom = newZoom;
+  render();
+}
+
+window.doZoom = function(delta) {
+  zoomAt(MAP.w / 2, MAP.h / 2, delta);
+};
+
+window.goHome = function() {
+  initMapState(HOME.lat, HOME.lng, HOME.zoom);
+  render();
+};
+
+// ── POPUP ────────────────────────────────────────────
+const tHeb  = {attraction:'אטרקציה', hotel:'מלון', restaurant:'מסעדה'};
+const typeIco = {attraction:'🏯', hotel:'🏨', restaurant:'🍜'};
+const cityHeb = {Tokyo:'טוקיו', Hakone:'האקונה', Kyoto:'קיוטו', Osaka:'אוסקה', Nara:'נארה'};
+const typeHeb = {attraction:'אטרקציה', hotel:'מלון', restaurant:'מסעדה'};
+const HM = ['ינו','פבר','מרץ','אפר','מאי','יונ','יול','אוג','ספט','אוק','נוב','דצמ'];
+const HD = ['א','ב','ג','ד','ה','ו','ש'];
+let favorites = new Set(JSON.parse(localStorage.getItem('jp_favs')||'[]'));
+
+window.clickMarker = function(id) {
+  const p = PLACES.find(x => x.id === id);
+  if (!p) return;
+  MAP.activePopupId = id;
+
+  document.getElementById('pu-badge').textContent = tHeb[p.type];
+  document.getElementById('pu-badge').className = 'bdg ' + p.type;
+  document.getElementById('pu-name').textContent = p.name;
+  document.getElementById('pu-note').textContent = p.note;
+  document.getElementById('pu-meta').innerHTML =
+    `<span>${p.price}</span>${p.veg ? '<span>🥬 צמחוני</span>' : ''}`;
+  document.getElementById('pu-link').href = p.link;
+  document.getElementById('pu-fav').classList.toggle('on', favorites.has(id));
+
+  // Position popup above marker on screen
+  const tileOriginX = MAP.cx - MAP.w / 2;
+  const tileOriginY = MAP.cy - MAP.h / 2;
+  const px = latLngToPixel(p.lat, p.lng, MAP.zoom);
+  const sx = px.x - tileOriginX;
+  const sy = px.y - tileOriginY;
+
+  const popup = document.getElementById('popup');
+  popup.style.display = 'block';
+  const pw = popup.offsetWidth  || 250;
+  const ph = popup.offsetHeight || 160;
+  let left = sx - pw / 2;
+  let top  = sy - ph - 44;
+  left = Math.max(4, Math.min(MAP.w - pw - 4, left));
+  if (top < 4) top = sy + 14;
+  popup.style.left = left + 'px';
+  popup.style.top  = top  + 'px';
+  render();
+};
+
+window.closePopup = function() {
+  document.getElementById('popup').style.display = 'none';
+  MAP.activePopupId = null;
+  render();
+};
+
+window.puFav = function() {
+  const id = MAP.activePopupId;
+  if (!id) return;
+  if (favorites.has(id)) favorites.delete(id); else favorites.add(id);
+  localStorage.setItem('jp_favs', JSON.stringify([...favorites]));
+  document.getElementById('pu-fav').classList.toggle('on', favorites.has(id));
+  renderList();
+  render();
+};
+
+// ── SIDEBAR ──────────────────────────────────────────
+let filters = {city:'all', type:'all', fav:false, q:''};
+
+function getFiltered() {
+  return PLACES.filter(p => {
+    if (filters.city !== 'all' && p.city !== filters.city) return false;
+    if (filters.type !== 'all' && p.type !== filters.type) return false;
+    if (filters.fav && !favorites.has(p.id)) return false;
+    if (filters.q) {
+      const q = filters.q.toLowerCase();
+      if (!p.name.toLowerCase().includes(q) && !p.note.toLowerCase().includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function renderList() {
+  filteredIds = new Set(getFiltered().map(p => p.id));
+  const el = document.getElementById('plist');
+  const items = getFiltered();
+  if (!items.length) { el.innerHTML='<p style="text-align:center;color:#aaa;padding:20px;font-size:12px">אין תוצאות</p>'; render(); return; }
+  el.innerHTML = items.map(p => `
+    <div class="pc" onclick="sbClick('${p.id}')">
+      <div class="pc-top">
+        <span class="pc-ico">${typeIco[p.type]}</span>
+        <span class="pc-name">${p.name}</span>
+        <button class="pc-fav${favorites.has(p.id)?' on':''}"
+          onclick="event.stopPropagation();sbFav('${p.id}',this)">❤️</button>
+      </div>
+      <div class="pc-meta">
+        <span class="bdg ${p.type}">${typeHeb[p.type]}</span>
+        <span class="pc-city">${cityHeb[p.city]||p.city}</span>
+      </div>
+    </div>`).join('');
+  render();
+}
+
+window.sbFav = function(id, btn) {
+  if (favorites.has(id)) favorites.delete(id); else favorites.add(id);
+  localStorage.setItem('jp_favs', JSON.stringify([...favorites]));
+  btn.classList.toggle('on', favorites.has(id));
+  render();
+};
+
+window.sbClick = function(id) {
+  const p = PLACES.find(x => x.id === id);
+  if (!p) return;
+  if (window.closeMobSb) window.closeMobSb();
+  switchTab('map');
+  const pix = latLngToPixel(p.lat, p.lng, MAP.zoom);
+  MAP.cx = pix.x; MAP.cy = pix.y;
+  if (MAP.zoom < 14) { MAP.zoom = 15; const pix2 = latLngToPixel(p.lat, p.lng, MAP.zoom); MAP.cx = pix2.x; MAP.cy = pix2.y; }
+  render();
+  setTimeout(() => clickMarker(id), 60);
+};
+
+// ── TABS ─────────────────────────────────────────────
+// ── MOBILE SIDEBAR AS DRAWER ─────────────────────────
+window.mobSbOpen = false;
+window.setupMobileSidebar = function(){
+  if (window.innerWidth > 700) return;
+  var sb = document.getElementById('sb');
+  if (!sb) return;
+  // סיידבר כשכבה צפה מוסתרת מימין
+  sb.style.cssText = 'position:fixed;top:0;right:0;bottom:0;width:86%;max-width:330px;z-index:9000;background:var(--cream);overflow-y:auto;transform:translateX(110%);transition:transform .25s ease;box-shadow:-4px 0 18px rgba(0,0,0,.28);border-left:1px solid var(--border)';
+  // backdrop
+  if (!document.getElementById('mob-backdrop')) {
+    var bd = document.createElement('div');
+    bd.id = 'mob-backdrop';
+    bd.style.cssText = 'display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:8900';
+    bd.onclick = window.toggleMobSb;
+    document.body.appendChild(bd);
+  }
+  // floating button
+  if (!document.getElementById('mob-sb-toggle')) {
+    var btn = document.createElement('button');
+    btn.id = 'mob-sb-toggle';
+    btn.textContent = '🔍';
+    btn.onclick = window.toggleMobSb;
+    btn.style.cssText = 'position:fixed;bottom:18px;left:14px;z-index:8800;width:46px;height:46px;border-radius:50%;background:#c0392b;color:#fff;font-size:20px;border:none;cursor:pointer;box-shadow:0 3px 12px rgba(192,57,43,.5);display:flex;align-items:center;justify-content:center';
+    document.body.appendChild(btn);
+  }
+};
+
+window.toggleMobSb = function(){
+  var sb = document.getElementById('sb');
+  var bd = document.getElementById('mob-backdrop');
+  window.mobSbOpen = !window.mobSbOpen;
+  if (window.mobSbOpen) {
+    sb.style.transform = 'translateX(0)';
+    if (bd) bd.style.display = 'block';
+  } else {
+    sb.style.transform = 'translateX(110%)';
+    if (bd) bd.style.display = 'none';
+  }
+};
+
+window.closeMobSb = function(){
+  if (!window.mobSbOpen) return;
+  window.mobSbOpen = false;
+  var sb = document.getElementById('sb');
+  var bd = document.getElementById('mob-backdrop');
+  if (sb) sb.style.transform = 'translateX(110%)';
+  if (bd) bd.style.display = 'none';
+};
+
+// תאימות לאחור — נקרא מ-switchTab
+window.mobileSidebar = function(name){
+  var sb = document.getElementById('sb');
+  if (!sb) return;
+  if (window.innerWidth > 700) { sb.style.display = ''; return; }
+  // במובייל הסיידבר הוא drawer — לא משנים display לפי טאב
+};
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.tab === name));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.id === name+'-panel'));
+  if (window.mobileSidebar) window.mobileSidebar(name);
+  if (name === 'home') { renderHome(); }
+  if (name === 'map') { requestAnimationFrame(() => {
+  render();
+  (function fixHdr(){
+    var hh = document.getElementById('hdr').offsetHeight;
+    if(window.innerWidth <= 700) {
+      document.getElementById('app').style.marginTop = hh + 'px';
+      document.getElementById('app').style.height = 'calc(100vh - ' + hh + 'px)';
+    }
+  })();
+  window.addEventListener('resize', function(){
+    var hh = document.getElementById('hdr').offsetHeight;
+    if(window.innerWidth <= 700) {
+      document.getElementById('app').style.marginTop = hh + 'px';
+      document.getElementById('app').style.height = 'calc(100vh - ' + hh + 'px)';
+    } else {
+      document.getElementById('app').style.marginTop = '';
+      document.getElementById('app').style.height = '';
+    }
+  });
+}); }
+  if (name === 'budget') { renderBudget(); }
+  if (name === 'transport') { renderTransport(); }
+  if (name === 'journal') { renderJournal(); }
+  if (name === 'phrases') { renderPhrases(); }
+  if (name === 'packing') { renderPacking(); }
+  if (name === 'itin' && window.applyMobileItinerary) { setTimeout(window.applyMobileItinerary, 10); }
+}
+
+// ── ITINERARY ────────────────────────────────────────
+function renderDayNav() {
+  document.getElementById('day-nav').innerHTML = ITINERARY.map((d,i) => {
+    const dt = new Date(d.date+'T00:00:00');
+    return `<div class="dni" onclick="selDay(${i})">
+      <span class="dd">${dt.getDate()} ${HM[dt.getMonth()]}</span>
+      <span class="dc">יום ${HD[dt.getDay()]}' · ${cityHeb[d.city]||d.city}</span>
+      <span class="dt">${d.theme.split('+')[0].trim()}</span>
+    </div>`;
+  }).join('');
+  if (window.applyMobileItinerary) window.applyMobileItinerary();
+}
+
+window.selDay = function(i) {
+  document.querySelectorAll('.dni').forEach((el,j) => el.classList.toggle('on', j===i));
+  const day = ITINERARY[i];
+  const dt  = new Date(day.date+'T00:00:00');
+  const places = day.ids.map(id => PLACES.find(p=>p.id===id)).filter(Boolean);
+  const dist   = calcDist(day.ids);
+
+  document.getElementById('day-det').innerHTML = `
+    <div class="d-title">${dt.getDate()} ${HM[dt.getMonth()]} ${dt.getFullYear()}</div>
+    <div class="d-theme">📍 ${day.theme}</div>
+    <p class="d-notes">${day.notes}</p>
+    <hr class="d-div"/>
+    <div class="stats-row">
+      <div class="sbox"><strong>${places.length}</strong>מקומות</div>
+      <div class="sbox"><strong>${cityHeb[day.city]||day.city}</strong>עיר</div>
+      ${dist > 0 ? `<div class="sbox"><strong>~${dist} ק"מ</strong>מרחק</div>` : ''}
+    </div>
+    ${places.length ? `<div class="dp-list">${places.map((p,n) => `
+      <div class="dpi" onclick="jumpTo('${p.id}')">
+        <div class="dpi-n">${n+1}</div>
+        <div>
+          <div class="dpi-name">${typeIco[p.type]} ${p.name}</div>
+          <div class="dpi-note">${p.note.slice(0,80)}...</div>
+        </div>
+      </div>`).join('')}</div>`
+    : '<p style="color:#aaa;font-size:12px;text-align:center;padding:20px">אין מקומות ביום זה</p>'}`;
+
+  dayPolylineCoords = places.map(p => [p.lat, p.lng]);
+};
+
+window.jumpTo = function(id) {
+  switchTab('map');
+  setTimeout(() => window.sbClick(id), 80);
+};
+
+function calcDist(ids) {
+  if (ids.length < 2) return 0;
+  let t = 0;
+  for (let i=0; i<ids.length-1; i++) {
+    const a=PLACES.find(p=>p.id===ids[i]), b=PLACES.find(p=>p.id===ids[i+1]);
+    if(a&&b){
+      const R=6371,dL=(b.lat-a.lat)*Math.PI/180,dN=(b.lng-a.lng)*Math.PI/180;
+      const x=Math.sin(dL/2)**2+Math.cos(a.lat*Math.PI/180)*Math.cos(b.lat*Math.PI/180)*Math.sin(dN/2)**2;
+      t+=R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+    }
+  }
+  return Math.round(t*10)/10;
+}
+
+// ── WEATHER ──────────────────────────────────────────
+function renderWx(city) {
+  document.getElementById('wx-out').innerHTML = `<div class="wx-grid">${
+    (WX[city]||[]).map((d,i) => `
+      <div class="wxc" style="animation-delay:${i*.07}s">
+        <div class="wxdate">${d.d}</div>
+        <div class="wxicon">${d.i}</div>
+        <div class="wxdesc">${d.desc}</div>
+        <div class="wxtemp">${d.max}° <span>/ ${d.min}°</span></div>
+        <div class="wxhum">💧 ${d.h}%&nbsp;&nbsp;🌧️ ${d.r}%</div>
+      </div>`).join('')
+  }</div>`;
+}
+
+
+const ILS_PER_JPY = 0.024;
+let budgetCurrency = 'BOTH';
+
+const BUDGET_DATA = {
+  daily: [
+    {date:"2026-08-19",city:"Tokyo",  theme:"הגעה",              hotel:7400, food:2500,transport:1500,entry:0,    misc:2000},
+    {date:"2026-08-20",city:"Tokyo",  theme:"DisneySea",          hotel:7400, food:4000,transport:1200,entry:9800, misc:1000},
+    {date:"2026-08-21",city:"Tokyo",  theme:"שיבויה+אסאקוסה",     hotel:7400, food:3000,transport:800, entry:0,    misc:2000},
+    {date:"2026-08-22",city:"Hakone", theme:"האקונה",             hotel:16500,food:4000,transport:3500,entry:2800, misc:500},
+    {date:"2026-08-23",city:"Kyoto",  theme:"הגעה לקיוטו",        hotel:9000, food:2800,transport:1500,entry:0,    misc:500},
+    {date:"2026-08-24",city:"Kyoto",  theme:"פושימי+קינקאקו",      hotel:9000, food:3000,transport:700, entry:600,  misc:500},
+    {date:"2026-08-25",city:"Kyoto",  theme:"ארשייאמה",           hotel:9000, food:3000,transport:600, entry:500,  misc:1000},
+    {date:"2026-08-26",city:"Kyoto",  theme:"נארה (טיול יום)",    hotel:9000, food:3500,transport:2400,entry:600,  misc:500},
+    {date:"2026-08-27",city:"Kyoto",  theme:"גיון+חופשי",          hotel:9000, food:2500,transport:400, entry:0,    misc:2000},
+    {date:"2026-08-28",city:"Osaka",  theme:"הגעה+דוטונבורי",      hotel:11700, food:4000,transport:600, entry:0,    misc:1000},
+    {date:"2026-08-29",city:"Osaka",  theme:"תצפית+שופינג",        hotel:11700, food:3500,transport:700, entry:1800, misc:2000},
+    {date:"2026-08-30",city:"Tokyo",  theme:"חזרה לטוקיו",        hotel:9000, food:3000,transport:3600,entry:0,    misc:1000},
+    {date:"2026-08-31",city:"Tokyo",  theme:"שופינג",             hotel:9000, food:3000,transport:800, entry:0,    misc:6000},
+    {date:"2026-09-01",city:"Tokyo",  theme:"teamLab+אודאיבה",    hotel:9000, food:3000,transport:800, entry:3200, misc:1000},
+    {date:"2026-09-02",city:"Tokyo",  theme:"יום חופשי",          hotel:9000, food:2500,transport:500, entry:0,    misc:2000},
+    {date:"2026-09-03",city:"Tokyo",  theme:"יום עזיבה",          hotel:0,    food:1500,transport:3000,entry:0,    misc:1000},
+  ],
+  fixed: [
+    {name:"JR Pass (14 יום)",      ico:"🚄", amount:50000, cat:"transport", note:"חובה לקנות לפני הטיסה!"},
+    {name:"כרטיס טיסה (הלוך-חזור)",ico:"✈️", amount:180000,cat:"flight",   note:"הערכה — תלוי בחברה ועונה"},
+    {name:"ביטוח נסיעות",           ico:"🛡️", amount:8000,  cat:"misc",     note:"לאדם, 17 ימים"},
+    {name:"SIM / WiFi Pocket",      ico:"📱", amount:5000,  cat:"misc",     note:"אינטרנט לאורך כל הטיול"},
+    {name:"teamLab Planets",        ico:"🎨", amount:3200,  cat:"entry",    note:"חובה להזמין מראש"},
+    {name:"Tokyo DisneySea",        ico:"🎢", amount:9800,  cat:"entry",    note:"כרטיס כניסה ליום מלא"},
+  ],
+};
+
+const CAT_COLORS = {hotel:'#1d4ed8',food:'#92400e',transport:'#166534',entry:'#7c3aed',misc:'#be185d',flight:'#0369a1'};
+const CAT_LABELS = {hotel:'מלון',food:'אוכל',transport:'תחבורה',entry:'כניסות',misc:'שונות',flight:'טיסה'};
+const HM2 = ['ינו','פבר','מרץ','אפר','מאי','יונ','יול','אוג','ספט','אוק','נוב','דצמ'];
+
+function fmt(jpy) {
+  if (budgetCurrency === 'JPY') return '¥' + jpy.toLocaleString();
+  if (budgetCurrency === 'ILS') return '₪' + Math.round(jpy*ILS_PER_JPY).toLocaleString();
+  return '¥' + jpy.toLocaleString() + ' <span style="color:var(--muted);font-size:.8em">/ ₪' + Math.round(jpy*ILS_PER_JPY).toLocaleString() + '</span>';
+}
+
+
+
+// ── TRANSPORT MODULE ─────────────────────────────────
+const FLIGHTS = [
+  {dir:"\u05d4\u05dc\u05d5\u05da \u2708\ufe0f", no:"LY091", airline:"El Al \u05d0\u05dc \u05e2\u05dc",
+   from:{code:"TLV",city:"\u05ea\u05dc \u05d0\u05d1\u05d9\u05d1",time:"19:45",date:"18 \u05d0\u05d5\u05d2' 2026"},
+   to:{code:"NRT",city:"\u05d8\u05d5\u05e7\u05d9\u05d5 \u05e0\u05e8\u05d9\u05d8\u05d4",time:"13:20",date:"19 \u05d0\u05d5\u05d2' 2026"},
+   dur:"11\u05e9 35\u05d3", seats:"40A (\u05d7\u05dc\u05d5\u05df) + \u05e0\u05d5\u05e1\u05e3 \u05e0\u05d5\u05e1\u05e3", bags:"2 \u00d7 23 \u05e7\u05f4\u05d2"},
+  {dir:"\u05d7\u05d6\u05d5\u05e8 \u2708\ufe0f", no:"LY092", airline:"El Al \u05d0\u05dc \u05e2\u05dc",
+   from:{code:"NRT",city:"\u05d8\u05d5\u05e7\u05d9\u05d5 \u05e0\u05e8\u05d9\u05d8\u05d4",time:"15:35",date:"03 \u05e1\u05e4\u05d8' 2026"},
+   to:{code:"TLV",city:"\u05ea\u05dc \u05d0\u05d1\u05d9\u05d1",time:"22:20",date:"03 \u05e1\u05e4\u05d8' 2026"},
+   dur:"12\u05e9 45\u05d3", seats:"40J", bags:"2 \u00d7 23 \u05e7\u05f4\u05d2"},
+];
+
+const TRAINS = [
+  {ico:"\ud83d\ude82", route:"\u05d8\u05d5\u05e7\u05d9\u05d5 \u2190 \u05d4\u05d0\u05e7\u05d5\u05e0\u05d4", detail:"Odakyu Romancecar", dur:"~85 \u05d3\u05e7'", cost:"\u00a52,330",
+   freq:"\u05db\u05dc \u05d7\u05e6\u05d9 \u05e9\u05e2\u05d4 \u05d1\u05e9\u05e2\u05d5\u05ea \u05d4\u05d9\u05d5\u05dd",
+   path:["\u05ea\u05d7\u05e0\u05ea Shinjuku (\u05d8\u05d5\u05e7\u05d9\u05d5)","\u05e8\u05db\u05d1\u05ea Odakyu Romancecar \u05d9\u05e9\u05d9\u05e8\u05d4","\u05ea\u05d7\u05e0\u05ea Hakone-Yumoto"],
+   notes:"\u05de\u05d5\u05e9\u05d1\u05d9\u05dd \u05e9\u05de\u05d5\u05e8\u05d9\u05dd \u2014 \u05db\u05d3\u05d0\u05d9 \u05dc\u05d4\u05d6\u05de\u05d9\u05df \u05de\u05e8\u05d0\u05e9. \u05dc\u05d0 \u05de\u05db\u05d5\u05e1\u05d4 \u05d1-JR Pass."},
+  {ico:"\ud83d\ude85", route:"\u05d4\u05d0\u05e7\u05d5\u05e0\u05d4 \u2190 \u05e7\u05d9\u05d5\u05d8\u05d5", detail:"\u05e9\u05d9\u05e0\u05e7\u05e0\u05e1\u05df \u05d3\u05e8\u05da Odawara", dur:"~2:40 \u05e9\u05e2\u05d5\u05ea", cost:"\u05db\u05dc\u05d5\u05dc \u05d1-JR Pass",
+   freq:"\u05e9\u05d9\u05e0\u05e7\u05e0\u05e1\u05df \u05db\u05dc 10-15 \u05d3\u05e7'",
+   path:["Hakone-Yumoto","\u05e8\u05db\u05d1\u05ea \u05de\u05e7\u05d5\u05de\u05d9\u05ea \u05dc-Odawara","\u05e9\u05d9\u05e0\u05e7\u05e0\u05e1\u05df Hikari \u05dc-Kyoto"],
+   notes:"\u05d4\u05e2\u05d1\u05e8\u05d4 \u05d1-Odawara. Nozomi \u05dc\u05d0 \u05de\u05db\u05d5\u05e1\u05d4 \u05d1-JR Pass \u2014 \u05d4\u05e9\u05ea\u05de\u05e9\u05d5 \u05d1-Hikari."},
+  {ico:"\ud83d\ude86", route:"\u05e7\u05d9\u05d5\u05d8\u05d5 \u2194 \u05e0\u05d0\u05e8\u05d4", detail:"\u05e7\u05d5 JR Nara (\u05d8\u05d9\u05d5\u05dc \u05d9\u05d5\u05dd)", dur:"~45 \u05d3\u05e7'", cost:"\u05db\u05dc\u05d5\u05dc \u05d1-JR Pass",
+   freq:"\u05db\u05dc 15-20 \u05d3\u05e7'",
+   path:["\u05ea\u05d7\u05e0\u05ea Kyoto","\u05e8\u05db\u05d1\u05ea JR Nara Line (Rapid)","\u05ea\u05d7\u05e0\u05ea Nara"],
+   notes:"\u05e8\u05db\u05d1\u05ea Miyakoji Rapid \u05d4\u05db\u05d9 \u05de\u05d4\u05d9\u05e8\u05d4. \u05d4\u05dc\u05d9\u05db\u05d4 \u05e7\u05e6\u05e8\u05d4 \u05dc\u05e4\u05d0\u05e8\u05e7."},
+  {ico:"\ud83d\ude85", route:"\u05e7\u05d9\u05d5\u05d8\u05d5 \u2190 \u05d0\u05d5\u05e1\u05e7\u05d4", detail:"JR Special Rapid", dur:"~15-30 \u05d3\u05e7'", cost:"\u00a5570 / JR Pass",
+   freq:"\u05db\u05dc 15 \u05d3\u05e7'",
+   path:["\u05ea\u05d7\u05e0\u05ea Kyoto","JR Kyoto Line Special Rapid","\u05ea\u05d7\u05e0\u05ea Osaka"],
+   notes:"\u05de\u05d4\u05d9\u05e8 \u05d5\u05d6\u05d5\u05dc. \u05d0\u05dc\u05d8\u05e8\u05e0\u05d8\u05d9\u05d1\u05d4: \u05e9\u05d9\u05e0\u05e7\u05e0\u05e1\u05df \u05dc-Shin-Osaka (15 \u05d3\u05e7')."},
+  {ico:"\ud83d\ude85", route:"\u05d0\u05d5\u05e1\u05e7\u05d4 \u2190 \u05d8\u05d5\u05e7\u05d9\u05d5", detail:"\u05e9\u05d9\u05e0\u05e7\u05e0\u05e1\u05df Hikari", dur:"~2:45-3:00 \u05e9\u05e2\u05d5\u05ea", cost:"\u00a514,000 / JR Pass",
+   freq:"\u05db\u05dc 10 \u05d3\u05e7'",
+   path:["\u05ea\u05d7\u05e0\u05ea Shin-Osaka","\u05e9\u05d9\u05e0\u05e7\u05e0\u05e1\u05df Hikari/Nozomi","\u05ea\u05d7\u05e0\u05ea Tokyo"],
+   notes:"Nozomi \u05de\u05d4\u05d9\u05e8 \u05d9\u05d5\u05ea\u05e8 \u05d0\u05da \u05dc\u05d0 \u05d1-JR Pass. Hikari \u05de\u05db\u05d5\u05e1\u05d4 \u05d5\u05de\u05d5\u05e1\u05d9\u05e3 ~20 \u05d3\u05e7'."},
+];
+
+const LOCAL_TRANSPORT = [
+  {ico:"\ud83d\udcb3", name:"Suica / Pasmo (IC Card)", desc:"\u05db\u05e8\u05d8\u05d9\u05e1 \u05e0\u05d8\u05e2\u05df \u05dc\u05ea\u05e9\u05dc\u05d5\u05dd \u05d1\u05de\u05d8\u05e8\u05d5, \u05d0\u05d5\u05d8\u05d5\u05d1\u05d5\u05e1, \u05e8\u05db\u05d1\u05d5\u05ea \u05d5\u05d0\u05e4\u05d9\u05dc\u05d5 \u05d7\u05e0\u05d5\u05d9\u05d5\u05ea. \u05dc\u05d8\u05e2\u05d5\u05df \u00a55,000-10,000 \u05d1\u05d4\u05ea\u05d7\u05dc\u05d4."},
+  {ico:"\ud83d\ude87", name:"\u05de\u05d8\u05e8\u05d5 \u05d8\u05d5\u05e7\u05d9\u05d5", desc:"Tokyo Metro + Toei. \u05e8\u05e9\u05ea \u05e2\u05e0\u05e4\u05d4 \u2014 \u05d4\u05e9\u05ea\u05de\u05e9\u05d5 \u05d1-Google Maps \u05dc\u05e0\u05d9\u05d5\u05d5\u05d8. Suica \u05e2\u05d5\u05d1\u05d3 \u05d1\u05db\u05dc\u05dd."},
+  {ico:"\ud83d\ude87", name:"\u05de\u05d8\u05e8\u05d5 \u05e7\u05d9\u05d5\u05d8\u05d5/\u05d0\u05d5\u05e1\u05e7\u05d4", desc:"\u05e7\u05d9\u05d5\u05d8\u05d5: 2 \u05e7\u05d5\u05d5\u05d9 \u05de\u05d8\u05e8\u05d5 + \u05d0\u05d5\u05d8\u05d5\u05d1\u05d5\u05e1\u05d9\u05dd. \u05d0\u05d5\u05e1\u05e7\u05d4: \u05e8\u05e9\u05ea \u05de\u05d8\u05e8\u05d5 \u05e0\u05d5\u05d7\u05d4 \u05d5\u05e8\u05d7\u05d1\u05d4."},
+  {ico:"\ud83d\ude95", name:"\u05de\u05d5\u05e0\u05d9\u05d5\u05ea", desc:"\u05d9\u05e7\u05e8\u05d5\u05ea \u05d0\u05d1\u05dc \u05d0\u05de\u05d9\u05e0\u05d5\u05ea. \u05d3\u05dc\u05ea\u05d5\u05ea \u05e0\u05e4\u05ea\u05d7\u05d5\u05ea \u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9\u05ea. \u05d8\u05d5\u05d1 \u05dc\u05dc\u05d9\u05dc\u05d4 \u05d0\u05d5 \u05e2\u05dd \u05de\u05d6\u05d5\u05d5\u05d3\u05d5\u05ea."},
+  {ico:"\ud83d\ude8c", name:"NEX / \u05e9\u05d3\u05d4 \u05d4\u05ea\u05e2\u05d5\u05e4\u05d4", desc:"Narita Express (NEX) \u05de-NRT \u05dc\u05de\u05e8\u05db\u05d6 \u05d8\u05d5\u05e7\u05d9\u05d5 ~60 \u05d3\u05e7'. \u05db\u05dc\u05d5\u05dc \u05d1-JR Pass!"},
+];
+
+
+window.toggleTrain = function(i){
+  var panel = document.getElementById('trd-'+i);
+  var chev = document.getElementById('chev-'+i);
+  if (!panel) return;
+  var isOpen = panel.classList.contains('open');
+  // סגור את כולם
+  document.querySelectorAll('.train-detail-panel').forEach(function(p){ p.classList.remove('open'); });
+  document.querySelectorAll('.train-chev').forEach(function(c){ c.style.transform=''; });
+  // פתח את הנבחר אם היה סגור
+  if (!isOpen) {
+    panel.classList.add('open');
+    if (chev) chev.style.transform = 'rotate(180deg)';
+  }
+};
+
+
+
+
+
+// ── PACKING LIST MODULE ──────────────────────────────
+var PACKING_DEFAULT = {
+  "\u05de\u05e1\u05de\u05db\u05d9\u05dd \u05d5\u05db\u05e1\u05e3": [
+    "\u05d3\u05e8\u05db\u05d5\u05df \u05d1\u05ea\u05d5\u05e7\u05e3 (6+ \u05d7\u05d5\u05d3\u05e9\u05d9\u05dd)",
+    "\u05db\u05e8\u05d8\u05d9\u05e1\u05d9 \u05d8\u05d9\u05e1\u05d4 (\u05de\u05d5\u05d3\u05e4\u05e1/\u05d3\u05d9\u05d2\u05d9\u05d8\u05dc\u05d9)",
+    "\u05d0\u05e9\u05e8\u05d5\u05ea \u05d5\u05d9\u05d6\u05d4/\u05db\u05e0\u05d9\u05e1\u05d4 (\u05d0\u05dd \u05e0\u05d3\u05e8\u05e9)",
+    "\u05d1\u05d9\u05d8\u05d5\u05d7 \u05e0\u05e1\u05d9\u05e2\u05d5\u05ea (\u05de\u05e1\u05de\u05db\u05d9\u05dd)",
+    "\u05de\u05d6\u05d5\u05de\u05df (\u05d9\u05df) + \u05db\u05e8\u05d8\u05d9\u05e1\u05d9 \u05d0\u05e9\u05e8\u05d0\u05d9",
+    "\u05d0\u05d9\u05e9\u05d5\u05e8\u05d9 \u05de\u05dc\u05d5\u05df (\u05d4\u05d6\u05de\u05e0\u05d5\u05ea)",
+    "JR Pass (\u05d0\u05dd \u05e0\u05e7\u05e0\u05d4 \u05de\u05e8\u05d0\u05e9)",
+    "\u05e6\u05d9\u05dc\u05d5\u05dd \u05d3\u05e8\u05db\u05d5\u05df \u05d1\u05d8\u05dc\u05e4\u05d5\u05df (\u05d2\u05d9\u05d1\u05d5\u05d9)"
+  ],
+  "\u05d0\u05dc\u05e7\u05d8\u05e8\u05d5\u05e0\u05d9\u05e7\u05d4": [
+    "\u05de\u05d8\u05e2\u05df \u05d8\u05dc\u05e4\u05d5\u05df + \u05db\u05d1\u05dc\u05d9\u05dd",
+    "\u05de\u05ea\u05d0\u05dd \u05ea\u05e7\u05e2 \u05d9\u05e4\u05e0\u05d9 (Type A) - \u05d9\u05e4\u05df 100V",
+    "\u05e1\u05d5\u05dc\u05dc\u05d4 \u05e0\u05d9\u05d9\u05d3\u05ea (Power Bank)",
+    "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea",
+    "\u05de\u05e6\u05dc\u05de\u05d4 (\u05d0\u05dd \u05dc\u05d0 \u05d1\u05d8\u05dc\u05e4\u05d5\u05df)",
+    "SIM \u05d9\u05e4\u05e0\u05d9/eSIM \u05d0\u05d5 Pocket WiFi"
+  ],
+  "\u05d1\u05d2\u05d3\u05d9\u05dd (\u05e7\u05d9\u05e5 \u05d7\u05dd \u05d5\u05dc\u05d7)": [
+    "\u05d7\u05d5\u05dc\u05e6\u05d5\u05ea \u05e7\u05dc\u05d5\u05ea/\u05e0\u05d5\u05e9\u05de\u05d5\u05ea (\u05d4\u05e8\u05d1\u05d4!)",
+    "\u05de\u05db\u05e0\u05e1\u05d9\u05d9\u05dd \u05e7\u05e6\u05e8\u05d9\u05dd + \u05d0\u05e8\u05d5\u05db\u05d9\u05dd",
+    "\u05e0\u05e2\u05dc\u05d9 \u05d4\u05dc\u05d9\u05db\u05d4 \u05e0\u05d5\u05d7\u05d5\u05ea (\u05d4\u05e8\u05d1\u05d4 \u05d4\u05dc\u05d9\u05db\u05d4!)",
+    "\u05d2\u05e9\u05dd/\u05de\u05e2\u05d9\u05dc \u05e7\u05dc (\u05e1\u05e4\u05d8\u05de\u05d1\u05e8 = \u05d8\u05d9\u05e9\u05d5\u05df)",
+    "\u05d2\u05e8\u05d1\u05d9\u05d9\u05dd \u05e0\u05d5\u05d7\u05d5\u05ea",
+    "\u05d1\u05d2\u05d3\u05d9 \u05e9\u05d9\u05e0\u05d4",
+    "\u05db\u05d5\u05d1\u05e2/\u05de\u05e6\u05d7\u05d9\u05d9\u05d4 \u05dc\u05e9\u05de\u05e9",
+    "\u05d2\u05e8\u05d1\u05d9 \u05d0\u05d5\u05e0\u05e1\u05df (\u05dc\u05d4\u05d0\u05e7\u05d5\u05e0\u05d4)"
+  ],
+  "\u05e8\u05d7\u05e6\u05d4 \u05d5\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea": [
+    "\u05de\u05d1\u05e8\u05e9\u05ea + \u05de\u05e9\u05d7\u05ea \u05e9\u05d9\u05e0\u05d9\u05d9\u05dd",
+    "\u05d3\u05d0\u05d5\u05d3\u05d5\u05e8\u05e0\u05d8 + \u05de\u05d5\u05e6\u05e8\u05d9 \u05d8\u05d9\u05e4\u05d5\u05d7",
+    "\u05e7\u05e8\u05dd \u05d4\u05d2\u05e0\u05d4 (SPF \u05d2\u05d1\u05d5\u05d4)",
+    "\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea \u05d0\u05d9\u05e9\u05d9\u05d5\u05ea (\u05d0\u05dd \u05d9\u05e9)",
+    "\u05de\u05e9\u05db\u05d7\u05d9 \u05db\u05d0\u05d1\u05d9\u05dd / \u05e7\u05d9\u05d1\u05d4",
+    "\u05e4\u05dc\u05e1\u05d8\u05e8\u05d9\u05dd + \u05d7\u05d5\u05de\u05e8\u05d9 \u05e2\u05d6\u05e8\u05d4 \u05e8\u05d0\u05e9\u05d5\u05e0\u05d4",
+    "\u05de\u05d2\u05d1\u05d5\u05e0\u05d9\u05dd \u05dc\u05d7\u05d9\u05dd (\u05d1\u05d9\u05e4\u05df \u05d0\u05d9\u05df \u05d1\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd!)"
+  ],
+  "\u05e9\u05d5\u05e0\u05d5\u05ea \u05dc\u05d9\u05e4\u05df": [
+    "\u05ea\u05d9\u05e7 \u05d9\u05d5\u05dd \u05e7\u05d8\u05df \u05dc\u05d8\u05d9\u05d5\u05dc\u05d9\u05dd",
+    "\u05d1\u05e7\u05d1\u05d5\u05e7 \u05de\u05d9\u05dd \u05e8\u05d9\u05e7 (\u05dc\u05de\u05d9\u05dc\u05d5\u05d9)",
+    "\u05e9\u05e7\u05d9\u05ea \u05dc\u05d6\u05d1\u05dc (\u05d0\u05d9\u05df \u05e4\u05d7\u05d9\u05dd \u05d1\u05e8\u05d7\u05d5\u05d1!)",
+    "\u05de\u05d8\u05e8\u05d9\u05d9\u05d4 \u05de\u05ea\u05e7\u05e4\u05dc\u05ea",
+    "\u05de\u05e1\u05db\u05d5\u05ea (\u05de\u05e7\u05d5\u05d1\u05dc \u05d1\u05d9\u05e4\u05df)",
+    "\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d9\u05ea \u05ea\u05e8\u05d2\u05d5\u05dd (Google Translate \u05d0\u05d5\u05e4\u05dc\u05d9\u05d9\u05df)"
+  ]
+};
+
+var packingState = JSON.parse(localStorage.getItem('jp_packing') || 'null');
+
+function initPacking(){
+  if (packingState) return;
+  // אתחל מהברירת מחדל
+  packingState = { items: [], checked: {} };
+  var id = 1;
+  Object.keys(PACKING_DEFAULT).forEach(function(cat){
+    PACKING_DEFAULT[cat].forEach(function(name){
+      packingState.items.push({ id: id++, cat: cat, name: name });
+    });
+  });
+  packingState.nextId = id;
+  savePacking();
+}
+
+function savePacking(){ localStorage.setItem('jp_packing', JSON.stringify(packingState)); }
+
+function renderPacking(){
+  initPacking();
+  var cats = {};
+  packingState.items.forEach(function(it){
+    if (!cats[it.cat]) cats[it.cat] = [];
+    cats[it.cat].push(it);
+  });
+  var total = packingState.items.length;
+  var done = packingState.items.filter(function(it){ return packingState.checked[it.id]; }).length;
+  var pct = total ? Math.round(done/total*100) : 0;
+
+  var catIcons = {
+    "\u05de\u05e1\u05de\u05db\u05d9\u05dd \u05d5\u05db\u05e1\u05e3":"\ud83d\udcc4",
+    "\u05d0\u05dc\u05e7\u05d8\u05e8\u05d5\u05e0\u05d9\u05e7\u05d4":"\ud83d\udd0c",
+    "\u05d1\u05d2\u05d3\u05d9\u05dd (\u05e7\u05d9\u05e5 \u05d7\u05dd \u05d5\u05dc\u05d7)":"\ud83d\udc55",
+    "\u05e8\u05d7\u05e6\u05d4 \u05d5\u05ea\u05e8\u05d5\u05e4\u05d5\u05ea":"\ud83e\uddf4",
+    "\u05e9\u05d5\u05e0\u05d5\u05ea \u05dc\u05d9\u05e4\u05df":"\ud83c\udf0f"
+  };
+
+  var catsHtml = Object.keys(cats).map(function(cat){
+    var itemsHtml = cats[cat].map(function(it){
+      var on = packingState.checked[it.id];
+      return '<div class="pk-item'+(on?' checked':'')+'">'+
+        '<div class="pk-check'+(on?' on':'')+'" onclick="pkToggle('+it.id+')">'+(on?'\u2714':'')+'</div>'+
+        '<div class="pk-item-name">'+escapeHtmlPk(it.name)+'</div>'+
+        '<button class="pk-del" onclick="pkDel('+it.id+')">\u05d7</button>'+
+      '</div>';
+    }).join('');
+    return '<div class="pk-cat"><div class="pk-cat-title">'+(catIcons[cat]||'\ud83d\udccc')+' '+cat+'</div>'+itemsHtml+
+      '<div class="pk-add-row">'+
+        '<input class="pk-add-input" id="pk-add-'+btoa(unescape(encodeURIComponent(cat))).replace(/=/g,'')+'" placeholder="\u05d4\u05d5\u05e1\u05e3 \u05e4\u05e8\u05d9\u05d8..." onkeydown="if(event.key===\'Enter\')pkAdd(this,\''+escapeJs(cat)+'\')"/>'+
+        '<button class="pk-add-btn" onclick="pkAddBtn(this,\''+escapeJs(cat)+'\')">+</button>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+
+  document.getElementById('packing-content').innerHTML =
+    '<div class="pk-h2">\ud83c\udf92 \u05e8\u05e9\u05d9\u05de\u05ea \u05d0\u05e8\u05d9\u05d6\u05d4 \u05dc\u05d8\u05d9\u05d5\u05dc</div>'+
+    '<div class="pk-sub">\u05e1\u05de\u05df \u2714 \u05db\u05e9\u05d0\u05e8\u05d6\u05ea \u00b7 \u05d4\u05d5\u05e1\u05e3 \u05d0\u05d5 \u05de\u05d7\u05e7 \u05e4\u05e8\u05d9\u05d8\u05d9\u05dd \u05dc\u05e4\u05d9 \u05d4\u05e6\u05d5\u05e8\u05da</div>'+
+    '<div class="pk-progress-wrap">'+
+      '<div class="pk-progress-top"><span class="pk-progress-label">\u05d4\u05ea\u05e7\u05d3\u05de\u05d5\u05ea \u05d0\u05e8\u05d9\u05d6\u05d4</span><span class="pk-progress-count">'+done+'/'+total+' ('+pct+'%)</span></div>'+
+      '<div class="pk-progress-bar"><div class="pk-progress-fill" style="width:'+pct+'%"></div></div>'+
+    '</div>'+
+    catsHtml +
+    '<button class="pk-reset" onclick="pkReset()">\u21ba \u05d0\u05e4\u05e1 \u05d4\u05db\u05dc \u05dc\u05e8\u05e9\u05d9\u05de\u05ea \u05d1\u05e8\u05d9\u05e8\u05ea \u05d4\u05de\u05d7\u05d3\u05dc</button>'+
+    '<div style="height:20px"></div>';
+
+  if (window.applyMobilePacking) window.applyMobilePacking();
+}
+
+function escapeHtmlPk(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escapeJs(s){ return (s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+
+window.pkToggle = function(id){
+  packingState.checked[id] = !packingState.checked[id];
+  savePacking(); renderPacking();
+};
+window.pkDel = function(id){
+  packingState.items = packingState.items.filter(function(it){ return it.id !== id; });
+  delete packingState.checked[id];
+  savePacking(); renderPacking();
+};
+window.pkAdd = function(input, cat){
+  var val = input.value.trim();
+  if (!val) return;
+  packingState.items.push({ id: packingState.nextId++, cat: cat, name: val });
+  savePacking(); renderPacking();
+};
+window.pkAddBtn = function(btn, cat){
+  var input = btn.previousElementSibling;
+  window.pkAdd(input, cat);
+};
+window.pkReset = function(){
+  if (!confirm('\u05dc\u05d0\u05e4\u05e1 \u05d0\u05ea \u05db\u05dc \u05d4\u05e8\u05e9\u05d9\u05de\u05d4 \u05d7\u05d6\u05e8\u05d4 \u05dc\u05d1\u05e8\u05d9\u05e8\u05ea \u05d4\u05de\u05d7\u05d3\u05dc? \u05db\u05dc \u05d4\u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd \u05d9\u05d9\u05de\u05d7\u05e7\u05d5.')) return;
+  packingState = null;
+  localStorage.removeItem('jp_packing');
+  renderPacking();
+};
+
+window.applyMobilePacking = function(){
+  if (window.innerWidth > 700) return;
+  var pc = document.getElementById('packing-content');
+  if (pc) pc.style.cssText = 'padding:12px;max-width:none;margin:0;width:100%';
+};
+
+
+// ── PHRASEBOOK MODULE ────────────────────────────────
+var PHRASES = {
+  "\u05d1\u05e1\u05d9\u05e1\u05d9": [
+    {heb:"\u05e9\u05dc\u05d5\u05dd / \u05d4\u05d9\u05d9", jp:"\u3053\u3093\u306b\u3061\u306f", roma:"Konnichiwa", hp:"\u05e7\u05d5\u05e0\u05d9\u05e6\u05f3\u05d9\u05d5\u05d5\u05d4"},
+    {heb:"\u05d1\u05d5\u05e7\u05e8 \u05d8\u05d5\u05d1", jp:"\u304a\u306f\u3088\u3046\u3054\u3056\u3044\u307e\u3059", roma:"Ohayou gozaimasu", hp:"\u05d0\u05d5\u05d4\u05d0\u05d9\u05d5 \u05d2\u05d5\u05d6\u05d0\u05d9\u05de\u05d0\u05e1"},
+    {heb:"\u05e2\u05e8\u05d1 \u05d8\u05d5\u05d1", jp:"\u3053\u3093\u3070\u3093\u306f", roma:"Konbanwa", hp:"\u05e7\u05d5\u05e0\u05d1\u05d0\u05e0\u05d5\u05d5\u05d4"},
+    {heb:"\u05ea\u05d5\u05d3\u05d4", jp:"\u3042\u308a\u304c\u3068\u3046", roma:"Arigatou", hp:"\u05d0\u05e8\u05d9\u05d2\u05d0\u05d8\u05d5"},
+    {heb:"\u05ea\u05d5\u05d3\u05d4 \u05e8\u05d1\u05d4", jp:"\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059", roma:"Arigatou gozaimasu", hp:"\u05d0\u05e8\u05d9\u05d2\u05d0\u05d8\u05d5 \u05d2\u05d5\u05d6\u05d0\u05d9\u05de\u05d0\u05e1"},
+    {heb:"\u05d1\u05d1\u05e7\u05e9\u05d4", jp:"\u304a\u306d\u304c\u3044\u3057\u307e\u3059", roma:"Onegaishimasu", hp:"\u05d0\u05d5\u05e0\u05d2\u05d0\u05d9\u05e9\u05d9\u05de\u05d0\u05e1"},
+    {heb:"\u05e1\u05dc\u05d9\u05d7\u05d4 / \u05ea\u05e1\u05dc\u05d7", jp:"\u3059\u307f\u307e\u305b\u3093", roma:"Sumimasen", hp:"\u05e1\u05d5\u05de\u05d9\u05de\u05d0\u05e1\u05df"},
+    {heb:"\u05db\u05df", jp:"\u306f\u3044", roma:"Hai", hp:"\u05d4\u05d0\u05d9"},
+    {heb:"\u05dc\u05d0", jp:"\u3044\u3044\u3048", roma:"Iie", hp:"\u05d0\u05d9\u05d9\u05d4"},
+    {heb:"\u05dc\u05d4\u05ea\u05e8\u05d0\u05d5\u05ea", jp:"\u3055\u3088\u3046\u306a\u3089", roma:"Sayounara", hp:"\u05e1\u05d0\u05d9\u05d5\u05e0\u05d0\u05e8\u05d4"}
+  ],
+  "\u05de\u05e1\u05e2\u05d3\u05d4": [
+    {heb:"\u05ea\u05e4\u05e8\u05d9\u05d8, \u05d1\u05d1\u05e7\u05e9\u05d4", jp:"\u30e1\u30cb\u30e5\u30fc\u3092\u304f\u3060\u3055\u3044", roma:"Menyuu o kudasai", hp:"\u05de\u05e0\u05d9\u05d5 \u05d0\u05d5 \u05e7\u05d5\u05d3\u05d0\u05e1\u05d0\u05d9"},
+    {heb:"\u05d8\u05e2\u05d9\u05dd \u05de\u05d0\u05d5\u05d3!", jp:"\u3068\u3066\u3082\u304a\u3044\u3057\u3044", roma:"Totemo oishii", hp:"\u05d8\u05d5\u05d8\u05d4\u05de\u05d5 \u05d0\u05d5\u05d0\u05d9\u05e9\u05d9"},
+    {heb:"\u05d4\u05d7\u05e9\u05d1\u05d5\u05df, \u05d1\u05d1\u05e7\u05e9\u05d4", jp:"\u304a\u4f1a\u8a08\u3092\u304a\u306d\u304c\u3044\u3057\u307e\u3059", roma:"Okaikei o onegaishimasu", hp:"\u05d0\u05d5\u05e7\u05d0\u05d9\u05e7\u05d9\u05d9 \u05d0\u05d5 \u05d0\u05d5\u05e0\u05d2\u05d0\u05d9\u05e9\u05d9\u05de\u05d0\u05e1"},
+    {heb:"\u05d0\u05e0\u05d9 \u05e6\u05de\u05d7\u05d5\u05e0\u05d9", jp:"\u30d9\u30b8\u30bf\u30ea\u30a2\u30f3\u3067\u3059", roma:"Bejitarian desu", hp:"\u05d1\u05d2\u05f3\u05d9\u05d8\u05d0\u05e8\u05d9\u05d0\u05df \u05d3\u05e1"},
+    {heb:"\u05de\u05d9\u05dd, \u05d1\u05d1\u05e7\u05e9\u05d4", jp:"\u304a\u6c34\u3092\u304f\u3060\u3055\u3044", roma:"Omizu o kudasai", hp:"\u05d0\u05d5\u05de\u05d9\u05d6\u05d5 \u05d0\u05d5 \u05e7\u05d5\u05d3\u05d0\u05e1\u05d0\u05d9"},
+    {heb:"\u05ea\u05d5\u05d3\u05d4 \u05e2\u05dc \u05d4\u05d0\u05d5\u05db\u05dc (\u05dc\u05e4\u05e0\u05d9)", jp:"\u3044\u305f\u3060\u304d\u307e\u3059", roma:"Itadakimasu", hp:"\u05d0\u05d9\u05d8\u05d0\u05d3\u05d0\u05e7\u05d9\u05de\u05d0\u05e1"},
+    {heb:"\u05d4\u05d9\u05d4 \u05d8\u05e2\u05d9\u05dd (\u05d0\u05d7\u05e8\u05d9)", jp:"\u3054\u3061\u305d\u3046\u3055\u307e", roma:"Gochisousama", hp:"\u05d2\u05d5\u05e6\u05f3\u05d9\u05e1\u05d5\u05e1\u05d0\u05de\u05d4"}
+  ],
+  "\u05e7\u05e0\u05d9\u05d5\u05ea": [
+    {heb:"\u05db\u05de\u05d4 \u05d6\u05d4 \u05e2\u05d5\u05dc\u05d4?", jp:"\u3044\u304f\u3089\u3067\u3059\u304b", roma:"Ikura desu ka", hp:"\u05d0\u05d9\u05e7\u05d5\u05e8\u05d4 \u05d3\u05e1 \u05e7\u05d4"},
+    {heb:"\u05d6\u05d4 \u05d9\u05e7\u05e8", jp:"\u9ad8\u3044\u3067\u3059", roma:"Takai desu", hp:"\u05d8\u05d0\u05e7\u05d0\u05d9 \u05d3\u05e1"},
+    {heb:"\u05d0\u05e7\u05d7 \u05d0\u05ea \u05d6\u05d4", jp:"\u3053\u308c\u3092\u304f\u3060\u3055\u3044", roma:"Kore o kudasai", hp:"\u05e7\u05d5\u05e8\u05d4 \u05d0\u05d5 \u05e7\u05d5\u05d3\u05d0\u05e1\u05d0\u05d9"},
+    {heb:"\u05d0\u05e4\u05e9\u05e8 \u05dc\u05e9\u05dc\u05dd \u05d1\u05db\u05e8\u05d8\u05d9\u05e1?", jp:"\u30ab\u30fc\u30c9\u3067\u3082\u3044\u3044\u3067\u3059\u304b", roma:"Kaado de mo ii desu ka", hp:"\u05e7\u05d0\u05d3\u05d5 \u05d3\u05d4 \u05de\u05d5 \u05d0\u05d9 \u05d3\u05e1 \u05e7\u05d4"},
+    {heb:"\u05e8\u05e7 \u05de\u05e1\u05ea\u05db\u05dc", jp:"\u898b\u3066\u3044\u308b\u3060\u3051\u3067\u3059", roma:"Mite iru dake desu", hp:"\u05de\u05d9\u05d8\u05d4 \u05d0\u05d9\u05e8\u05d5 \u05d3\u05d0\u05e7\u05d4 \u05d3\u05e1"}
+  ],
+  "\u05ea\u05d7\u05d1\u05d5\u05e8\u05d4": [
+    {heb:"\u05d0\u05d9\u05e4\u05d4 \u05d4\u05ea\u05d7\u05e0\u05d4?", jp:"\u99c5\u306f\u3069\u3053\u3067\u3059\u304b", roma:"Eki wa doko desu ka", hp:"\u05d0\u05e7\u05d9 \u05d5\u05d5\u05d4 \u05d3\u05d5\u05e7\u05d5 \u05d3\u05e1 \u05e7\u05d4"},
+    {heb:"\u05db\u05e8\u05d8\u05d9\u05e1 \u05dc...", jp:"\u307e\u3067\u306e\u5207\u7b26", roma:"...made no kippu", hp:"...\u05de\u05d0\u05d3\u05d4 \u05e0\u05d5 \u05e7\u05d9\u05e4\u05d5"},
+    {heb:"\u05d0\u05d9\u05e4\u05d4 \u05d4\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9\u05dd?", jp:"\u30c8\u30a4\u30ec\u306f\u3069\u3053\u3067\u3059\u304b", roma:"Toire wa doko desu ka", hp:"\u05d8\u05d5\u05d9\u05e8\u05d4 \u05d5\u05d5\u05d4 \u05d3\u05d5\u05e7\u05d5 \u05d3\u05e1 \u05e7\u05d4"},
+    {heb:"\u05db\u05de\u05d4 \u05d6\u05de\u05df \u05d6\u05d4 \u05dc\u05d5\u05e7\u05d7?", jp:"\u3069\u306e\u304f\u3089\u3044\u304b\u304b\u308a\u307e\u3059\u304b", roma:"Dono kurai kakarimasu ka", hp:"\u05d3\u05d5\u05e0\u05d5 \u05e7\u05d5\u05e8\u05d0\u05d9 \u05e7\u05d0\u05e7\u05d0\u05e8\u05d9\u05de\u05d0\u05e1 \u05e7\u05d4"},
+    {heb:"\u05d9\u05de\u05d9\u05e0\u05d4 / \u05e9\u05de\u05d0\u05dc\u05d4", jp:"\u53f3 / \u5de6", roma:"Migi / Hidari", hp:"\u05de\u05d9\u05d2\u05d9 / \u05d4\u05d9\u05d3\u05d0\u05e8\u05d9"}
+  ],
+  "\u05d7\u05d9\u05e8\u05d5\u05dd": [
+    {heb:"\u05e2\u05d6\u05e8\u05d4!", jp:"\u305f\u3059\u3051\u3066", roma:"Tasukete", hp:"\u05d8\u05d0\u05e1\u05d5\u05e7\u05d4\u05d8\u05d4"},
+    {heb:"\u05d0\u05e0\u05d9 \u05dc\u05d0 \u05de\u05d1\u05d9\u05df", jp:"\u308f\u304b\u308a\u307e\u305b\u3093", roma:"Wakarimasen", hp:"\u05d5\u05d5\u05e7\u05d0\u05e8\u05d9\u05de\u05d0\u05e1\u05df"},
+    {heb:"\u05d0\u05ea\u05d4 \u05de\u05d3\u05d1\u05e8 \u05d0\u05e0\u05d2\u05dc\u05d9\u05ea?", jp:"\u82f1\u8a9e\u3092\u8a71\u305b\u307e\u3059\u304b", roma:"Eigo o hanasemasu ka", hp:"\u05d0\u05d9\u05d2\u05d5 \u05d0\u05d5 \u05d4\u05d0\u05e0\u05d0\u05e1\u05d4\u05de\u05d0\u05e1 \u05e7\u05d4"},
+    {heb:"\u05d0\u05e0\u05d9 \u05d0\u05d1\u05d5\u05d3", jp:"\u9053\u306b\u8ff7\u3044\u307e\u3057\u305f", roma:"Michi ni mayoimashita", hp:"\u05de\u05d9\u05e6\u05f3\u05d9 \u05e0\u05d9 \u05de\u05d0\u05d9\u05d5\u05d9\u05de\u05d0\u05e9\u05d9\u05d8\u05d4"},
+    {heb:"\u05e7\u05e8\u05d0\u05d5 \u05dc\u05de\u05e9\u05d8\u05e8\u05d4", jp:"\u8b66\u5bdf\u3092\u547c\u3093\u3067", roma:"Keisatsu o yonde", hp:"\u05e7\u05d9\u05d9\u05e1\u05d0\u05e6\u05d5 \u05d0\u05d5 \u05d9\u05d5\u05e0\u05d3\u05d4"},
+    {heb:"\u05d0\u05e0\u05d9 \u05e6\u05e8\u05d9\u05da \u05e8\u05d5\u05e4\u05d0", jp:"\u533b\u8005\u304c\u5fc5\u8981\u3067\u3059", roma:"Isha ga hitsuyou desu", hp:"\u05d0\u05d9\u05e9\u05d4 \u05d2\u05d0 \u05d4\u05d9\u05e6\u05d5\u05d9\u05d5 \u05d3\u05e1"}
+  ]
+};
+
+var phActiveCat = "\u05d1\u05e1\u05d9\u05e1\u05d9";
+var jpVoice = null;
+
+function loadJpVoice(){
+  if (!('speechSynthesis' in window)) return;
+  var voices = speechSynthesis.getVoices();
+  jpVoice = voices.find(function(v){ return v.lang === 'ja-JP' || v.lang.indexOf('ja') === 0; }) || null;
+}
+if ('speechSynthesis' in window){
+  loadJpVoice();
+  speechSynthesis.onvoiceschanged = loadJpVoice;
+}
+
+window.phSpeak = function(jp, btn){
+  if (!('speechSynthesis' in window)){
+    alert('\u05d4\u05d3\u05e4\u05d3\u05e4\u05df \u05dc\u05d0 \u05ea\u05d5\u05de\u05da \u05d1\u05d4\u05e7\u05e8\u05d0\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea. \u05e0\u05e1\u05d4 \u05d1-Chrome.');
+    return;
+  }
+  // ודא שהקולות נטענו
+  loadJpVoice();
+  speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(jp);
+  if (jpVoice){
+    u.voice = jpVoice;
+    u.lang = jpVoice.lang;
+  } else {
+    u.lang = 'ja-JP';
+  }
+  u.rate = 0.8;
+  u.pitch = 1.0;
+  document.querySelectorAll('.ph-play').forEach(function(b){ b.classList.remove('playing'); });
+  if (btn){
+    btn.classList.add('playing');
+    u.onend = function(){ btn.classList.remove('playing'); };
+    u.onerror = function(){ btn.classList.remove('playing'); };
+  }
+  // עיכוב קטן לעקיפת באג ב-Chrome/Samsung שלא משמיע מיד
+  setTimeout(function(){ speechSynthesis.speak(u); }, 60);
+
+  // אם אין קול יפני — הודע פעם אחת
+  if (!jpVoice && !window._jpVoiceWarned){
+    window._jpVoiceWarned = true;
+    setTimeout(function(){
+      var note = document.getElementById('ph-voice-note');
+      if (note) note.style.display = 'block';
+    }, 200);
+  }
+};
+
+function renderPhrases(){
+  var cats = Object.keys(PHRASES);
+  var catsHtml = cats.map(function(c){
+    return '<button class="ph-cat'+(c===phActiveCat?' on':'')+'" onclick="phSetCat(\''+c+'\')">'+c+'</button>';
+  }).join('');
+
+  var items = PHRASES[phActiveCat] || [];
+  var itemsHtml = items.map(function(p){
+    return '<div class="ph-item">'+
+      '<button class="ph-play" onclick="phSpeak(\''+p.jp+'\',this)">\ud83d\udd0a</button>'+
+      '<div class="ph-info">'+
+        '<div class="ph-heb">'+p.heb+'</div>'+
+        '<div class="ph-jp">'+p.jp+'</div>'+
+        '<div class="ph-roma">'+p.roma+'</div>'+
+        '<div class="ph-hp">\ud83d\udd24 '+p.hp+'</div>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+
+  var voiceWarn = ('speechSynthesis' in window) ? '' :
+    '<div class="ph-novoice">\u26a0\ufe0f \u05d4\u05d3\u05e4\u05d3\u05e4\u05df \u05d4\u05e0\u05d5\u05db\u05d7\u05d9 \u05dc\u05d0 \u05ea\u05d5\u05de\u05da \u05d1\u05d4\u05e7\u05e8\u05d0\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea. \u05e0\u05e1\u05d4 \u05d1-Chrome.</div>';
+
+  document.getElementById('phrases-content').innerHTML =
+    '<div class="ph-h2">\ud83d\udde3\ufe0f \u05de\u05d9\u05dc\u05d5\u05df \u05d9\u05e4\u05e0\u05d9-\u05e2\u05d1\u05e8\u05d9</div>'+
+    '<div class="ph-sub">\u05d8\u05e4\u05d5 \u05e2\u05dc \ud83d\udd0a \u05db\u05d3\u05d9 \u05dc\u05e9\u05de\u05d5\u05e2 \u05d0\u05ea \u05d4\u05d4\u05d2\u05d9\u05d9\u05d4 \u05d4\u05d9\u05e4\u05e0\u05d9\u05ea</div>'+
+    '<button onclick="phDiagnose()" style="width:100%;padding:9px;border-radius:9px;border:1.5px solid var(--border);background:#fff;font-family:Heebo,sans-serif;font-size:12px;cursor:pointer;margin-bottom:14px;color:var(--dark)">\ud83d\udd0d \u05d1\u05d3\u05d5\u05e7 \u05d0\u05dd \u05d9\u05e9 \u05e7\u05d5\u05dc \u05d9\u05e4\u05e0\u05d9 \u05d1\u05de\u05db\u05e9\u05d9\u05e8</button>'+
+    voiceWarn +
+    '<div id="ph-voice-note" class="ph-novoice" style="display:none">\ud83d\udd0a \u05dc\u05d0 \u05e0\u05e9\u05de\u05e2 \u05e7\u05d5\u05dc? \u05d9\u05d9\u05ea\u05db\u05df \u05e9\u05d7\u05e1\u05e8 \u05e7\u05d5\u05dc \u05d9\u05e4\u05e0\u05d9 \u05d1\u05de\u05db\u05e9\u05d9\u05e8. \u05d4\u05ea\u05e7\u05df: \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u2190 \u05e0\u05d9\u05d4\u05d5\u05dc \u05db\u05dc\u05dc\u05d9 \u2190 \u05d8\u05e7\u05e1\u05d8-\u05dc\u05d3\u05d9\u05d1\u05d5\u05e8 \u2190 \u05d4\u05d5\u05e8\u05d3 \u05d9\u05e4\u05e0\u05d9\u05ea (\u65e5\u672c\u8a9e). \u05d1\u05d9\u05e0\u05ea\u05d9\u05d9\u05dd \u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05ea\u05e2\u05ea\u05d9\u05e7 \u05d4\u05e2\u05d1\u05e8\u05d9.</div>'+
+    '<div class="ph-cats">'+catsHtml+'</div>'+
+    '<div id="ph-items">'+itemsHtml+'</div>'+
+    '<div style="height:20px"></div>';
+
+  if (window.applyMobilePhrases) window.applyMobilePhrases();
+}
+
+
+window.phDiagnose = function(){
+  if (!('speechSynthesis' in window)){ alert('\u05d4\u05d3\u05e4\u05d3\u05e4\u05df \u05dc\u05d0 \u05ea\u05d5\u05de\u05da \u05d1\u05d4\u05e7\u05e8\u05d0\u05d4 \u05d1\u05db\u05dc\u05dc'); return; }
+  var voices = speechSynthesis.getVoices();
+  var jp = voices.filter(function(v){ return v.lang.indexOf('ja') === 0; });
+  var msg;
+  if (!voices.length){
+    msg = '\u26a0\ufe0f \u05d4\u05d3\u05e4\u05d3\u05e4\u05df \u05dc\u05d0 \u05de\u05d6\u05d4\u05d4 \u05e9\u05d5\u05dd \u05e7\u05d5\u05dc. \u05e0\u05e1\u05d4 \u05dc\u05e4\u05ea\u05d5\u05d7 \u05d1-Chrome.';
+  } else if (!jp.length){
+    msg = '\u274c \u05d0\u05d9\u05df \u05e7\u05d5\u05dc \u05d9\u05e4\u05e0\u05d9 \u05d6\u05de\u05d9\u05df \u05d1\u05d3\u05e4\u05d3\u05e4\u05df \u05d4\u05d6\u05d4.\n\n\u05e0\u05de\u05e6\u05d0\u05d5 ' + voices.length + ' \u05e7\u05d5\u05dc\u05d5\u05ea \u05d0\u05d7\u05e8\u05d9\u05dd.\n\n\u05e4\u05ea\u05e8\u05d5\u05df: \u05e4\u05ea\u05d7 \u05d0\u05ea \u05d4\u05e7\u05d5\u05d1\u05e5 \u05d1-Chrome \u05d1\u05de\u05e7\u05d5\u05dd Samsung Internet, \u05d0\u05d5 \u05d4\u05d7\u05dc\u05e3 \u05d0\u05ea \u05de\u05e0\u05d5\u05e2 \u05d4-TTS \u05dc-Google.';
+  } else {
+    msg = '\u2705 \u05e0\u05de\u05e6\u05d0 \u05e7\u05d5\u05dc \u05d9\u05e4\u05e0\u05d9!\n\n' + jp.map(function(v){ return '\u2022 '+v.name+' ('+v.lang+')'; }).join('\n') + '\n\n\u05de\u05e0\u05e1\u05d4 \u05dc\u05d4\u05e9\u05de\u05d9\u05e2 \u05e2\u05db\u05e9\u05d9\u05d5...';
+    // נסה להשמיע מיד עם הקול שנמצא
+    speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance('\u3053\u3093\u306b\u3061\u306f');
+    u.voice = jp[0]; u.lang = jp[0].lang; u.rate = 0.8;
+    speechSynthesis.speak(u);
+  }
+  alert(msg);
+};
+
+window.phSetCat = function(c){ phActiveCat = c; renderPhrases(); };
+
+window.applyMobilePhrases = function(){
+  if (window.innerWidth > 700) return;
+  var pc = document.getElementById('phrases-content');
+  if (pc) pc.style.cssText = 'padding:12px;max-width:none;margin:0;width:100%';
+};
+
+
+// ── JOURNAL MODULE ───────────────────────────────────
+var JOURNAL = JSON.parse(localStorage.getItem('jp_journal') || '[]');
+var jrMode = null;        // 'text' | 'draw'
+var jrCanvas, jrCtx, jrDrawing = false, jrColor = '#1a1a2e', jrPenSize = 3, jrErasing = false;
+
+function saveJournal(){ localStorage.setItem('jp_journal', JSON.stringify(JOURNAL)); }
+
+function renderJournal(){
+  var entriesHtml;
+  if (!JOURNAL.length){
+    entriesHtml = '<div class="jr-empty"><span class="big">\ud83d\udcd3</span>\u05e2\u05d3\u05d9\u05d9\u05df \u05d0\u05d9\u05df \u05e8\u05e9\u05d5\u05de\u05d5\u05ea.<br>\u05db\u05ea\u05d5\u05d1 \u05d0\u05d5 \u05e6\u05d9\u05d9\u05e8 \u05d0\u05ea \u05d4\u05e8\u05d0\u05e9\u05d5\u05e0\u05d4!</div>';
+  } else {
+    entriesHtml = JOURNAL.slice().reverse().map(function(e){
+      var body = e.type === 'draw'
+        ? '<img class="jr-entry-img" src="'+e.img+'"/>'
+        : '<div class="jr-entry-text">'+escapeHtml(e.text)+'</div>';
+      var tag = e.type === 'draw'
+        ? '<span class="jr-tag draw">\u270f\ufe0f \u05e6\u05d9\u05d5\u05e8</span>'
+        : '<span class="jr-tag text">\ud83d\udcdd \u05d8\u05e7\u05e1\u05d8</span>';
+      return '<div class="jr-entry"><div class="jr-entry-top">'+
+        '<div class="jr-entry-title">'+escapeHtml(e.title||'\u05dc\u05dc\u05d0 \u05db\u05d5\u05ea\u05e8\u05ea')+tag+'</div>'+
+        '<button class="jr-entry-del" onclick="delJournal('+e.id+')">\ud83d\uddd1\ufe0f</button></div>'+
+        '<div class="jr-entry-date">'+e.date+'</div>'+ body +'</div>';
+    }).join('');
+  }
+
+  document.getElementById('journal-content').innerHTML =
+    '<div class="jr-h2">\ud83d\udcd3 \u05d9\u05d5\u05de\u05df \u05d4\u05d8\u05d9\u05d5\u05dc</div>'+
+    '<div class="jr-sub">\u05e8\u05e9\u05d5\u05dd \u05d7\u05d5\u05d5\u05d9\u05d5\u05ea, \u05de\u05d7\u05e9\u05d1\u05d5\u05ea \u05d5\u05d0\u05d6\u05db\u05e8\u05d9\u05dd \u2014 \u05dc\u05e4\u05e0\u05d9 \u05d5\u05d1\u05de\u05d4\u05dc\u05da \u05d4\u05d8\u05d9\u05d5\u05dc</div>'+
+    '<div class="jr-newbtns">'+
+      '<button class="jr-newbtn" onclick="jrStart(\'text\')"><span class="ico">\ud83d\udcdd</span> \u05e8\u05e9\u05d5\u05de\u05d4 \u05d7\u05d3\u05e9\u05d4</button>'+
+      '<button class="jr-newbtn" onclick="jrStart(\'draw\')"><span class="ico">\u270f\ufe0f</span> \u05db\u05ea\u05d9\u05d1\u05d4/\u05e6\u05d9\u05d5\u05e8 \u05d1\u05e2\u05d8</button>'+
+    '</div>'+
+    '<div class="jr-editor" id="jr-editor">'+
+      '<input class="jr-title" id="jr-title" placeholder="\u05db\u05d5\u05ea\u05e8\u05ea..."/>'+
+      '<textarea class="jr-text" id="jr-text" placeholder="\u05de\u05d4 \u05e7\u05e8\u05d4 \u05d4\u05d9\u05d5\u05dd? \u05de\u05d7\u05e9\u05d1\u05d5\u05ea, \u05d7\u05d5\u05d5\u05d9\u05d5\u05ea, \u05d3\u05d1\u05e8\u05d9\u05dd \u05dc\u05d6\u05db\u05d5\u05e8..."></textarea>'+
+      '<div class="jr-canvas-wrap hidden" id="jr-canvas-wrap">'+
+        '<div class="jr-pen-hint" style="padding:6px 6px 0">\u270f\ufe0f \u05db\u05ea\u05d5\u05d1 \u05d0\u05d5 \u05e6\u05d9\u05d9\u05e8 \u05e2\u05dd \u05d4-S Pen \u05d0\u05d5 \u05d4\u05d0\u05e6\u05d1\u05e2</div>'+
+        '<div class="jr-canvas-tools" style="padding:8px">'+
+          '<button class="jr-tool on" id="jr-pen" onclick="jrSetPen()" title="\u05e2\u05d8">\u270f\ufe0f</button>'+
+          '<button class="jr-tool" id="jr-eraser" onclick="jrSetEraser()" title="\u05de\u05d7\u05e7">\ud83e\uddfd</button>'+
+          '<span class="jr-color on" style="background:#1a1a2e" onclick="jrSetColor(this,\'#1a1a2e\')"></span>'+
+          '<span class="jr-color" style="background:#c0392b" onclick="jrSetColor(this,\'#c0392b\')"></span>'+
+          '<span class="jr-color" style="background:#1d4ed8" onclick="jrSetColor(this,\'#1d4ed8\')"></span>'+
+          '<span class="jr-color" style="background:#166534" onclick="jrSetColor(this,\'#166534\')"></span>'+
+          '<span class="jr-color" style="background:#e8b84b" onclick="jrSetColor(this,\'#e8b84b\')"></span>'+
+          '<button class="jr-tool" onclick="jrClearCanvas()" title="\u05e0\u05e7\u05d4" style="margin-right:auto">\ud83d\uddd1\ufe0f</button>'+
+        '</div>'+
+        '<canvas id="jr-canvas"></canvas>'+
+      '</div>'+
+      '<div class="jr-editor-actions">'+
+        '<button class="jr-save" onclick="jrSave()">\ud83d\udcbe \u05e9\u05de\u05d5\u05e8</button>'+
+        '<button class="jr-cancel" onclick="jrCancel()">\u05d1\u05d9\u05d8\u05d5\u05dc</button>'+
+      '</div>'+
+    '</div>'+
+    '<div id="jr-entries">'+ entriesHtml +'</div>'+
+    '<div style="height:20px"></div>';
+
+  if (window.applyMobileJournal) window.applyMobileJournal();
+}
+
+function escapeHtml(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+window.jrStart = function(mode){
+  jrMode = mode;
+  var ed = document.getElementById('jr-editor');
+  ed.classList.add('on');
+  var cw = document.getElementById('jr-canvas-wrap');
+  var tx = document.getElementById('jr-text');
+  if (mode === 'draw'){
+    cw.classList.remove('hidden');
+    tx.style.display = 'none';
+    setTimeout(jrInitCanvas, 50);
+  } else {
+    cw.classList.add('hidden');
+    tx.style.display = '';
+  }
+  ed.scrollIntoView({behavior:'smooth', block:'center'});
+};
+
+window.jrCancel = function(){
+  document.getElementById('jr-editor').classList.remove('on');
+  document.getElementById('jr-title').value = '';
+  document.getElementById('jr-text').value = '';
+  jrMode = null;
+};
+
+function jrInitCanvas(){
+  jrCanvas = document.getElementById('jr-canvas');
+  if (!jrCanvas) return;
+  var wrap = document.getElementById('jr-canvas-wrap');
+  var w = wrap.clientWidth;
+  jrCanvas.width = w;
+  jrCanvas.height = 320;
+  jrCanvas.style.width = w + 'px';
+  jrCanvas.style.height = '320px';
+  jrCtx = jrCanvas.getContext('2d');
+  jrCtx.fillStyle = '#fffef9';
+  jrCtx.fillRect(0,0,jrCanvas.width,jrCanvas.height);
+  jrCtx.lineCap = 'round';
+  jrCtx.lineJoin = 'round';
+
+  function pos(e){
+    var r = jrCanvas.getBoundingClientRect();
+    var t = e.touches ? e.touches[0] : e;
+    return { x: t.clientX - r.left, y: t.clientY - r.top };
+  }
+  function start(e){ e.preventDefault(); jrDrawing = true; var p = pos(e); jrCtx.beginPath(); jrCtx.moveTo(p.x,p.y); }
+  function move(e){
+    if (!jrDrawing) return; e.preventDefault();
+    var p = pos(e);
+    // S Pen לחץ — אם נתמך
+    var pressure = (e.touches && e.touches[0] && e.touches[0].force) ? e.touches[0].force : (e.pressure || 0.5);
+    jrCtx.strokeStyle = jrErasing ? '#fffef9' : jrColor;
+    jrCtx.lineWidth = jrErasing ? 18 : (jrPenSize + pressure*3);
+    jrCtx.lineTo(p.x,p.y); jrCtx.stroke();
+  }
+  function end(e){ jrDrawing = false; }
+
+  // pointer events — תומך ב-S Pen, עכבר ומגע
+  jrCanvas.onpointerdown = start;
+  jrCanvas.onpointermove = move;
+  jrCanvas.onpointerup = end;
+  jrCanvas.onpointerleave = end;
+}
+
+window.jrSetPen = function(){ jrErasing=false; document.getElementById('jr-pen').classList.add('on'); document.getElementById('jr-eraser').classList.remove('on'); };
+window.jrSetEraser = function(){ jrErasing=true; document.getElementById('jr-eraser').classList.add('on'); document.getElementById('jr-pen').classList.remove('on'); };
+window.jrSetColor = function(el,c){ jrColor=c; jrErasing=false; document.querySelectorAll('.jr-color').forEach(function(x){x.classList.remove('on');}); el.classList.add('on'); document.getElementById('jr-pen').classList.add('on'); document.getElementById('jr-eraser').classList.remove('on'); };
+window.jrClearCanvas = function(){ if(jrCtx){ jrCtx.fillStyle='#fffef9'; jrCtx.fillRect(0,0,jrCanvas.width,jrCanvas.height); } };
+
+window.jrSave = function(){
+  var title = document.getElementById('jr-title').value.trim();
+  var now = new Date();
+  var dateStr = now.getDate()+'/'+(now.getMonth()+1)+'/'+now.getFullYear()+' '+
+    ('0'+now.getHours()).slice(-2)+':'+('0'+now.getMinutes()).slice(-2);
+  var entry = { id: Date.now(), title: title, date: dateStr, type: jrMode };
+  if (jrMode === 'draw'){
+    if (!jrCanvas) { alert('\u05d0\u05d9\u05df \u05e6\u05d9\u05d5\u05e8'); return; }
+    entry.img = jrCanvas.toDataURL('image/png');
+  } else {
+    var txt = document.getElementById('jr-text').value.trim();
+    if (!txt && !title){ alert('\u05db\u05ea\u05d5\u05d1 \u05de\u05e9\u05d4\u05d5 \u05ea\u05d7\u05d9\u05dc\u05d4'); return; }
+    entry.text = txt;
+  }
+  JOURNAL.push(entry);
+  saveJournal();
+  jrCancel();
+  renderJournal();
+};
+
+window.delJournal = function(id){
+  if (!confirm('\u05dc\u05de\u05d7\u05d5\u05e7 \u05d0\u05ea \u05d4\u05e8\u05e9\u05d5\u05de\u05d4?')) return;
+  JOURNAL = JOURNAL.filter(function(e){ return e.id !== id; });
+  saveJournal();
+  renderJournal();
+};
+
+window.applyMobileJournal = function(){
+  if (window.innerWidth > 700) return;
+  var jc = document.getElementById('journal-content');
+  if (jc) jc.style.cssText = 'padding:12px;max-width:none;margin:0;width:100%';
+};
+
+
+// ── HOME DASHBOARD ───────────────────────────────────
+function renderHome(){
+  // ספירה לאחור — הטיסה ממריאה 18.8, ההגעה ליפן 19.8
+  var FLIGHT = new Date('2026-08-18T00:00:00');
+  var ARRIVAL = new Date('2026-08-19T00:00:00');
+  var RETURN = new Date('2026-09-03T00:00:00');
+  var now = new Date(); now.setHours(0,0,0,0);
+  var msDay = 86400000;
+  var dToF = Math.round((FLIGHT-now)/msDay);
+  var dToR = Math.round((RETURN-now)/msDay);
+  var heroTitle, heroCount, heroSub;
+  if (dToF > 0){ heroTitle='\u05d4\u05d8\u05d9\u05e1\u05d4 \u05e9\u05dc\u05db\u05dd \u05de\u05de\u05e9\u05de\u05e9\u05ea \u05d5\u05de\u05ea\u05e7\u05e8\u05d1\u05ea \u2708\ufe0f'; heroCount=dToF; heroSub='\u05d9\u05de\u05d9\u05dd \u05dc\u05d8\u05d9\u05e1\u05d4 \u00b7 18 \u05d0\u05d5\u05d2\u05d5\u05e1\u05d8 2026'; }
+  else if (dToR >= 0){ heroTitle='\u05d0\u05ea\u05dd \u05d1\u05d9\u05e4\u05df! \ud83d\uddfe'; heroCount='\u05d9\u05d5\u05dd '+Math.max(1,(Math.round((now-ARRIVAL)/msDay)+1)); heroSub=dToR+' \u05d9\u05de\u05d9\u05dd \u05dc\u05d7\u05d6\u05e8\u05d4'; }
+  else { heroTitle='\u05d7\u05d6\u05e8\u05ea\u05dd \u05d1\u05e9\u05dc\u05d5\u05dd \ud83c\udfe0'; heroCount='\u2714'; heroSub='\u05d4\u05d8\u05d9\u05d5\u05dc \u05d4\u05e1\u05ea\u05d9\u05d9\u05dd'; }
+
+  // תקציב
+  var daily = BUDGET_DATA.daily, fixed = BUDGET_DATA.fixed;
+  var dTot = 0; daily.forEach(function(d){ dTot += d.hotel+d.food+d.transport+d.entry+d.misc; });
+  var fTot = 0; fixed.forEach(function(f){ fTot += f.amount; });
+  var ppTotal = dTot + fTot;
+  var ils = Math.round(ppTotal * ILS_PER_JPY);
+
+  // מסלול — ערים ייחודיות לפי סדר
+  var cityHebMap = {Tokyo:'\u05d8\u05d5\u05e7\u05d9\u05d5',Hakone:'\u05d4\u05d0\u05e7\u05d5\u05e0\u05d4',Kyoto:'\u05e7\u05d9\u05d5\u05d8\u05d5',Osaka:'\u05d0\u05d5\u05e1\u05e7\u05d4',Nara:'\u05e0\u05d0\u05e8\u05d4'};
+  var seq = [], last=null;
+  ITINERARY.forEach(function(d){ if(d.city!==last){ seq.push(d.city); last=d.city; } });
+  var routeHtml = seq.map(function(c,i){
+    return (i>0?'<span class="drt-arrow">\u2190</span>':'')+'<span class="drt-city">'+(cityHebMap[c]||c)+'</span>';
+  }).join('');
+
+  // טיסות
+  var flightsHtml = FLIGHTS.map(function(f){
+    return '<div class="dash-flight"><span class="dfl-dir">'+f.dir+'</span>'+
+      '<span class="dfl-route">'+f.from.code+' \u2190 '+f.to.code+'</span>'+
+      '<span class="dfl-time">'+f.from.date+'</span></div>';
+  }).join('');
+
+  // מזג אוויר — טוקיו יום ראשון
+  var wx = (WX.Tokyo && WX.Tokyo[0]) || {i:'\u2600\ufe0f',desc:'',max:'',min:''};
+
+  document.getElementById('home-content').innerHTML =
+    '<div class="dash-hero">'+
+      '<div class="dash-hero-title">'+heroTitle+'</div>'+
+      '<div class="dash-hero-count">'+heroCount+'</div>'+
+      '<div class="dash-hero-sub">'+heroSub+'</div>'+
+      '<div class="dash-hero-dates">\ud83d\udcc5 19 \u05d0\u05d5\u05d2\u05d5\u05e1\u05d8 \u2013 3 \u05e1\u05e4\u05d8\u05de\u05d1\u05e8 2026 \u00b7 16 \u05d9\u05de\u05d9\u05dd</div>'+
+    '</div>'+
+
+    '<div class="dash-grid">'+
+      '<div class="dash-card full">'+
+        '<div class="dash-card-h">\u2708\ufe0f \u05d8\u05d9\u05e1\u05d5\u05ea <span class="more" onclick="switchTab(\'transport\')">\u05dc\u05e4\u05e8\u05d8\u05d9\u05dd \u2190</span></div>'+
+        flightsHtml+
+      '</div>'+
+
+      '<div class="dash-card full">'+
+        '<div class="dash-card-h">\ud83d\uddfa\ufe0f \u05d4\u05de\u05e1\u05dc\u05d5\u05dc <span class="more" onclick="switchTab(\'itin\')">\u05dc\u05de\u05e1\u05dc\u05d5\u05dc \u2190</span></div>'+
+        '<div class="dash-route">'+routeHtml+'</div>'+
+      '</div>'+
+
+      '<div class="dash-card">'+
+        '<div class="dash-card-h">\ud83d\udcb4 \u05ea\u05e7\u05e6\u05d9\u05d1 <span class="more" onclick="switchTab(\'budget\')">\u05e4\u05d9\u05e8\u05d5\u05d8 \u2190</span></div>'+
+        '<div class="dash-budget-big">\u00a5'+ppTotal.toLocaleString()+'</div>'+
+        '<div class="dash-budget-sub">\u05dc\u05d0\u05d3\u05dd (\u05db\u05d5\u05dc\u05dc \u05d8\u05d9\u05e1\u05d4)</div>'+
+        '<div class="dash-budget-pp">\u20aa'+ils.toLocaleString()+' \u05dc\u05d0\u05d3\u05dd</div>'+
+      '</div>'+
+
+      '<div class="dash-card">'+
+        '<div class="dash-card-h">\ud83c\udf24\ufe0f \u05de\u05d6\u05d2 \u05d0\u05d5\u05d5\u05d9\u05e8 <span class="more" onclick="switchTab(\'wx\')">\u05ea\u05d7\u05d6\u05d9\u05ea \u2190</span></div>'+
+        '<div class="dash-wx"><span class="dash-wx-ico">'+wx.i+'</span>'+
+        '<div><div class="dash-wx-temp">'+wx.max+'\u00b0/'+wx.min+'\u00b0</div>'+
+        '<div class="dash-wx-desc">'+wx.desc+' \u00b7 \u05d8\u05d5\u05e7\u05d9\u05d5</div></div></div>'+
+      '</div>'+
+    '</div>'+
+
+    '<div class="dash-card full" style="margin-bottom:16px">'+
+      '<div class="dash-card-h">\u26a1 \u05e7\u05d9\u05e6\u05d5\u05e8\u05d9 \u05d3\u05e8\u05da</div>'+
+      '<div class="dash-shortcuts">'+
+        '<div class="dash-sc" onclick="switchTab(\'map\')"><span class="dash-sc-ico">\ud83d\uddfa\ufe0f</span><span class="dash-sc-label">\u05de\u05e4\u05d4</span></div>'+
+        '<div class="dash-sc" onclick="switchTab(\'itin\')"><span class="dash-sc-ico">\ud83d\udcc5</span><span class="dash-sc-label">\u05de\u05e1\u05dc\u05d5\u05dc</span></div>'+
+        '<div class="dash-sc" onclick="switchTab(\'wx\')"><span class="dash-sc-ico">\ud83c\udf24\ufe0f</span><span class="dash-sc-label">\u05de\u05d6\u05d2 \u05d0\u05d5\u05d5\u05d9\u05e8</span></div>'+
+        '<div class="dash-sc" onclick="switchTab(\'budget\')"><span class="dash-sc-ico">\ud83d\udcb4</span><span class="dash-sc-label">\u05ea\u05e7\u05e6\u05d9\u05d1</span></div>'+
+        '<div class="dash-sc" onclick="switchTab(\'transport\')"><span class="dash-sc-ico">\ud83d\ude86</span><span class="dash-sc-label">\u05ea\u05d7\u05d1\u05d5\u05e8\u05d4</span></div>'+
+      '</div>'+
+    '</div>'+
+    '<div style="height:20px"></div>';
+
+  if (window.applyMobileHome) window.applyMobileHome();
+}
+
+window.applyMobileHome = function(){
+  if (window.innerWidth > 700) return;
+  var hc = document.getElementById('home-content');
+  if (hc) hc.style.cssText = 'padding:12px;max-width:none;margin:0;width:100%';
+};
+
+
+function renderTransport(){
+  var fc = FLIGHTS.map(function(f){
+    return '<div class="flight-card">'+
+      '<div class="flight-top"><span class="flight-no">'+f.dir+' \u00b7 '+f.no+'</span><span class="flight-airline">'+f.airline+'</span></div>'+
+      '<div class="flight-body"><div class="flight-route">'+
+        '<div class="fr-end"><div class="fr-code">'+f.from.code+'</div><div class="fr-city">'+f.from.city+'</div><div class="fr-time">'+f.from.time+'</div><div class="fr-date">'+f.from.date+'</div></div>'+
+        '<div class="fr-mid"><div class="fr-dur">'+f.dur+'</div><div class="fr-line"></div><div class="fr-plane">\u2708\ufe0f</div></div>'+
+        '<div class="fr-end"><div class="fr-code">'+f.to.code+'</div><div class="fr-city">'+f.to.city+'</div><div class="fr-time">'+f.to.time+'</div><div class="fr-date">'+f.to.date+'</div></div>'+
+      '</div>'+
+      '<div class="flight-meta"><span class="fm-item">\ud83d\udcba <strong>'+f.bags+'</strong></span><span class="fm-item">\ud83d\udcba \u05de\u05d5\u05e9\u05d1: <strong>'+f.seats+'</strong></span></div>'+
+      '</div></div>';
+  }).join('');
+
+  var tc = TRAINS.map(function(t,i){
+    var pathHtml = t.path.map(function(p,j){
+      var isLast = (j === t.path.length-1);
+      return '<div class="trd-step"><span class="trd-dot'+(isLast?' last':'')+'"></span><span class="trd-step-txt">'+p+'</span></div>'+
+             (isLast?'':'<div class="trd-connector"></div>');
+    }).join('');
+    return '<div class="train-card-wrap">'+
+      '<div class="train-card" onclick="toggleTrain('+i+')">'+
+        '<span class="train-ico">'+t.ico+'</span>'+
+        '<div class="train-info"><div class="train-route">'+t.route+'</div><div class="train-detail">'+t.detail+'</div></div>'+
+        '<div class="train-time"><div class="train-dur">'+t.dur+'</div><div class="train-cost">'+t.cost+'</div></div>'+
+        '<span class="train-chev" id="chev-'+i+'">\u25be</span>'+
+      '</div>'+
+      '<div class="train-detail-panel" id="trd-'+i+'">'+
+        '<div class="trd-grid">'+
+          '<div class="trd-box"><div class="trd-label">\u23f1\ufe0f \u05de\u05e9\u05da</div><div class="trd-val">'+t.dur+'</div></div>'+
+          '<div class="trd-box"><div class="trd-label">\ud83d\udcb0 \u05e2\u05dc\u05d5\u05ea</div><div class="trd-val">'+t.cost+'</div></div>'+
+          '<div class="trd-box"><div class="trd-label">\ud83d\udd01 \u05ea\u05d3\u05d9\u05e8\u05d5\u05ea</div><div class="trd-val">'+t.freq+'</div></div>'+
+        '</div>'+
+        '<div class="trd-path-title">\ud83d\uddfa\ufe0f \u05de\u05e1\u05dc\u05d5\u05dc</div>'+
+        '<div class="trd-path">'+pathHtml+'</div>'+
+        '<div class="trd-notes">\ud83d\udca1 '+t.notes+'</div>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+
+  var lc = LOCAL_TRANSPORT.map(function(l){
+    return '<div class="local-card"><div class="local-top"><span class="local-ico">'+l.ico+'</span><span class="local-name">'+l.name+'</span></div><div class="local-desc">'+l.desc+'</div></div>';
+  }).join('');
+
+  document.getElementById('transport-content').innerHTML =
+    '<div class="tr-h2">\ud83d\ude86 \u05ea\u05d7\u05d1\u05d5\u05e8\u05d4</div>'+
+    '<div class="tr-section-title">\u2708\ufe0f \u05d8\u05d9\u05e1\u05d5\u05ea</div>'+ fc +
+    '<div class="tr-section-title">\ud83d\ude85 \u05e8\u05db\u05d1\u05d5\u05ea \u05d1\u05d9\u05df \u05e2\u05e8\u05d9\u05dd</div>'+ tc +
+    '<div class="tr-tip">\ud83d\udca1 <strong>JR Pass</strong> (14 \u05d9\u05d5\u05dd) \u05de\u05db\u05e1\u05d4 \u05d0\u05ea \u05e8\u05d5\u05d1 \u05d4\u05e8\u05db\u05d1\u05d5\u05ea \u05d4\u05d1\u05d9\u05df-\u05e2\u05d9\u05e8\u05d5\u05e0\u05d9\u05d5\u05ea \u05d5\u05d0\u05ea NEX \u05de\u05e9\u05d3\u05d4 \u05d4\u05ea\u05e2\u05d5\u05e4\u05d4. \u05e7\u05e0\u05d5 \u05d0\u05d5\u05ea\u05d5 \u05dc\u05e4\u05e0\u05d9 \u05d4\u05d8\u05d9\u05e1\u05d4!</div>'+
+    '<div class="tr-section-title">\ud83d\ude87 \u05ea\u05d7\u05d1\u05d5\u05e8\u05d4 \u05de\u05e7\u05d5\u05de\u05d9\u05ea</div>'+ lc +
+    '<div style="height:20px"></div>';
+
+  if (window.applyMobileTransport) window.applyMobileTransport();
+}
+
+window.applyMobileTransport = function(){
+  if (window.innerWidth > 700) return;
+  var tc2 = document.getElementById('transport-content');
+  if (tc2) tc2.style.cssText = 'padding:12px;max-width:none;margin:0;width:100%';
+};
+
+
+// ── MOBILE BUDGET LAYOUT ─────────────────────────────
+window.applyMobileBudget = function(){
+  if (window.innerWidth > 700) return;
+  var bc = document.getElementById('budget-content');
+  if (bc) bc.style.cssText = 'padding:10px;max-width:none;margin:0;width:100%';
+  var sum = document.querySelector('.bgt-summary');
+  if (sum) sum.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px';
+  document.querySelectorAll('.bc-amount').forEach(function(el){ el.style.fontSize='15px'; });
+  var cg = document.querySelector('.cat-grid');
+  if (cg) cg.style.gridTemplateColumns = '1fr';
+  var hdr = document.querySelector('.bgt-hdr');
+  if (hdr) { hdr.style.flexDirection='column'; hdr.style.alignItems='flex-start'; hdr.style.gap='8px'; }
+  // טבלה — הסתר עמודות פחות חשובות
+  document.querySelectorAll('.day-table tr').forEach(function(tr){
+    var cells = tr.children;
+    if (cells[5]) cells[5].style.display='none'; // תחבורה
+    if (cells[7]) cells[7].style.display='none'; // שונות
+  });
+  var dt = document.querySelector('.day-table');
+  if (dt) dt.style.fontSize = '11px';
+};
+
+function renderBudget() {
+  const daily = BUDGET_DATA.daily, fixed = BUDGET_DATA.fixed, PEOPLE = 2;
+  const cats = {hotel:0,food:0,transport:0,entry:0,misc:0};
+  daily.forEach(d => Object.keys(cats).forEach(k => cats[k] += d[k]||0));
+  const dailyTotalPP = Object.values(cats).reduce((a,b)=>a+b,0);
+  const fixedCats = {};
+  fixed.forEach(f => { fixedCats[f.cat] = (fixedCats[f.cat]||0) + f.amount; });
+  const fixedTotalPP = fixed.reduce((a,f)=>a+f.amount,0);
+  const grandTotalPP = dailyTotalPP + fixedTotalPP;
+  const grandTotal2  = grandTotalPP * PEOPLE;
+  const allCats = {};
+  Object.entries(cats).forEach(([k,v]) => allCats[k]=(allCats[k]||0)+v);
+  Object.entries(fixedCats).forEach(([k,v]) => allCats[k]=(allCats[k]||0)+v);
+  const total = Object.values(allCats).reduce((a,b)=>a+b,0);
+  const cityHeb2 = {Tokyo:'טוקיו',Hakone:'האקונה',Kyoto:'קיוטו',Osaka:'אוסקה',Nara:'נארה'};
+
+  document.getElementById('budget-content').innerHTML = `
+    <div class="bgt-hdr">
+      <h2>💴 תקציב טיול יפן 2026</h2>
+      <div class="bgt-currency">
+        <button class="bgt-cur-btn${budgetCurrency==='JPY'?' on':''}" onclick="setCur('JPY')">¥ ין</button>
+        <button class="bgt-cur-btn${budgetCurrency==='ILS'?' on':''}" onclick="setCur('ILS')">₪ שקל</button>
+        <button class="bgt-cur-btn${budgetCurrency==='BOTH'?' on':''}" onclick="setCur('BOTH')">שניהם</button>
+      </div>
+    </div>
+    <div class="bgt-summary">
+      <div class="bgt-card"><div class="bc-label">🏨 לינה</div><div class="bc-amount">${fmt(cats.hotel)}</div><div class="bc-sub">לאדם</div></div>
+      <div class="bgt-card"><div class="bc-label">🍜 אוכל</div><div class="bc-amount">${fmt(cats.food)}</div><div class="bc-sub">לאדם</div></div>
+      <div class="bgt-card"><div class="bc-label">🚃 תחבורה</div><div class="bc-amount">${fmt(cats.transport+(fixedCats.transport||0))}</div><div class="bc-sub">כולל JR Pass</div></div>
+      <div class="bgt-card"><div class="bc-label">🎟️ כניסות</div><div class="bc-amount">${fmt(cats.entry+(fixedCats.entry||0))}</div><div class="bc-sub">לאדם</div></div>
+      <div class="bgt-card"><div class="bc-label">✈️ טיסה+שונות</div><div class="bc-amount">${fmt((fixedCats.flight||0)+(fixedCats.misc||0)+cats.misc)}</div><div class="bc-sub">לאדם (הערכה)</div></div>
+      <div class="bgt-card total"><div class="bc-label">סה"כ לאדם</div><div class="bc-amount">${fmt(grandTotalPP)}</div><div class="bc-sub">₪${Math.round(grandTotalPP*ILS_PER_JPY).toLocaleString()}</div></div>
+      <div class="bgt-card total" style="background:var(--red)"><div class="bc-label">סה"כ 2 אנשים</div><div class="bc-amount">${fmt(grandTotal2)}</div><div class="bc-sub">₪${Math.round(grandTotal2*ILS_PER_JPY).toLocaleString()}</div></div>
+    </div>
+    <div class="bgt-bar-wrap">${Object.entries(allCats).map(([k,v])=>`<div class="bgt-bar-seg" style="width:${(v/total*100).toFixed(1)}%;background:${CAT_COLORS[k]}"></div>`).join('')}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px">${Object.entries(allCats).map(([k,v])=>`<span style="font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:${CAT_COLORS[k]};display:inline-block"></span>${CAT_LABELS[k]} ${(v/total*100).toFixed(0)}%</span>`).join('')}</div>
+    <div class="bgt-section">
+      <div class="bgt-section-title">📌 הוצאות קבועות (לאדם)</div>
+      <div class="cat-grid">${fixed.map(f=>`<div class="cat-item"><span class="cat-ico">${f.ico}</span><div class="cat-info"><div class="cat-name">${f.name}</div><div class="cat-desc">${f.note}</div></div><div><div class="cat-price">${fmt(f.amount)}</div></div></div>`).join('')}</div>
+    </div>
+    <div class="bgt-section">
+      <div class="bgt-section-title">📅 פירוט יומי (לאדם)</div>
+      <div style="overflow-x:auto"><table class="day-table">
+        <thead><tr><th>תאריך</th><th>עיר</th><th>נושא</th><th>🏨</th><th>🍜</th><th>🚃</th><th>🎟️</th><th>📦</th><th>סה"כ</th></tr></thead>
+        <tbody>${daily.map(d=>{const dt=new Date(d.date+'T00:00:00');const tot=d.hotel+d.food+d.transport+d.entry+d.misc;return`<tr><td>${dt.getDate()} ${HM2[dt.getMonth()]}</td><td><span class="day-city-tag ${d.city}">${cityHeb2[d.city]}</span></td><td style="font-size:11px;color:var(--muted)">${d.theme}</td><td>${d.hotel>0?fmt(d.hotel):'—'}</td><td>${fmt(d.food)}</td><td>${fmt(d.transport)}</td><td>${d.entry>0?fmt(d.entry):'—'}</td><td>${d.misc>0?fmt(d.misc):'—'}</td><td class="total-col">${fmt(tot)}</td></tr>`;}).join('')}</tbody>
+        <tfoot><tr><td colspan="3">סה"כ</td><td>${fmt(cats.hotel)}</td><td>${fmt(cats.food)}</td><td>${fmt(cats.transport)}</td><td>${fmt(cats.entry)}</td><td>${fmt(cats.misc)}</td><td>${fmt(dailyTotalPP)}</td></tr></tfoot>
+      </table></div>
+    </div>
+    <div class="bgt-tips">
+      <h3>💡 טיפים לחסכון</h3>
+      <div class="tip-item"><span class="tip-ico">🚄</span><div><strong>JR Pass</strong> — קנו לפני הטיסה. חוסך עשרות אלפי ין על שינקנסן.</div></div>
+      <div class="tip-item"><span class="tip-ico">🏪</span><div><strong>קונביני</strong> (7-Eleven, FamilyMart) — ארוחות איכותיות ב-500–800¥.</div></div>
+      <div class="tip-item"><span class="tip-ico">💳</span><div><strong>מזומן!</strong> — יפן עדיין מוכוונת מזומן. החליפו לפני כל שלב.</div></div>
+      <div class="tip-item"><span class="tip-ico">🍱</span><div><strong>צהריים = הארוחה הגדולה</strong> — תפריטי צהריים זולים בהרבה מהערב.</div></div>
+    </div>
+    <div style="height:20px"></div>`;
+  if (window.applyMobileBudget) window.applyMobileBudget();
+}
+window.setCur = function(c){ budgetCurrency=c; renderBudget(); };
+
+// ── COUNTDOWN ──
+function updateCountdown() {
+  const FLIGHT = new Date('2026-08-18T00:00:00');
+  const ARRIVAL = new Date('2026-08-19T00:00:00');
+  const RETURN = new Date('2026-09-03T00:00:00');
+  const now = new Date(); now.setHours(0,0,0,0);
+  const msDay = 86400000;
+  const daysToFlight = Math.round((FLIGHT-now)/msDay);
+  const daysToReturn = Math.round((RETURN-now)/msDay);
+  const cdEl=document.getElementById('countdown');
+  const numEl=document.getElementById('cd-num');
+  const txtEl=document.getElementById('cd-text');
+  const subEl=document.getElementById('cd-sub');
+  if(daysToFlight>0){numEl.textContent=daysToFlight;txtEl.textContent='ימים לטיסה ✈️';subEl.textContent='18 אוגוסט 2026';cdEl.classList.remove('arrived');}
+  else if(daysToReturn>=0){numEl.textContent='יום '+Math.max(1,(Math.round((now-ARRIVAL)/msDay)+1));txtEl.textContent='🗾 אנחנו ביפן!';subEl.textContent=daysToReturn+' ימים לחזרה';cdEl.classList.add('arrived');}
+  else{numEl.textContent='🏠';txtEl.textContent='חזרנו בשלום!';subEl.textContent='';cdEl.classList.add('arrived');}
+}
+updateCountdown();
+
+
+// ── BOOTSTRAP ────────────────────────────────────────
+renderHome();
+initMapState(HOME.lat, HOME.lng, HOME.zoom);
+setupEvents();
+renderDayNav();
+renderList();
+renderWx('Tokyo');
+
+// First render after layout settles
+requestAnimationFrame(() => {
+  render();
+  (function fixHdr(){
+    var hh = document.getElementById('hdr').offsetHeight;
+    if(window.innerWidth <= 700) {
+      document.getElementById('app').style.marginTop = hh + 'px';
+      document.getElementById('app').style.height = 'calc(100vh - ' + hh + 'px)';
+    }
+  })();
+  window.addEventListener('resize', function(){
+    var hh = document.getElementById('hdr').offsetHeight;
+    if(window.innerWidth <= 700) {
+      document.getElementById('app').style.marginTop = hh + 'px';
+      document.getElementById('app').style.height = 'calc(100vh - ' + hh + 'px)';
+    } else {
+      document.getElementById('app').style.marginTop = '';
+      document.getElementById('app').style.height = '';
+    }
+  });
+});
+
+// Wire up UI controls
+document.querySelectorAll('.tab').forEach(t =>
+  t.addEventListener('click', () => {
+    if (t.dataset.tab === 'places') {
+      // טאב מקומות — פתח את התפריט (drawer במובייל, סיידבר גלוי בדסקטופ)
+      if (window.innerWidth <= 700) {
+        if (window.mobSbOpen) { window.closeMobSb(); }
+        else { window.toggleMobSb(); }
+      }
+      return;
+    }
+    switchTab(t.dataset.tab);
+  }));
+
+document.querySelectorAll('#city-f .chip').forEach(c =>
+  c.addEventListener('click', () => {
+    document.querySelectorAll('#city-f .chip').forEach(x => x.classList.remove('on'));
+    c.classList.add('on');
+    filters.city = c.dataset.v;
+    renderList();
+    const cv = CITY_VIEWS[c.dataset.v];
+    if (cv) { initMapState(cv.lat, cv.lng, cv.zoom); render(); }
+    else    { initMapState(HOME.lat, HOME.lng, HOME.zoom); render(); }
+  }));
+
+document.querySelectorAll('#type-f .chip').forEach(c =>
+  c.addEventListener('click', () => {
+    document.querySelectorAll('#type-f .chip').forEach(x => x.classList.remove('on'));
+    c.classList.add('on');
+    filters.type = c.dataset.v;
+    renderList();
+  }));
+
+document.getElementById('fav-cb').addEventListener('change', e => {
+  filters.fav = e.target.checked; renderList();
+});
+
+let st;
+document.getElementById('srch').addEventListener('input', e => {
+  clearTimeout(st);
+  st = setTimeout(() => { filters.q = e.target.value.trim(); renderList(); }, 220);
+});
+
+document.querySelectorAll('.wxcb').forEach(b =>
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.wxcb').forEach(x => x.classList.remove('on'));
+    b.classList.add('on'); renderWx(b.dataset.c);
+  }));
+
+// פונקציה גלובלית — נקראת שוב אחרי כל renderDayNav
+window.applyMobileItinerary = function(){
+  if (window.innerWidth > 700) return;
+  var itin = document.getElementById('itin-panel');
+  if (itin) itin.style.flexDirection = 'column';
+  var dn = document.getElementById('day-nav');
+  if (dn) dn.style.cssText = 'width:100%;height:78px;min-height:78px;overflow-x:auto;overflow-y:hidden;display:flex;flex-direction:row;gap:5px;padding:6px 8px;border-left:none;border-bottom:1px solid #e0d5b8;flex-shrink:0;-webkit-overflow-scrolling:touch;background:var(--cream2)';
+  var dd = document.getElementById('day-det');
+  if (dd) dd.style.cssText = 'flex:1;overflow-y:auto;padding:16px;background:var(--cream)';
+  document.querySelectorAll('.dni .dt').forEach(function(el){ el.style.display='none'; });
+  document.querySelectorAll('.dni').forEach(function(el){
+    el.style.flexShrink='0'; el.style.minWidth='76px'; el.style.maxWidth='90px'; el.style.textAlign='center';
+  });
+};
+
+// ── MOBILE DIRECT DOM ────────────────────────────────
+(function(){
+  if (window.innerWidth > 700) return;
+  
+  // כותרת — שורה שנייה לטאבים
+  var hdr = document.getElementById('hdr');
+  hdr.style.height = 'auto';
+  hdr.style.flexWrap = 'wrap';
+  hdr.style.padding = '6px 10px';
+  hdr.style.gap = '4px';
+  var brand = document.querySelector('.brand');
+  brand.querySelector('p') && (brand.querySelector('p').style.display = 'none');
+  brand.querySelector('h1').style.fontSize = '13px';
+  document.querySelector('.torii').style.fontSize = '18px';
+  var cd = document.getElementById('countdown');
+  if(cd){ cd.style.padding='3px 8px'; }
+  var cdnum = document.getElementById('cd-num');
+  if(cdnum) cdnum.style.fontSize = '15px';
+  var cdsub = document.getElementById('cd-sub');
+  if(cdsub) cdsub.style.display = 'none';
+  var tabs = document.querySelector('.tabs');
+  tabs.style.cssText = 'width:100%;order:3;overflow-x:auto;flex-wrap:nowrap;gap:4px;-webkit-overflow-scrolling:touch;display:flex';
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.style.flexShrink = '0';
+    t.style.padding = '4px 10px';
+    t.style.fontSize = '11px';
+  });
+  
+  // הסתר סיידבר
+  // sidebar visible
+  
+  // app — גובה נכון
+  var app = document.getElementById('app');
+  var hh = hdr.offsetHeight;
+  app.style.marginTop = hh + 'px';
+  app.style.height = 'calc(100vh - ' + hh + 'px)';
+  app.style.marginBottom = '0';
+  
+  // מסלול — סדר ראשוני
+  window.applyMobileItinerary();
+  // סיידבר כ-drawer
+  window.setupMobileSidebar();
+  
+})();
+
+</script>
+<script>
+// ── PWA MANIFEST (inline) ────────────────────────────
+(function(){
+  var manifest = {
+    name: "\u05d8\u05d9\u05d5\u05dc \u05d9\u05e4\u05df 2026",
+    short_name: "\u05d8\u05d9\u05d5\u05dc \u05d9\u05e4\u05df",
+    description: "\u05de\u05ea\u05db\u05e0\u05df \u05d8\u05d9\u05d5\u05dc \u05d0\u05d9\u05e9\u05d9 \u05dc\u05d9\u05e4\u05df",
+    start_url: ".",
+    display: "standalone",
+    background_color: "#1a1a2e",
+    theme_color: "#1a1a2e",
+    lang: "he",
+    dir: "rtl",
+    orientation: "portrait",
+    icons: [
+      { src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACKElEQVR4nO3bwQkCMRBAUVesImALe7AkC7Mkm7ARW9D9ukvgvXtgDp85hGQZYz3BVuejB2BuAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASC7l8PNx/dUcHOh2f20+awORCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASJYx1qNn+NS21yPlrUI348xfsYFIBEQiIBIBkQiIREAkAiIREMlOF4l+kO1vn9tIG4hEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiLxqP6/Zpz5KzYQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgkmWM9egZmJgNRCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBETyBsjrFWiNKWNWAAAAAElFTkSuQmCC", sizes: "192x192", type: "image/png", purpose: "any" },
+      { src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAAHeklEQVR4nO3XwWnEQBBFQcs4igGloINCUmAKSUkoER99tA27zLKvKoIPfXj0Msb2AUDP5+wBAMwhAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUV+zB/zJda6zJwD8w37csyf8zgcAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUcsY2+wNPMZ1rrMn/NiPe/aEt+K4PIMPACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiljG22RteznWusycAD7Yf9+wJL8cHABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAELWMsc3ewGNc5zp7wo/9uGdPeCuOyzP4AACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgahljm70BgAl8AABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABR32yYF+i18tbyAAAAAElFTkSuQmCC", sizes: "512x512", type: "image/png", purpose: "any" },
+      { src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAAHeklEQVR4nO3XwWnEQBBFQcs4igGloINCUmAKSUkoER99tA27zLKvKoIPfXj0Msb2AUDP5+wBAMwhAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUV+zB/zJda6zJwD8w37csyf8zgcAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUcsY2+wNPMZ1rrMn/NiPe/aEt+K4PIMPACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiljG22RteznWusycAD7Yf9+wJL8cHABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAELWMsc3ewGNc5zp7wo/9uGdPeCuOyzP4AACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgahljm70BgAl8AABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABR32yYF+i18tbyAAAAAElFTkSuQmCC", sizes: "512x512", type: "image/png", purpose: "maskable" }
+    ]
+  };
+  var blob = new Blob([JSON.stringify(manifest)], {type:'application/json'});
+  var url = URL.createObjectURL(blob);
+  var link = document.createElement('link');
+  link.rel = 'manifest';
+  link.href = url;
+  document.head.appendChild(link);
+})();
+</script>
+</body>
+</html>

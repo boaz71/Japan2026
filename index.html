@@ -433,6 +433,31 @@ html,body{height:100%;overflow:hidden;font-family:'Heebo',sans-serif;direction:r
 #home-panel{overflow-y:auto;background:linear-gradient(180deg,#fdf6e3,#f5ead0)}
 #home-content{padding:18px;max-width:900px;margin:0 auto}
 
+
+/* ── ITINERARY EDIT MODE ─────────────────── */
+.d-edit-btn{float:left;background:var(--gold);color:var(--dark);border:none;border-radius:8px;padding:6px 12px;font-family:'Heebo',sans-serif;font-size:12px;font-weight:800;cursor:pointer}
+.ie-field{margin-bottom:13px}
+.ie-field label{display:block;font-size:12px;font-weight:800;color:var(--dark);margin-bottom:5px}
+.ie-field input,.ie-field textarea,.ie-add-row select{width:100%;border:1.5px solid var(--border);border-radius:9px;padding:10px 12px;font-family:'Heebo',sans-serif;font-size:13px;outline:none;box-sizing:border-box;background:#fff}
+.ie-field input:focus,.ie-field textarea:focus{border-color:var(--red)}
+.ie-field textarea{resize:vertical;min-height:64px}
+.ie-places{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:8px}
+.ie-place-row{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-bottom:1px solid #f0ead0;gap:8px}
+.ie-place-row:last-child{border-bottom:none}
+.ie-place-name{font-size:13px;color:var(--text);flex:1}
+.ie-place-btns{display:flex;gap:5px;flex-shrink:0}
+.ie-mini{background:#eef;border:none;border-radius:7px;width:30px;height:30px;font-size:13px;cursor:pointer;color:#1d4ed8}
+.ie-mini.ie-del{background:#fee;color:#c0392b}
+.ie-empty{padding:14px;text-align:center;font-size:12px;color:var(--muted)}
+.ie-add-row{display:flex;gap:7px}
+.ie-add-row select{flex:1}
+.ie-add-btn{background:#27ae60;color:#fff;border:none;border-radius:9px;padding:0 15px;font-family:'Heebo',sans-serif;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap}
+.ie-actions{display:flex;gap:8px;margin-top:14px}
+.ie-save{flex:2;background:var(--red);color:#fff;border:none;border-radius:10px;padding:13px;font-family:'Heebo',sans-serif;font-size:14px;font-weight:800;cursor:pointer}
+.ie-cancel{flex:1;background:#fff;color:var(--muted);border:1.5px solid var(--border);border-radius:10px;padding:13px;font-family:'Heebo',sans-serif;font-size:14px;font-weight:700;cursor:pointer}
+.ie-reset{width:100%;margin-top:10px;background:none;border:1.5px dashed var(--border);border-radius:10px;padding:10px;font-family:'Heebo',sans-serif;font-size:12px;color:var(--muted);cursor:pointer}
+.ie-reset:hover{border-color:#c0392b;color:#c0392b}
+
 /* ── TODAY IN ITINERARY CARD ───────────────── */
 .today-card{background:linear-gradient(135deg,#c0392b,#e8734a);border-radius:18px;padding:18px;margin-bottom:16px;color:#fff;box-shadow:0 4px 16px rgba(192,57,43,.3)}
 .today-card.today-soon{background:linear-gradient(135deg,#2a7a8a,#3aa0b0)}
@@ -706,7 +731,7 @@ const PLACES = [
   {id:"rkyt",name:"קפה בוקר קיוטו",        city:"Kyoto",  type:"restaurant",lat:35.0050,lng:135.7640,note:"קפה בוקר ליד שוק נישיקי.",link:"https://mumokuteki.com/",price:"₪"},
 ];
 
-const ITINERARY = [
+const ITINERARY_DEFAULT = [
   {date:"2026-08-19",city:"Tokyo",  theme:"הגעה + שינג'וקו בערב",           ids:["htok","sjku","rich"],        notes:"נחיתה. צ'ק-אין. סיבוב ערב קל בשינג'וקו. אל תגזימו — ג'ט-לאג."},
   {date:"2026-08-20",city:"Tokyo",  theme:"שיבויה + אסאקוסה",               ids:["shib","snso","rtky"],         notes:"בוקר בשיבויה — מעבר החציה + שופינג. אחה׳צ אסאקוסה ומקדש סנסו-ג'י."},
   {date:"2026-08-21",city:"Tokyo",  theme:"🎢 Tokyo DisneySea — יום מלא",    ids:["dsea"],                      notes:"יום מלא ב-DisneySea. להזמין כרטיסים מראש! חזרה למלון עייפים ומאושרים."},
@@ -724,6 +749,31 @@ const ITINERARY = [
   {date:"2026-09-02",city:"Tokyo",  theme:"יום חופשי אחרון",                ids:[],                            notes:"שופינג אחרון / מנוחה. ארוחת ערב אחרונה. אריזת מזוודות."},
   {date:"2026-09-03",city:"Tokyo",  theme:"טיסה חזרה ✈️",                   ids:[],                            notes:"צ'ק-אאוט. נסיעה לשדה התעופה. またね — להתראות יפן!"},
 ];
+
+// ── מסלול ניתן לעריכה: נטען מ-localStorage אם קיימות עריכות ──
+var ITINERARY = (function(){
+  try {
+    var saved = JSON.parse(localStorage.getItem('jp_itinerary') || 'null');
+    if (saved && Array.isArray(saved) && saved.length) return saved;
+  } catch(e){}
+  return JSON.parse(JSON.stringify(ITINERARY_DEFAULT));
+})();
+
+function saveItinerary(){
+  localStorage.setItem('jp_itinerary', JSON.stringify(ITINERARY));
+}
+
+function isItineraryEdited(){
+  return localStorage.getItem('jp_itinerary') !== null;
+}
+
+window.resetItinerary = function(){
+  if (!confirm('\u05dc\u05e9\u05d7\u05d6\u05e8 \u05d0\u05ea \u05d4\u05de\u05e1\u05dc\u05d5\u05dc \u05d4\u05de\u05e7\u05d5\u05e8\u05d9? \u05db\u05dc \u05d4\u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd \u05e9\u05e2\u05e8\u05db\u05ea \u05d9\u05d9\u05de\u05d7\u05e7\u05d5.')) return;
+  localStorage.removeItem('jp_itinerary');
+  ITINERARY = JSON.parse(JSON.stringify(ITINERARY_DEFAULT));
+  renderDayNav();
+  if (window._itinSelDay !== undefined) selDay(window._itinSelDay);
+};
 
 const WX = {
   Tokyo:[
@@ -1218,6 +1268,7 @@ function renderDayNav() {
 }
 
 window.selDay = function(i) {
+  window._itinSelDay = i;
   document.querySelectorAll('.dni').forEach((el,j) => el.classList.toggle('on', j===i));
   const day = ITINERARY[i];
   const dt  = new Date(day.date+'T00:00:00');
@@ -1225,14 +1276,16 @@ window.selDay = function(i) {
   const dist   = calcDist(day.ids);
 
   document.getElementById('day-det').innerHTML = `
-    <div class="d-title">${dt.getDate()} ${HM[dt.getMonth()]} ${dt.getFullYear()}</div>
-    <div class="d-theme">📍 ${day.theme}</div>
+    <div class="d-title">${dt.getDate()} ${HM[dt.getMonth()]} ${dt.getFullYear()}
+      <button class="d-edit-btn" onclick="itinEditDay(${i})">\u270f\ufe0f \u05e2\u05e8\u05d5\u05da</button>
+    </div>
+    <div class="d-theme">\ud83d\udccd ${day.theme}</div>
     <p class="d-notes">${day.notes}</p>
     <hr class="d-div"/>
     <div class="stats-row">
-      <div class="sbox"><strong>${places.length}</strong>מקומות</div>
-      <div class="sbox"><strong>${cityHeb[day.city]||day.city}</strong>עיר</div>
-      ${dist > 0 ? `<div class="sbox"><strong>~${dist} ק"מ</strong>מרחק</div>` : ''}
+      <div class="sbox"><strong>${places.length}</strong>\u05de\u05e7\u05d5\u05de\u05d5\u05ea</div>
+      <div class="sbox"><strong>${cityHeb[day.city]||day.city}</strong>\u05e2\u05d9\u05e8</div>
+      ${dist > 0 ? `<div class="sbox"><strong>~${dist} \u05e7"\u05de</strong>\u05de\u05e8\u05d7\u05e7</div>` : ''}
     </div>
     ${places.length ? `<div class="dp-list">${places.map((p,n) => `
       <div class="dpi" onclick="jumpTo('${p.id}')">
@@ -1242,9 +1295,115 @@ window.selDay = function(i) {
           <div class="dpi-note">${p.note.slice(0,80)}...</div>
         </div>
       </div>`).join('')}</div>`
-    : '<p style="color:#aaa;font-size:12px;text-align:center;padding:20px">אין מקומות ביום זה</p>'}`;
+    : '<p style="color:#aaa;font-size:12px;text-align:center;padding:20px">\u05d0\u05d9\u05df \u05de\u05e7\u05d5\u05de\u05d5\u05ea \u05d1\u05d9\u05d5\u05dd \u05d6\u05d4</p>'}`;
 
   dayPolylineCoords = places.map(p => [p.lat, p.lng]);
+};
+
+// ── מצב עריכת יום ──
+window.itinEditDay = function(i){
+  const day = ITINERARY[i];
+  const dt  = new Date(day.date+'T00:00:00');
+  const cityOfDay = day.city;
+
+  const placeRows = day.ids.map(function(id, n){
+    const p = PLACES.find(x=>x.id===id);
+    const nm = p ? (typeIco[p.type]+' '+p.name) : id;
+    return '<div class="ie-place-row">'+
+      '<span class="ie-place-name">'+nm+'</span>'+
+      '<span class="ie-place-btns">'+
+        (n>0 ? '<button class="ie-mini" onclick="itinMovePlace('+i+','+n+',-1)">\u2b06</button>' : '')+
+        (n<day.ids.length-1 ? '<button class="ie-mini" onclick="itinMovePlace('+i+','+n+',1)">\u2b07</button>' : '')+
+        '<button class="ie-mini ie-del" onclick="itinRemovePlace('+i+','+n+')">\u2716</button>'+
+      '</span>'+
+    '</div>';
+  }).join('');
+
+  // אפשרויות הוספה: כל המקומות שלא ביום, ממוינים — קודם של אותה עיר
+  const available = PLACES.filter(p => day.ids.indexOf(p.id) === -1)
+    .sort((a,b) => (a.city===cityOfDay?0:1) - (b.city===cityOfDay?0:1));
+  const options = available.map(p =>
+    '<option value="'+p.id+'">'+(p.city===cityOfDay?'\u2b50 ':'')+p.name+' ('+(cityHeb[p.city]||p.city)+')</option>'
+  ).join('');
+
+  document.getElementById('day-det').innerHTML = `
+    <div class="d-title">\u270f\ufe0f \u05e2\u05e8\u05d9\u05db\u05ea \u05d9\u05d5\u05dd \u00b7 ${dt.getDate()} ${HM[dt.getMonth()]}</div>
+    <div class="ie-field">
+      <label>\u05e0\u05d5\u05e9\u05d0 \u05d4\u05d9\u05d5\u05dd</label>
+      <input id="ie-theme" type="text" value="${day.theme.replace(/"/g,'&quot;')}"/>
+    </div>
+    <div class="ie-field">
+      <label>\u05d4\u05e2\u05e8\u05d5\u05ea</label>
+      <textarea id="ie-notes">${day.notes||''}</textarea>
+    </div>
+    <div class="ie-field">
+      <label>\u05de\u05e7\u05d5\u05de\u05d5\u05ea \u05d4\u05d9\u05d5\u05dd (${day.ids.length})</label>
+      <div class="ie-places">${placeRows || '<div class="ie-empty">\u05d0\u05d9\u05df \u05de\u05e7\u05d5\u05de\u05d5\u05ea</div>'}</div>
+      <div class="ie-add-row">
+        <select id="ie-add-select">${options}</select>
+        <button class="ie-add-btn" onclick="itinAddPlace(${i})">+ \u05d4\u05d5\u05e1\u05e3</button>
+      </div>
+    </div>
+    <div class="ie-actions">
+      <button class="ie-save" onclick="itinSaveDay(${i})">\ud83d\udcbe \u05e9\u05de\u05d5\u05e8</button>
+      <button class="ie-cancel" onclick="selDay(${i})">\u05d1\u05d9\u05d8\u05d5\u05dc</button>
+    </div>
+    <button class="ie-reset" onclick="resetItinerary()">\u21ba \u05e9\u05d7\u05d6\u05e8 \u05de\u05e1\u05dc\u05d5\u05dc \u05de\u05e7\u05d5\u05e8\u05d9 (\u05db\u05dc \u05d4\u05d9\u05de\u05d9\u05dd)</button>`;
+};
+
+window.itinRemovePlace = function(i, n){
+  // שמור טיוטת טקסטים לפני רינדור מחדש
+  itinStashDraft();
+  ITINERARY[i].ids.splice(n,1);
+  saveItinerary();
+  itinEditDay(i);
+  itinRestoreDraft();
+};
+
+window.itinMovePlace = function(i, n, dir){
+  itinStashDraft();
+  const ids = ITINERARY[i].ids;
+  const j = n + dir;
+  if (j < 0 || j >= ids.length) return;
+  const t = ids[n]; ids[n] = ids[j]; ids[j] = t;
+  saveItinerary();
+  itinEditDay(i);
+  itinRestoreDraft();
+};
+
+window.itinAddPlace = function(i){
+  itinStashDraft();
+  const sel = document.getElementById('ie-add-select');
+  if (!sel || !sel.value) return;
+  ITINERARY[i].ids.push(sel.value);
+  saveItinerary();
+  itinEditDay(i);
+  itinRestoreDraft();
+};
+
+var _itinDraft = null;
+function itinStashDraft(){
+  const t = document.getElementById('ie-theme');
+  const n = document.getElementById('ie-notes');
+  _itinDraft = t && n ? { theme:t.value, notes:n.value } : null;
+}
+function itinRestoreDraft(){
+  if (!_itinDraft) return;
+  const t = document.getElementById('ie-theme');
+  const n = document.getElementById('ie-notes');
+  if (t) t.value = _itinDraft.theme;
+  if (n) n.value = _itinDraft.notes;
+  _itinDraft = null;
+}
+
+window.itinSaveDay = function(i){
+  const t = document.getElementById('ie-theme');
+  const n = document.getElementById('ie-notes');
+  if (t) ITINERARY[i].theme = t.value.trim() || ITINERARY[i].theme;
+  if (n) ITINERARY[i].notes = n.value.trim();
+  saveItinerary();
+  renderDayNav();
+  selDay(i);
 };
 
 window.jumpTo = function(id) {

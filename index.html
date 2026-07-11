@@ -238,6 +238,37 @@ html,body{height:100%;overflow:hidden;font-family:'Heebo',sans-serif;direction:r
 
 
 
+
+/* ── DOCS & EMERGENCY ───────────────────────── */
+#docs-panel{overflow-y:auto;background:var(--cream)}
+#docs-content{padding:16px;max-width:760px;margin:0 auto}
+.dc-h2{font-size:19px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.dc-sub{font-size:12px;color:var(--muted);margin-bottom:16px}
+.dc-sec-title{font-size:15px;font-weight:800;color:var(--dark);margin:18px 0 10px;display:flex;align-items:center;gap:8px;padding-bottom:6px;border-bottom:2px solid var(--gold)}
+.dc-emerg{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.dc-emerg-row{display:flex;align-items:center;gap:12px;padding:13px 15px;border-bottom:1px solid #f0ead0;text-decoration:none}
+.dc-emerg-row:last-child{border-bottom:none}
+.dc-emerg-ico{font-size:22px;flex-shrink:0;width:30px;text-align:center}
+.dc-emerg-txt{flex:1}
+.dc-emerg-name{font-size:14px;font-weight:700;color:var(--dark)}
+.dc-emerg-desc{font-size:11px;color:var(--muted);margin-top:1px}
+.dc-emerg-num{font-size:20px;font-weight:900;color:#c0392b;font-family:'Heebo',sans-serif;letter-spacing:1px}
+.dc-emerg-call{background:#27ae60;color:#fff;border-radius:8px;padding:7px 13px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.dc-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.dc-card h4{font-size:14px;font-weight:800;color:var(--red);margin-bottom:8px}
+.dc-card p{font-size:13px;color:var(--text);line-height:1.6;margin:0}
+.dc-field{margin-bottom:11px}
+.dc-field label{display:block;font-size:12px;font-weight:700;color:var(--dark);margin-bottom:5px}
+.dc-field input,.dc-field textarea{width:100%;border:1.5px solid var(--border);border-radius:9px;padding:10px 12px;font-family:'Heebo',sans-serif;font-size:14px;outline:none;box-sizing:border-box;background:#fff}
+.dc-field input:focus,.dc-field textarea:focus{border-color:var(--red)}
+.dc-field textarea{resize:vertical;min-height:56px}
+.dc-saved{font-size:11px;color:#27ae60;font-weight:700;margin-right:6px;opacity:0;transition:opacity .3s}
+.dc-saved.show{opacity:1}
+.dc-note{background:#fff8ec;border:1px solid var(--gold);border-radius:10px;padding:10px 12px;font-size:12px;color:#8a6d2f;margin-bottom:14px;line-height:1.5}
+.dc-export-btn{width:100%;background:var(--red);color:#fff;border:none;border-radius:11px;padding:14px;font-family:'Heebo',sans-serif;font-size:15px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px}
+.dc-export-btn:active{opacity:.85}
+.dc-export-desc{font-size:12px;color:var(--muted);text-align:center;margin-top:8px;line-height:1.5}
+
 /* ── JAPAN INFO ───────────────────────────── */
 #info-panel{overflow-y:auto;background:var(--cream)}
 #info-content{padding:16px;max-width:760px;margin:0 auto}
@@ -401,6 +432,22 @@ html,body{height:100%;overflow:hidden;font-family:'Heebo',sans-serif;direction:r
 /* ── HOME DASHBOARD ─────────────────────── */
 #home-panel{overflow-y:auto;background:linear-gradient(180deg,#fdf6e3,#f5ead0)}
 #home-content{padding:18px;max-width:900px;margin:0 auto}
+
+/* ── TODAY IN ITINERARY CARD ───────────────── */
+.today-card{background:linear-gradient(135deg,#c0392b,#e8734a);border-radius:18px;padding:18px;margin-bottom:16px;color:#fff;box-shadow:0 4px 16px rgba(192,57,43,.3)}
+.today-card.today-soon{background:linear-gradient(135deg,#2a7a8a,#3aa0b0)}
+.today-badge{display:inline-block;background:rgba(255,255,255,.22);border-radius:20px;padding:5px 13px;font-size:12px;font-weight:800;margin-bottom:10px}
+.today-city{font-size:26px;font-weight:900;line-height:1.1;margin-bottom:3px}
+.today-theme{font-size:15px;font-weight:600;opacity:.95;margin-bottom:12px}
+.today-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+.today-chip{background:rgba(255,255,255,.2);border-radius:9px;padding:6px 11px;font-size:12px;font-weight:600;cursor:pointer;transition:.15s}
+.today-chip:active{background:rgba(255,255,255,.35)}
+.today-notes{background:rgba(255,255,255,.15);border-radius:10px;padding:10px 12px;font-size:12px;line-height:1.55;margin-bottom:12px}
+.today-actions{display:flex;gap:8px;margin-bottom:4px}
+.today-btn{flex:1;background:#fff;color:var(--dark);border:none;border-radius:10px;padding:11px;font-family:'Heebo',sans-serif;font-size:13px;font-weight:800;cursor:pointer}
+.today-btn:active{opacity:.85}
+.today-tomorrow{margin-top:12px;padding-top:11px;border-top:1px solid rgba(255,255,255,.25);font-size:12px;opacity:.9}
+
 .dash-hero{background:linear-gradient(135deg,#1a1a2e,#2c2c4e);border-radius:18px;padding:22px 20px;color:#fff;margin-bottom:16px;position:relative;overflow:hidden}
 .dash-hero::after{content:'⛩';position:absolute;left:-10px;bottom:-20px;font-size:90px;opacity:.07}
 .dash-hero-title{font-size:15px;color:rgba(232,184,75,.85);font-weight:600;margin-bottom:4px}
@@ -503,6 +550,7 @@ html,body{height:100%;overflow:hidden;font-family:'Heebo',sans-serif;direction:r
     <button class="tab"     data-tab="packing">🎒 אריזה</button>
     <button class="tab"     data-tab="translate">🔄 תרגומון</button>
     <button class="tab"     data-tab="info">📖 על יפן</button>
+    <button class="tab"     data-tab="docs">🆘 מסמכים וחירום</button>
   </div>
 </header>
 
@@ -614,6 +662,10 @@ html,body{height:100%;overflow:hidden;font-family:'Heebo',sans-serif;direction:r
     <div id="info-content"></div>
   </div>
 
+  <div id="docs-panel" class="panel">
+    <div id="docs-content"></div>
+  </div>
+
 </div>
 
 <script>
@@ -656,8 +708,8 @@ const PLACES = [
 
 const ITINERARY = [
   {date:"2026-08-19",city:"Tokyo",  theme:"הגעה + שינג'וקו בערב",           ids:["htok","sjku","rich"],        notes:"נחיתה. צ'ק-אין. סיבוב ערב קל בשינג'וקו. אל תגזימו — ג'ט-לאג."},
-  {date:"2026-08-20",city:"Tokyo",  theme:"🎢 Tokyo DisneySea — יום מלא",    ids:["dsea"],                      notes:"יום מלא ב-DisneySea. להזמין כרטיסים מראש! חזרה למלון עייפים ומאושרים."},
-  {date:"2026-08-21",city:"Tokyo",  theme:"שיבויה + אסאקוסה",               ids:["shib","snso","rtky"],         notes:"בוקר בשיבויה — מעבר החציה + שופינג. אחה׳צ אסאקוסה ומקדש סנסו-ג'י."},
+  {date:"2026-08-20",city:"Tokyo",  theme:"שיבויה + אסאקוסה",               ids:["shib","snso","rtky"],         notes:"בוקר בשיבויה — מעבר החציה + שופינג. אחה׳צ אסאקוסה ומקדש סנסו-ג'י."},
+  {date:"2026-08-21",city:"Tokyo",  theme:"🎢 Tokyo DisneySea — יום מלא",    ids:["dsea"],                      notes:"יום מלא ב-DisneySea. להזמין כרטיסים מראש! חזרה למלון עייפים ומאושרים."},
   {date:"2026-08-22",city:"Hakone", theme:"🌋 האקונה — רכבל + אגם אשי",      ids:["hkrw","hkow","hkas","hkon"], notes:"יציאה מוקדמת מטוקיו. רכבל + אזור געשי + שייט באגם אשי. לינה עם אונסן!"},
   {date:"2026-08-23",city:"Kyoto",  theme:"נוף לפוג'י + הגעה לקיוטו",       ids:["hkyt"],                      notes:"בוקר: נוף לפוג'י מהאקונה (אם בהיר). שינקנסן לקיוטו. צ'ק-אין + סיבוב ערב."},
   {date:"2026-08-24",city:"Kyoto",  theme:"פושימי אינארי + מקדשים",         ids:["fush","kink","rkyt"],         notes:"פושימי אינארי בשחר (לפני ההמונים!). אחה׳צ קינקאקו-ג'י + שוק נישיקי."},
@@ -1148,6 +1200,7 @@ function switchTab(name) {
   if (name === 'packing') { renderPacking(); }
   if (name === 'translate') { renderTranslate(); }
   if (name === 'info') { renderInfo(); }
+  if (name === 'docs') { renderDocs(); }
   if (name === 'itin' && window.applyMobileItinerary) { setTimeout(window.applyMobileItinerary, 10); }
 }
 
@@ -1234,8 +1287,8 @@ let budgetCurrency = 'BOTH';
 const BUDGET_DATA = {
   daily: [
     {date:"2026-08-19",city:"Tokyo",  theme:"הגעה",              hotel:7400, food:2500,transport:1500,entry:0,    misc:2000},
-    {date:"2026-08-20",city:"Tokyo",  theme:"DisneySea",          hotel:7400, food:4000,transport:1200,entry:9800, misc:1000},
-    {date:"2026-08-21",city:"Tokyo",  theme:"שיבויה+אסאקוסה",     hotel:7400, food:3000,transport:800, entry:0,    misc:2000},
+    {date:"2026-08-20",city:"Tokyo",  theme:"שיבויה+אסאקוסה",     hotel:7400, food:3000,transport:800, entry:0,    misc:2000},
+    {date:"2026-08-21",city:"Tokyo",  theme:"DisneySea",          hotel:7400, food:4000,transport:1200,entry:9800, misc:1000},
     {date:"2026-08-22",city:"Hakone", theme:"האקונה",             hotel:16500,food:4000,transport:3500,entry:2800, misc:500},
     {date:"2026-08-23",city:"Kyoto",  theme:"הגעה לקיוטו",        hotel:9000, food:2800,transport:1500,entry:0,    misc:500},
     {date:"2026-08-24",city:"Kyoto",  theme:"פושימי+קינקאקו",      hotel:9000, food:3000,transport:700, entry:600,  misc:500},
@@ -1335,6 +1388,123 @@ window.toggleTrain = function(i){
 
 
 
+
+
+// ── DOCS & EMERGENCY MODULE ──────────────────────────
+var DOCS_FIELDS = [
+  { id:'passport', label:'\u05de\u05e1\u05e4\u05e8 \u05d3\u05e8\u05db\u05d5\u05df', ph:'\u05de\u05e1\u05e4\u05e8 \u05d4\u05d3\u05e8\u05db\u05d5\u05df + \u05ea\u05d5\u05e7\u05e3', type:'text' },
+  { id:'passport2', label:'\u05d3\u05e8\u05db\u05d5\u05df \u05e0\u05d5\u05e1\u05e2 2', ph:'\u05de\u05e1\u05e4\u05e8 + \u05ea\u05d5\u05e7\u05e3', type:'text' },
+  { id:'insurance', label:'\ud83c\udfe5 \u05d1\u05d9\u05d8\u05d5\u05d7 \u05e0\u05e1\u05d9\u05e2\u05d5\u05ea', ph:'\u05d7\u05d1\u05e8\u05d4 + \u05de\u05e1\u05e4\u05e8 \u05e4\u05d5\u05dc\u05d9\u05e1\u05d4 + \u05d8\u05dc\u05e4\u05d5\u05df \u05d7\u05d9\u05e8\u05d5\u05dd', type:'textarea' },
+  { id:'flightOut', label:'\u2708\ufe0f \u05d8\u05d9\u05e1\u05d4 \u05d4\u05dc\u05d5\u05da', ph:'LY091 \u00b7 18.8 19:45 TLV\u2192NRT', type:'text' },
+  { id:'flightBack', label:'\u2708\ufe0f \u05d8\u05d9\u05e1\u05d4 \u05d7\u05d6\u05d5\u05e8', ph:'LY092 \u00b7 3.9 15:35 NRT\u2192TLV', type:'text' },
+  { id:'credit', label:'\ud83d\udcb3 \u05db\u05e8\u05d8\u05d9\u05e1\u05d9 \u05d0\u05e9\u05e8\u05d0\u05d9 (\u05dc\u05d7\u05e1\u05d9\u05de\u05d4)', ph:'\u05d8\u05dc\u05e4\u05d5\u05e0\u05d9 \u05d7\u05d9\u05e8\u05d5\u05dd \u05dc\u05d7\u05e1\u05d9\u05de\u05ea \u05db\u05e8\u05d8\u05d9\u05e1\u05d9\u05dd', type:'textarea' },
+  { id:'other', label:'\ud83d\udcdd \u05e4\u05e8\u05d8\u05d9\u05dd \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd', ph:'\u05db\u05dc \u05de\u05d9\u05dc\u05d5\u05dc \u05d0\u05d7\u05e8 \u05e9\u05d7\u05e9\u05d5\u05d1 \u05dc\u05d6\u05db\u05d5\u05e8', type:'textarea' }
+];
+
+var docsData = JSON.parse(localStorage.getItem('jp_docs') || '{}');
+
+function renderDocs(){
+  var emergencies = [
+    { ico:'\ud83d\udc6e', name:'\u05de\u05e9\u05d8\u05e8\u05d4 (Police)', desc:'\u05dc\u05d7\u05d9\u05e8\u05d5\u05dd \u05d1\u05dc\u05d1\u05d3', num:'110' },
+    { ico:'\ud83d\ude91', name:'\u05d0\u05de\u05d1\u05d5\u05dc\u05e0\u05e1 + \u05db\u05d1\u05d0\u05d5\u05ea', desc:'\u05e9\u05d9\u05e8\u05d5\u05ea\u05d9 \u05d7\u05d9\u05e8\u05d5\u05dd \u05e8\u05e4\u05d5\u05d0\u05d9\u05d9\u05dd', num:'119' },
+    { ico:'\ud83c\udf0a', name:'\u05de\u05d5\u05e7\u05d3 \u05d0\u05e1\u05d5\u05e0\u05d5\u05ea (\u05d9\u05e4\u05e0\u05d9\u05ea)', desc:'\u05e8\u05e2\u05d9\u05d3\u05d5\u05ea/\u05d8\u05d9\u05e4\u05d5\u05df \u2013 \u05de\u05d9\u05d3\u05e2 \u05d1\u05d0\u05e0\u05d2\u05dc\u05d9\u05ea', num:'050-3116-3502' }
+  ];
+
+  var emergHtml = emergencies.map(function(e){
+    return '<a class="dc-emerg-row" href="tel:'+e.num.replace(/[^0-9+]/g,'')+'">'+
+      '<div class="dc-emerg-ico">'+e.ico+'</div>'+
+      '<div class="dc-emerg-txt"><div class="dc-emerg-name">'+e.name+'</div><div class="dc-emerg-desc">'+e.desc+'</div></div>'+
+      '<div class="dc-emerg-num">'+e.num+'</div>'+
+    '</a>';
+  }).join('');
+
+  var fieldsHtml = DOCS_FIELDS.map(function(f){
+    var val = docsData[f.id] || '';
+    var input = f.type === 'textarea'
+      ? '<textarea id="dc-'+f.id+'" placeholder="'+f.ph+'" oninput="dcSave(\''+f.id+'\')">'+escapeHtmlDc(val)+'</textarea>'
+      : '<input id="dc-'+f.id+'" type="text" placeholder="'+f.ph+'" value="'+escapeAttrDc(val)+'" oninput="dcSave(\''+f.id+'\')"/>';
+    return '<div class="dc-field"><label>'+f.label+' <span class="dc-saved" id="dc-saved-'+f.id+'">\u2713 \u05e0\u05e9\u05de\u05e8</span></label>'+input+'</div>';
+  }).join('');
+
+  document.getElementById('docs-content').innerHTML =
+    '<div class="dc-h2">\ud83c\udd98 \u05de\u05e1\u05de\u05db\u05d9\u05dd \u05d5\u05d7\u05d9\u05e8\u05d5\u05dd</div>'+
+    '<div class="dc-sub">\u05de\u05d9\u05d3\u05e2 \u05d7\u05d9\u05d5\u05e0\u05d9 \u05dc\u05de\u05e7\u05e8\u05d4 \u05d7\u05d9\u05e8\u05d5\u05dd \u00b7 \u05e0\u05e9\u05de\u05e8 \u05e8\u05e7 \u05d1\u05de\u05db\u05e9\u05d9\u05e8 \u05e9\u05dc\u05da</div>'+
+
+    '<div class="dc-sec-title">\ud83d\udea8 \u05de\u05e1\u05e4\u05e8\u05d9 \u05d7\u05d9\u05e8\u05d5\u05dd \u05d1\u05d9\u05e4\u05df</div>'+
+    '<div class="dc-emerg">'+emergHtml+'</div>'+
+
+    '<div class="dc-sec-title">\ud83c\uddee\ud83c\uddf1 \u05e9\u05d2\u05e8\u05d9\u05e8\u05d5\u05ea \u05d9\u05e9\u05e8\u05d0\u05dc \u05d1\u05d8\u05d5\u05e7\u05d9\u05d5</div>'+
+    '<div class="dc-card"><h4>Embassy of Israel in Japan</h4><p>'+
+      '\ud83d\udccd 3 Niban-cho, Chiyoda-ku, Tokyo 102-0084<br>'+
+      '\ud83d\udcde \u05d8\u05dc\u05e4\u05d5\u05df: <a href="tel:+81332643100" style="color:#c0392b;font-weight:700">+81-3-3264-0911</a><br>'+
+      '\ud83c\udd98 \u05d7\u05d9\u05e8\u05d5\u05dd (\u05de\u05d7\u05d5\u05e5 \u05dc\u05e9\u05e2\u05d5\u05ea \u05e4\u05e2\u05d9\u05dc\u05d5\u05ea): \u05e2\u05e7\u05d1\u05d5 \u05d0\u05d7\u05e8 \u05d4\u05d4\u05e0\u05d7\u05d9\u05d5\u05ea \u05d1\u05e7\u05d5\u05dc\u05d9\u05ea<br>'+
+      '\ud83d\udd52 \u05e9\u05e2\u05d5\u05ea \u05e7\u05d1\u05dc\u05ea \u05e7\u05d4\u05dc: \u05d0-\u05d4, 9:00-16:00'+
+    '</p></div>'+
+
+    '<div class="dc-sec-title">\ud83d\udcc4 \u05d4\u05de\u05e1\u05de\u05db\u05d9\u05dd \u05d4\u05d7\u05e9\u05d5\u05d1\u05d9\u05dd \u05e9\u05dc\u05d9</div>'+
+    '<div class="dc-note">\ud83d\udd12 \u05d4\u05e4\u05e8\u05d8\u05d9\u05dd \u05e0\u05e9\u05de\u05e8\u05d9\u05dd \u05e8\u05e7 \u05d1\u05de\u05db\u05e9\u05d9\u05e8 \u05d4\u05d6\u05d4 (\u05dc\u05d0 \u05e0\u05e9\u05dc\u05d7\u05d9\u05dd \u05dc\u05e9\u05d5\u05dd \u05de\u05e7\u05d5\u05dd). \u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05de\u05dc\u05d0 \u05dc\u05e4\u05e0\u05d9 \u05d4\u05d8\u05d9\u05e1\u05d4.</div>'+
+    fieldsHtml +
+
+    '<div class="dc-sec-title">\ud83d\udce4 \u05d9\u05d9\u05e6\u05d5\u05d0 \u05d4\u05d8\u05d9\u05d5\u05dc</div>'+
+    '<button class="dc-export-btn" onclick="dcExportJson()">\ud83d\udcbe \u05d9\u05e6\u05d0 \u05d0\u05ea \u05db\u05dc \u05e4\u05e8\u05d8\u05d9 \u05d4\u05d8\u05d9\u05d5\u05dc \u05dc\u05e7\u05d5\u05d1\u05e5 JSON</button>'+
+    '<div class="dc-export-desc">\u05de\u05d9\u05d9\u05e6\u05d0 \u05e7\u05d5\u05d1\u05e5 \u05e2\u05dd \u05db\u05dc \u05d4\u05de\u05e1\u05dc\u05d5\u05dc, \u05d4\u05de\u05dc\u05d5\u05e0\u05d5\u05ea, \u05d4\u05d8\u05d9\u05e1\u05d5\u05ea \u05d5\u05d4\u05de\u05e7\u05d5\u05de\u05d5\u05ea \u2013 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d5\u05ea \u05d0\u05d7\u05e8\u05d5\u05ea \u05d0\u05d5 \u05dc\u05d2\u05d9\u05d1\u05d5\u05d9.</div>'+
+    '<div style="height:24px"></div>';
+
+  if (window.applyMobileDocs) window.applyMobileDocs();
+}
+
+function escapeHtmlDc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escapeAttrDc(s){ return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+
+window.dcSave = function(id){
+  var el = document.getElementById('dc-'+id);
+  if (!el) return;
+  docsData[id] = el.value;
+  localStorage.setItem('jp_docs', JSON.stringify(docsData));
+  var s = document.getElementById('dc-saved-'+id);
+  if (s){ s.classList.add('show'); clearTimeout(s._t); s._t = setTimeout(function(){ s.classList.remove('show'); }, 1500); }
+};
+
+window.dcExportJson = function(){
+  var payload = {
+    trip: '\u05d8\u05d9\u05d5\u05dc \u05d9\u05e4\u05df 2026',
+    exportedAt: new Date().toISOString(),
+    flights: {
+      outbound: 'LY091 \u00b7 TLV 18.8 19:45 \u2192 NRT 19.8 13:20',
+      inbound: 'LY092 \u00b7 NRT 3.9 15:35 \u2192 TLV 3.9 22:20'
+    },
+    itinerary: (typeof ITINERARY !== 'undefined') ? ITINERARY.map(function(d){
+      var placeNames = (d.ids||[]).map(function(id){
+        var p = (typeof PLACES !== 'undefined') ? PLACES.find(function(x){ return x.id===id; }) : null;
+        return p ? p.name : id;
+      });
+      return { date:d.date, city:d.city, theme:d.theme, places:placeNames, notes:d.notes||'' };
+    }) : [],
+    hotels: (typeof PLACES !== 'undefined') ? PLACES.filter(function(p){ return p.type==='hotel'; }).map(function(p){
+      return { name:p.name, city:p.city, lat:p.lat, lng:p.lng, price:p.price, note:p.note };
+    }) : [],
+    places: (typeof PLACES !== 'undefined') ? PLACES.filter(function(p){ return p.type!=='hotel'; }).map(function(p){
+      return { name:p.name, city:p.city, type:p.type, lat:p.lat, lng:p.lng };
+    }) : [],
+    myDocuments: docsData
+  };
+
+  var blob = new Blob([JSON.stringify(payload, null, 2)], { type:'application/json' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'japan-trip-2026.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+};
+
+window.applyMobileDocs = function(){
+  if (window.innerWidth > 700) return;
+  var dc = document.getElementById('docs-content');
+  if (dc) dc.style.cssText = 'padding:12px;max-width:none;margin:0;width:100%';
+};
 
 // ── JAPAN INFO MODULE ────────────────────────────────
 var infoActiveSec = 'overview';
@@ -2220,6 +2390,61 @@ function renderHome(){
   else if (dToR >= 0){ heroTitle='\u05d0\u05ea\u05dd \u05d1\u05d9\u05e4\u05df! \ud83d\uddfe'; heroCount='\u05d9\u05d5\u05dd '+Math.max(1,(Math.round((now-ARRIVAL)/msDay)+1)); heroSub=dToR+' \u05d9\u05de\u05d9\u05dd \u05dc\u05d7\u05d6\u05e8\u05d4'; }
   else { heroTitle='\u05d7\u05d6\u05e8\u05ea\u05dd \u05d1\u05e9\u05dc\u05d5\u05dd \ud83c\udfe0'; heroCount='\u2714'; heroSub='\u05d4\u05d8\u05d9\u05d5\u05dc \u05d4\u05e1\u05ea\u05d9\u05d9\u05dd'; }
 
+  // ── "היום במסלול" — כרטיס דינמי ──
+  var todayStr = (function(){ var t=new Date(); return t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0'); })();
+  var cityHebMapT = {Tokyo:'\u05d8\u05d5\u05e7\u05d9\u05d5',Hakone:'\u05d4\u05d0\u05e7\u05d5\u05e0\u05d4',Kyoto:'\u05e7\u05d9\u05d5\u05d8\u05d5',Osaka:'\u05d0\u05d5\u05e1\u05e7\u05d4',Nara:'\u05e0\u05d0\u05e8\u05d4'};
+  var todayCardHtml = '';
+  var todayIdx = -1;
+  for (var ti=0; ti<ITINERARY.length; ti++){ if (ITINERARY[ti].date === todayStr){ todayIdx = ti; break; } }
+
+  if (todayIdx >= 0){
+    // אנחנו בטיול, ביום מתוכנן
+    var td = ITINERARY[todayIdx];
+    var dayNum = Math.max(1, Math.round((now-ARRIVAL)/msDay)+1);
+    var placeChips = (td.ids||[]).map(function(id){
+      var p = PLACES.find(function(x){ return x.id===id; });
+      return p ? '<span class="today-chip" onclick="switchTab(\'map\');">\ud83d\udccd '+p.name+'</span>' : '';
+    }).join('');
+    // כרטיס למחר
+    var tomHtml = '';
+    if (todayIdx+1 < ITINERARY.length){
+      var tm = ITINERARY[todayIdx+1];
+      tomHtml = '<div class="today-tomorrow">\u05de\u05d7\u05e8: <strong>'+(cityHebMapT[tm.city]||tm.city)+'</strong> \u00b7 '+tm.theme+'</div>';
+    }
+    todayCardHtml =
+      '<div class="today-card">'+
+        '<div class="today-badge">\ud83d\udccd \u05d4\u05d9\u05d5\u05dd \u05d1\u05de\u05e1\u05dc\u05d5\u05dc \u00b7 \u05d9\u05d5\u05dd '+dayNum+'</div>'+
+        '<div class="today-city">'+(cityHebMapT[td.city]||td.city)+'</div>'+
+        '<div class="today-theme">'+td.theme+'</div>'+
+        (placeChips ? '<div class="today-chips">'+placeChips+'</div>' : '')+
+        (td.notes ? '<div class="today-notes">'+td.notes+'</div>' : '')+
+        '<div class="today-actions">'+
+          '<button class="today-btn" onclick="switchTab(\'itin\')">\ud83d\udcc5 \u05dc\u05de\u05e1\u05dc\u05d5\u05dc \u05d4\u05de\u05dc\u05d0</button>'+
+          '<button class="today-btn" onclick="switchTab(\'map\')">\ud83d\uddfa\ufe0f \u05dc\u05de\u05e4\u05d4</button>'+
+        '</div>'+
+        tomHtml+
+      '</div>';
+  } else if (dToF > 0){
+    // שבוע לפני — תצוגה מקדימה של היום הראשון
+    var firstDay = ITINERARY[0];
+    var weeks = Math.floor(dToF/7);
+    var daysWord = dToF===1 ? '\u05d9\u05d5\u05dd \u05d0\u05d7\u05d3' : dToF+' \u05d9\u05de\u05d9\u05dd';
+    var extraTime = weeks>=1 ? ' (\u05db-'+weeks+' \u05e9\u05d1\u05d5\u05e2'+(weeks>1?'\u05d5\u05ea':'')+')' : '';
+    todayCardHtml =
+      '<div class="today-card today-soon">'+
+        '<div class="today-badge">\u2708\ufe0f \u05e2\u05d5\u05d3 '+daysWord+' \u05dc\u05d8\u05d9\u05e1\u05d4!'+extraTime+'</div>'+
+        '<div class="today-city">\u05de\u05ea\u05d7\u05d9\u05dc\u05d9\u05dd \u05d1\u05d8\u05d5\u05e7\u05d9\u05d5 \ud83d\uddfc</div>'+
+        '<div class="today-theme">\u05d9\u05d5\u05dd \u05e8\u05d0\u05e9\u05d5\u05df: '+firstDay.theme+'</div>'+
+        '<div class="today-notes">'+(firstDay.notes||'\u05d4\u05d4\u05e8\u05e4\u05ea\u05e7\u05d4 \u05e9\u05dc\u05db\u05dd \u05de\u05ea\u05e7\u05e8\u05d1\u05ea! \u05d6\u05d4 \u05d6\u05de\u05df \u05d8\u05d5\u05d1 \u05dc\u05d4\u05ea\u05d7\u05d9\u05dc \u05dc\u05d0\u05e8\u05d5\u05d6 \u05d5\u05dc\u05e1\u05d3\u05e8 \u05de\u05e1\u05de\u05db\u05d9\u05dd.')+'</div>'+
+        '<div class="today-actions">'+
+          '<button class="today-btn" onclick="switchTab(\'packing\')">\ud83c\udf92 \u05d0\u05e8\u05d9\u05d6\u05d4</button>'+
+          '<button class="today-btn" onclick="switchTab(\'itin\')">\ud83d\udcc5 \u05de\u05e1\u05dc\u05d5\u05dc</button>'+
+          '<button class="today-btn" onclick="switchTab(\'docs\')">\ud83c\udd98 \u05de\u05e1\u05de\u05db\u05d9\u05dd</button>'+
+        '</div>'+
+      '</div>';
+  }
+
+
   // תקציב
   var daily = BUDGET_DATA.daily, fixed = BUDGET_DATA.fixed;
   var dTot = 0; daily.forEach(function(d){ dTot += d.hotel+d.food+d.transport+d.entry+d.misc; });
@@ -2252,6 +2477,8 @@ function renderHome(){
       '<div class="dash-hero-sub">'+heroSub+'</div>'+
       '<div class="dash-hero-dates">\ud83d\udcc5 19 \u05d0\u05d5\u05d2\u05d5\u05e1\u05d8 \u2013 3 \u05e1\u05e4\u05d8\u05de\u05d1\u05e8 2026 \u00b7 16 \u05d9\u05de\u05d9\u05dd</div>'+
     '</div>'+
+
+    todayCardHtml +
 
     '<div class="dash-grid">'+
       '<div class="dash-card full">'+
